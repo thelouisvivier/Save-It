@@ -15,4 +15,6 @@ On pourrait afficher une mini-carte sur l'écran, ainsi qu'un genre de curseur q
 
 Différents types de personnages: Pierre le sadique (il fait exprès de laisser des appareils allumés), mamie Jeanne Alzheimer (elle oublie d'éteindre des appareils), Marie la consommatrice (ne prends que des bains trop long, se sèche les cheveux...)
 Deux catégories de personnages, des bons et des mauvais. Si on ne gère pas bien les consommations, les bons s'en vont et les mauvais arrivent, ce qui rends le niveau plus dur.
-Par exemple aussi, la mère de famille mauvaise qui mets ses lessives la journée.
+
+Qualité graphique personnages:http://blogs.articulate.com/les-essentiels-du-elearning/lot-de-personnages-flat-design-gratuit/
+Format maison/appartement:http://rebloggy.com/post/yay-but-here-we-are-orphan-black-tiny-tower-obedits-hss-ob-hss-gif-hss-wat-yees/87344872433
