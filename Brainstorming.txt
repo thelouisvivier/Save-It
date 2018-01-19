@@ -3,7 +3,7 @@ Idée de départ :
 Le jeu a pour but de faire comprendre l'impact ecologique et economique lorsque l'on laisse des appareils inutilisés allumés.
 
 Le premier niveau, le joueur doit simplement eteindre une lampe. Puis au fur et à mesure le nombre d'appareils à eteindre augmente. 
-A chaque niveau, le joueur à une cagnote dans lequel on prelève le prix de l'électricité consommé par les appareils en marche non utilisés. Ainsi plus l'utilisateur met du temps plus il perd de l'argent.
+A chaque niveau, le joueur à une cagnote dans lequel on prelève le prix de l'électricité consommé par les appareils en marche non utilisés. Ainsi plus l'utilisateur met du temps plus il perd de l'argent. A la fin de chaque niveau, l'argent qui restera ira dans la gagnote générale permettant l'achat d'améliorations.
 
 La cagnote peut permettre d'acheter des améliorations : par exemple des ampoules led : la cagnote descendra donc moins vite. Un compteur avec les heures creuses et les heures pleines.
 
