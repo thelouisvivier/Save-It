@@ -10,3 +10,5 @@ La cagnote peut permettre d'acheter des améliorations : par exemple des ampoule
 Le joueur devra jouer en prenant compte du jour et de la nuit, des saisons...
 
 Au niveau du design, on peut imaginer une maison sur plusieurs étages. Plus la difficulté augmente, plus le nombre d'étages, d'appareils, de pièces augmente.
+
+On pourrait afficher une mini-carte sur l'écran, ainsi qu'un genre de curseur qui permettrai de voir l'évolution de la température dans la pièce ou de la consommation.
