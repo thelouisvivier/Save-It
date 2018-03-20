@@ -5,9 +5,9 @@ var total = 3;
 
 var Game = {
   preload: function (){
-  game.load.image('dude', './../assets/dude.png');
-  game.load.image('carrelage','./../assets/carrelage.png');
-	game.load.image('Game Over', './../assets/GameOver.png');
+  game.load.image('dude', 'assets/dude.png');
+  game.load.image('carrelage','assets/carrelage.png');
+	game.load.image('Game Over', 'assets/GameOver.png');
 },
 
 
@@ -33,7 +33,7 @@ cursors = game.input.keyboard.createCursorKeys();
 timer = game.time.create(false);
 
 //  Set a TimerEvent to occur after 1 seconds
-timer.loop(1000, updateCounter, this);
+timer.loop(1000, Game.updateCounter, this);
 
 //  Start the timer running - this is important!
 //  It won't start automatically, allowing you to hook it to button events and the like.
@@ -71,6 +71,7 @@ update : function () {
 
 
 },
+
 updateCounter : function (){
 	game.add.tileSprite(400, 300, 200, 200, 'Game Over');
 	total--;
