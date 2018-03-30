@@ -29,14 +29,6 @@ var Game = {
 
     tv=game.add.sprite(1000,800,'tv')
 
-    /*
-    tvgroup= game.add.group();
-    var tv = game.add.sprite(1000,800, 'tv');
-    tvgroup.add(tv);
-    //tvgroup.create(1000, 800, 'tv');
-    //tv.scale.setTo(0.5, 0.5);
-    */
-
 
     game.physics.enable(louis, Phaser.Physics.ARCADE);
     game.physics.enable(tv, Phaser.Physics.ARCADE);
