@@ -3,6 +3,7 @@ var tvgroup;
 var tv;
 var lampeB;
 var evier;
+var radiateur;
 var cursors;
 var timer;
 var total = 3;
@@ -13,6 +14,7 @@ var keyLdown=false;
 var tvstate=true;
 var lampeBstate=true;
 var evierstate=true;
+var radiateurstate=true;
 var flipFlop;
 var Game = {
   preload: function (){
@@ -22,6 +24,7 @@ var Game = {
     game.load.spritesheet('tv', 'assets/sprites/objects/tv.png', 100, 100);
     game.load.spritesheet('lampeB', 'assets/sprites/objects/lampeB.png', 100, 256);
     game.load.spritesheet('evier', 'assets/sprites/objects/evier.png', 200, 158);
+    game.load.spritesheet('radiateur', 'assets/sprites/objects/radiateur.png', 240, 150);
   },
 
 
@@ -32,10 +35,13 @@ var Game = {
     game.world.setBounds(0, 0, 1920, 1920);
     tv=game.add.sprite(1200,800,'tv')
     evier=game.add.sprite(1400,800,'evier')
+    radiateur=game.add.sprite(1100,1100,'radiateur')
     game.physics.enable(tv, Phaser.Physics.ARCADE);
     game.physics.enable(evier, Phaser.Physics.ARCADE);
+    game.physics.enable(radiateur, Phaser.Physics.ARCADE);
     tv.body.immovable = true;
     evier.body.immovable = true;
+    radiateur.body.immovable = true;
     louis = game.add.sprite(game.world.centerX, game.world.centerY, 'louis');
     //louis.scale.setTo(0.5, 0.5);
     //louis.body.collideWorldBounds = true;
@@ -53,9 +59,8 @@ var Game = {
 
 
     evier.scale.setTo(0.5, 0.5);
-
     evier.body.setSize(180,0);
-
+    radiateur.scale.setTo(0.7,0.7);
     cursors = game.input.keyboard.createCursorKeys();
     game.camera.follow(louis, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
     //  Create our Timer
@@ -76,6 +81,8 @@ var Game = {
     lampeB.animations.add('lampeBoff', [1], 5, true);
     evier.animations.add('evieron', [0,1,2], 5, true);
     evier.animations.add('evieroff', [3], 5, true);
+    radiateur.animations.add('radiateuron', [1,2,3,4,5], 5, true);
+    radiateur.animations.add('radiateuroff', [0], 5, true);
 
     keyT = game.input.keyboard.addKey(Phaser.Keyboard.T);
     keyL = game.input.keyboard.addKey(Phaser.Keyboard.L);
@@ -86,6 +93,7 @@ var Game = {
     this.game.physics.arcade.collide(louis, tv);
     this.game.physics.arcade.collide(louis, lampeB);
     this.game.physics.arcade.collide(louis, evier);
+    this.game.physics.arcade.collide(louis, radiateur);
     //Test de la distance entre le joueur et la télé, à reformuler
     //https://stackoverflow.com/questions/29922024/how-to-set-keyboard-key-pressed-event-only-once-after-pressed-but-not-continousl
     if(louis.body.x-tv.body.x<=100 && tv.body.x-louis.body.x<=100 && louis.body.y-tv.body.y<=100 && tv.body.y-louis.body.y<=100){
@@ -149,6 +157,33 @@ var Game = {
                 else if (evierstate==false) {
                   evier.animations.play('evieroff')
                 }
+
+                if(louis.body.x-radiateur.body.x<=100 && radiateur.body.x-louis.body.x<=100 && louis.body.y-radiateur.body.y<=100 && radiateur.body.y-louis.body.y<=100){
+                  if (keyT.isDown){
+                    if (!flipFlop) {
+                      radiateurstate^=true
+                      flipFlop = true;
+                    }
+                  }
+                  if (keyT.isUp) {
+                    flipFlop = false;
+                  }
+                }
+
+
+                    if (radiateurstate==true){
+                      radiateur.animations.play('radiateuron');
+                    }
+                    else if (radiateurstate==false) {
+                      radiateur.animations.play('radiateuroff')
+                    }
+
+
+
+
+
+
+
 
         if (cursors.up.isDown){
           //louis.body.moveUp(300)
