@@ -1,21 +1,19 @@
 var Menu = {
   preload : function(){
-    game.load.image('menu','./assets/menu.png', 0, 0);
-    game.load.image('saveit','./assets/saveit.png', 0, 0);
-    game.load.spritesheet('b_introduction','./assets/introduction.png', 0 , 0);
-    game.load.spritesheet('b_demarrer','./assets/demarrer.png', 0, 0);
-    game.load.spritesheet('b_continuer','./assets/continuer.png', 0, 0);
-    game.load.spritesheet('b_credits','./assets/credits.png', 0, 0);
+    game.load.image('menu','./assets/menu.jpg', 4000, 3000);
+    game.load.spritesheet('b_intro','./assets/intro.png', 0 , 357);
+    game.load.spritesheet('b_demarrer','./assets/demarrer.png', 0, 357);
+    game.load.spritesheet('b_continuer','./assets/continuer.png', 0, 357);
+    game.load.spritesheet('b_credits','./assets/credits.png', 0, 357);
   },
 
   create : function(){
-    //game.add.tileSprite(0, 0, 1920, 1920, 'menu');
-    var logo = game.add.sprite(500, 20, 'saveit');
-    logo.scale.setTo(0.5,0.5);
-    var buttonIntroduction = game.add.button(550, 200, 'b_introduction', this.startIntroduction, this, 2, 1, 0);
-    var buttonDemarrer = game.add.button(565, 250, 'b_demarrer', this.startStart, this, 2, 1, 0);
-    var buttonContinuer = game.add.button(567, 300, 'b_continuer', this.startContinuer, this, 2, 1, 0);
-    var buttonCredits = game.add.button(587, 350, 'b_credits', this.startCredit, this, 2, 1, 0);
+    var fond = game.add.tileSprite(0, 0, 4000, 3000, 'menu');
+    fond.scale.setTo(0.35 ,0.3);
+    var buttonIntroduction = game.add.button(565, 200, 'b_intro', this.startIntroduction, this, 1, 0, 2).scale.setTo(0.25,0.25);
+    var buttonDemarrer = game.add.button(565, 300, 'b_demarrer', this.startStart, this, 1, 0, 2).scale.setTo(0.25,0.25);
+    var buttonContinuer = game.add.button(565, 400, 'b_continuer', this.startContinuer, this, 1, 0, 2).scale.setTo(0.25,0.25);
+    var buttonCredits = game.add.button(565, 500, 'b_credits', this.startCredit, this, 1, 0, 2).scale.setTo(0.25,0.25);
   },
 
   startIntroduction : function(){
