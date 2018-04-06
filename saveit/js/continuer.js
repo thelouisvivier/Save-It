@@ -1,6 +1,6 @@
 var Continuer = {
   preload : function(){
-    game.load.image('menu','./assets/textures/menu.png',4000,3000);
+    game.load.image('menu','./assets/textures/menu.jpg',4000,3000);
   },
 
   create : function(){
