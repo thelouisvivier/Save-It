@@ -16,21 +16,19 @@ var evierstate=true;
 var flipFlop;
 var Game = {
   preload: function (){
-    game.load.image('sol','assets/sol.png');
-    game.load.image('Game Over', 'assets/GameOver.png');
-    game.load.spritesheet('louis', 'assets/louis.png', 100, 95);
-    game.load.spritesheet('tv', 'assets/tv.png', 100, 100);
-    game.load.spritesheet('lampeB', 'assets/lampeB.png', 100, 256);
-    game.load.spritesheet('lampeB', 'assets/lampeB.png', 100, 256);
-    game.load.spritesheet('evier', 'assets/evier.png', 200, 158);
+    game.load.image('sol','assets/textures/sol.png');
+    game.load.image('popup', 'assets/popup/popupwindow.png');
+    game.load.spritesheet('louis', 'assets/sprites/perso/louis.png', 100, 95);
+    game.load.spritesheet('tv', 'assets/sprites/objects/tv.png', 100, 100);
+    game.load.spritesheet('lampeB', 'assets/sprites/objects/lampeB.png', 100, 256);
+    game.load.spritesheet('evier', 'assets/sprites/objects/evier.png', 200, 158);
   },
 
 
   create : function() {
-
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.tileSprite(0, 0, 1920, 1920, 'sol');
-
+    Popup.create('tvinfo');
     game.world.setBounds(0, 0, 1920, 1920);
     tv=game.add.sprite(1200,800,'tv')
     evier=game.add.sprite(1400,800,'evier')
@@ -41,7 +39,7 @@ var Game = {
     louis = game.add.sprite(game.world.centerX, game.world.centerY, 'louis');
     //louis.scale.setTo(0.5, 0.5);
     //louis.body.collideWorldBounds = true;
-game.physics.enable(louis, Phaser.Physics.ARCADE);
+    game.physics.enable(louis, Phaser.Physics.ARCADE);
 
     tv.body.setSize(70, 20, 10); //droite,bas,décalage
 
