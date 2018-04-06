@@ -1,10 +1,10 @@
 var Menu = {
   preload : function(){
-    game.load.image('menu','./assets/menu.jpg', 4000, 3000);
-    game.load.spritesheet('b_intro','./assets/intro.png', 0 , 357);
-    game.load.spritesheet('b_demarrer','./assets/demarrer.png', 0, 357);
-    game.load.spritesheet('b_continuer','./assets/continuer.png', 0, 357);
-    game.load.spritesheet('b_credits','./assets/credits.png', 0, 357);
+    game.load.image('menu','./assets/textures/menu.jpg', 4000, 3000);
+    game.load.spritesheet('b_intro','./assets/bouttons/intro.png', 0 , 357);
+    game.load.spritesheet('b_demarrer','./assets/bouttons/demarrer.png', 0, 357);
+    game.load.spritesheet('b_continuer','./assets/bouttons/continuer.png', 0, 357);
+    game.load.spritesheet('b_credits','./assets/bouttons/credits.png', 0, 357);
   },
 
   create : function(){
