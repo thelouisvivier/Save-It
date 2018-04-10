@@ -1,10 +1,10 @@
 var Menu = {
   preload : function(){
     game.load.image('menu','./assets/textures/menu.jpg', 4000, 3000);
-    game.load.spritesheet('b_intro','./assets/bouttons/intro.png', 0 , 357);
-    game.load.spritesheet('b_demarrer','./assets/bouttons/demarrer.png', 0, 357);
-    game.load.spritesheet('b_continuer','./assets/bouttons/continuer.png', 0, 357);
-    game.load.spritesheet('b_credits','./assets/bouttons/credits.png', 0, 357);
+    game.load.spritesheet('b_intro','./assets/buttons/intro.png', 0 , 357);
+    game.load.spritesheet('b_demarrer','./assets/buttons/demarrer.png', 0, 357);
+    game.load.spritesheet('b_continuer','./assets/buttons/continuer.png', 0, 357);
+    game.load.spritesheet('b_credits','./assets/buttons/credits.png', 0, 357);
   },
 
   create : function(){
@@ -17,18 +17,18 @@ var Menu = {
   },
 
   startIntroduction : function(){
-    game.state.start('Introduction');
+    game.state.start('IntroductionState');
   },
 
   startStart : function(){
-    game.state.start('Game');
+    game.state.start('GameState');
   },
 
   startContinuer : function(){
-    game.state.start('Continuer');
+    game.state.start('ContinuerState');
   },
 
   startCredit : function(){
-    game.state.start('Credit');
+    game.state.start('CreditState');
   }
 }

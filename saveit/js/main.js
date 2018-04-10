@@ -1,7 +1,7 @@
 var game  = new Phaser.Game(1200, 600, Phaser.AUTO,'');
-game.state.add('Introduction', Introduction);
-game.state.add('Game', Game);
-game.state.add('Continuer', Continuer);
-game.state.add('Credit', Credit);
-game.state.add('Menu', Menu);
-game.state.start('Menu');
+game.state.add('IntroductionState', Introduction);
+game.state.add('GameState', Game);
+game.state.add('ContinuerState', Continuer);
+game.state.add('CreditState', Credit);
+game.state.add('MenuState', Menu);
+game.state.start('MenuState');
