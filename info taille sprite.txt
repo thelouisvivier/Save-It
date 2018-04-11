@@ -1,0 +1,14 @@
+preload:
+louis -> 100,95
+tv -> 100,100
+lampe -> 100,256
+evier -> 200,158
+radiateur -> 240,150
+radio -> 200,56
+
+setSize:
+tv -> 70,20,10
+lampe -> 60,40,10,220 (à changer)
+evier -> 180,0
+radiateur -> 90,20,80
+radio -> 60,5,70
