@@ -1,6 +1,7 @@
 var Continuer = {
   preload : function(){
     game.load.image('menu','./assets/textures/menu.jpg',4000,3000);
+    game.load.spritesheet('retour','./assets/buttons/retour.png', 0, 74);
   },
 
   create : function(){
@@ -9,5 +10,10 @@ var Continuer = {
     //Full screen mode
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.setShowAll();
+    var boutonRetour = game.add.button(1000, 500, 'retour', this.retourMenu, this, 1, 0);
+  },
+
+  retourMenu : function(){
+    game.state.start('MenuState');
   }
 }
