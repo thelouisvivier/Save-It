@@ -7,10 +7,6 @@ var spriteStorage = [];
 var stateStorage = [];
 var flipFlop = [];
 
-//Touches de contrôle des objets
-var keyT;
-var keyL;
-
 //Compteur
 var timer;
 var total = 3;
@@ -23,8 +19,10 @@ var Game = {
     game.load.spritesheet('louis', 'assets/sprites/perso/louis.png', 100, 95);
     game.load.spritesheet('tv', 'assets/sprites/objects/tv.png', 100, 100);
     game.load.spritesheet('lampeB', 'assets/sprites/objects/lampeB.png', 100, 256);
+    game.load.spritesheet('lampeJ', 'assets/sprites/objects/lampeJ.png', 100, 256);
     game.load.spritesheet('evier', 'assets/sprites/objects/evier.png', 200, 158);
     game.load.spritesheet('radiateur', 'assets/sprites/objects/radiateur.png', 240, 150);
+    game.load.spritesheet('radio', 'assets/sprites/objects/radio.png', 200, 56);
   },
 
   create : function() {
@@ -33,10 +31,10 @@ var Game = {
     game.world.setBounds(0, 0, 1920, 1920);
 
     Sprite.tv.create(1200,800,0/*id UNIQUE de l'objet*/);
-    Sprite.lampe.create(1000,600,'bleu',1);
+    Sprite.lampe.create(1000,600,'jaune',1);
     Sprite.evier.create(1300,700,2);
     Sprite.radiateur.create(1400,800,3);
-    Sprite.tv.create(1000,800,4);
+    Sprite.radio.create(900,800,4);
     Sprite.louis.create();
 
     //  Create our Timer
@@ -46,18 +44,15 @@ var Game = {
     //  Start the timer running - this is important!
     //  It won't start automatically, allowing you to hook it to button events and the like.
     timer.start();
-
-    keyT = game.input.keyboard.addKey(Phaser.Keyboard.T);
-    keyL = game.input.keyboard.addKey(Phaser.Keyboard.L);
   },
 
   update : function (){
     Sprite.louis.update();
-    Sprite.tv.update(0);
-    Sprite.lampe.update(1);
-    Sprite.evier.update(2);
-    Sprite.radiateur.update(3);
-    Sprite.tv.update(4);
+    Sprite.tv.update(Keys.T(),0);// Touche pour contôler l'objet et ID unique de cet objet
+    Sprite.lampe.update(Keys.L(),1);
+    Sprite.evier.update(Keys.E(),2);
+    Sprite.radiateur.update(Keys.R(),3);
+    Sprite.radio.update(Keys.R(),4);
 
     if(total==0){
       timer.stop();

@@ -3,7 +3,7 @@ Notice d'utilisation :
 
 Cette fonction permet d'ajouter les differents objets au jeu.
 Dans la partie "create" du jeu : Sprite.tv.create(#position en x#,#position en y#,#identifiant unique de l'objet#);
-Dans la partie "update" du jeu : Sprite.tv.update(#identifiant unique de l'objet#);
+Dans la partie "update" du jeu : Sprite.tv.update(#Touche contrôle objet, cf keys.js#,#identifiant unique de l'objet#);
 
 
 ***********************************************************************************************/
@@ -63,16 +63,16 @@ var Sprite = {
       spriteStorage[id].animations.add('tvON', [0, 1, 2, 3, 4, 5, 6], 5, true);
       spriteStorage[id].animations.add('tvOFF', [7], 5, true);
     },
-    update:function(id){
+    update:function(key,id){
       game.physics.arcade.collide(louis, spriteStorage[id]);
       if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
-        if (keyT.isDown){
+        if (key.isDown){
           if (!flipFlop[id]) {
             stateStorage[id]^=true;
             flipFlop[id] = true;
           }
         }
-        if (keyT.isUp) {
+        if (key.isUp) {
           flipFlop[id] = false;
         }
       }
@@ -89,25 +89,28 @@ var Sprite = {
       stateStorage[id]=true;
       if (color == 'bleu') {
         spriteStorage[id]=game.add.sprite(posx,posy,'lampeB');
-        spriteStorage[id].animations.add('lampeON', [0], 5, true);
-        spriteStorage[id].animations.add('lampeOFF', [1], 5, true);
+      }
+      else if (color = 'jaune'){
+        spriteStorage[id]=game.add.sprite(posx,posy,'lampeJ');
       };
+      spriteStorage[id].animations.add('lampeON', [0], 5, true);
+      spriteStorage[id].animations.add('lampeOFF', [1], 5, true);
       spriteStorage[id].scale.setTo(0.5, 0.5);
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].body.setSize(60, 40,10,220);//lampe par derrière
       //changer les parametres si on veut passer devant la lampe.
     },
-    update : function(id) {
+    update : function(key,id) {
       game.physics.arcade.collide(louis, spriteStorage[id]);
       if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
-        if (keyL.isDown){
+        if (key.isDown){
           if (!flipFlop[id]) {
             stateStorage[id]^= true;
             flipFlop[id] = true;
           }
         }
-        if (keyL.isUp) {
+        if (key.isUp) {
           flipFlop[id] = false;
         }
       }
@@ -130,16 +133,16 @@ var Sprite = {
       spriteStorage[id].animations.add('evierON', [0,1,2], 5, true);
       spriteStorage[id].animations.add('evierOFF', [3], 5, true);
     },
-    update : function(id) {
+    update : function(key,id) {
       game.physics.arcade.collide(louis, spriteStorage[id]);
       if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
-        if (keyL.isDown){
+        if (key.isDown){
           if (!flipFlop[id]) {
             stateStorage[id]^=true;
             flipFlop[id] = true;
           }
         }
-        if (keyL.isUp) {
+        if (key.isUp) {
           flipFlop[id] = false;
         }
       }
@@ -162,16 +165,16 @@ var Sprite = {
       spriteStorage[id].animations.add('radiateurON', [1,2,3,4,5], 5, true);
       spriteStorage[id].animations.add('radiateurOFF', [0], 5, true);
     },
-    update : function(id) {
+    update : function(key,id) {
       game.physics.arcade.collide(louis, spriteStorage[id]);
       if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
-        if (keyT.isDown){
+        if (key.isDown){
           if (!flipFlop[id]) {
             stateStorage[id]^=true;
             flipFlop[id] = true;
           }
         }
-        if (keyT.isUp) {
+        if (key.isUp) {
           flipFlop[id] = false;
         }
       }
@@ -180,6 +183,37 @@ var Sprite = {
       }
       else if (stateStorage[id]==false) {
         spriteStorage[id].animations.play('radiateurOFF')
+      }
+    }
+  },
+  radio : {
+    create:function(posx,posy,id) {
+      stateStorage[id]=true;
+      spriteStorage[id]=game.add.sprite(posx,posy,'radio');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].body.setSize(60, 20,70); //droite,bas,décalage
+      spriteStorage[id].animations.add('radioON', [0,1,2], 5, true);
+      spriteStorage[id].animations.add('radioOFF', [3], 5, true);
+    },
+    update:function(key,id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+      if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
+        if (key.isDown){
+          if (!flipFlop[id]) {
+            stateStorage[id]^=true;
+            flipFlop[id] = true;
+          }
+        }
+        if (key.isUp) {
+          flipFlop[id] = false;
+        }
+      }
+      if (stateStorage[id]==true){
+        spriteStorage[id].animations.play('radioON');
+      }
+      else if (stateStorage[id]==false) {
+        spriteStorage[id].animations.play('radioOFF')
       }
     }
   }
