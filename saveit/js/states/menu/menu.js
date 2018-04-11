@@ -10,6 +10,10 @@ var Menu = {
   create : function(){
     var fond = game.add.tileSprite(0, 0, 4000, 3000, 'menu');
     fond.scale.setTo(0.35 ,0.3);
+    //Full screen mode
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    game.scale.setShowAll();
+
     var buttonIntroduction = game.add.button(565, 200, 'b_intro', this.startIntroduction, this, 1, 0, 2).scale.setTo(0.25,0.25);
     var buttonDemarrer = game.add.button(565, 300, 'b_demarrer', this.startStart, this, 1, 0, 2).scale.setTo(0.25,0.25);
     var buttonContinuer = game.add.button(565, 400, 'b_continuer', this.startContinuer, this, 1, 0, 2).scale.setTo(0.25,0.25);

@@ -6,6 +6,10 @@ var Credit = {
   create : function(){
     var fond = game.add.tileSprite(0, 0, 4000, 3000, 'menu');
     fond.scale.setTo(0.35 ,0.3);
+    //Full screen mode
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    game.scale.setShowAll();
+    
     var style1 = { font: "75px Arial", fill: "#ff0000", align: "center" };
     var lesCredits = game.add.text(game.world.centerX, 250, "Crédits", style1);;
     var contenu = "Réalisation : \n Dehooghe Florentin \n Langue Louis-Clément \n Vandewalle Rémi \n Vivier Louis";

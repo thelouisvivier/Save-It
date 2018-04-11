@@ -29,12 +29,18 @@ var Game = {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.tileSprite(0, 0, 1920, 1920, 'sol');
     game.world.setBounds(0, 0, 1920, 1920);
+    //Full screen mode
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    game.scale.setShowAll();
 
+    //Ajout des sprite
     Sprite.tv.create(1200,800,0/*id UNIQUE de l'objet*/);
     Sprite.lampe.create(1000,600,'jaune',1);
     Sprite.evier.create(1300,700,2);
     Sprite.radiateur.create(1400,800,3);
     Sprite.radio.create(900,800,4);
+
+    //Ajout du perso
     Sprite.louis.create();
 
     //  Create our Timer
@@ -47,6 +53,7 @@ var Game = {
   },
 
   update : function (){
+    //Update des differents élements ajoutés dans le create
     Sprite.louis.update();
     Sprite.tv.update(Keys.T(),0);// Touche pour contôler l'objet et ID unique de cet objet
     Sprite.lampe.update(Keys.L(),1);
