@@ -6,6 +6,7 @@ evier -> 200,158
 radiateur -> 240,150
 radio -> 200,56
 fenetre -> 200,162
+tv2 -> 100,100
 
 setSize:
 tv -> 70,20,10
@@ -14,3 +15,4 @@ evier -> 180,0
 radiateur -> 90,20,80
 radio -> 60,5,70
 fenetre - > 60,100,20
+tv 2 -> 70.20.10

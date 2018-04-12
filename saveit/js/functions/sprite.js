@@ -54,14 +54,24 @@ var Sprite = {
     }
   },
   tv : {
-    create:function(posx,posy,id) {
+    create:function(posx,posy,model,id) {
       stateStorage[id]=true;
-      spriteStorage[id]=game.add.sprite(posx,posy,'tv');
-      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
-      spriteStorage[id].body.immovable = true;
-      spriteStorage[id].body.setSize(70, 20, 10); //droite,bas,décalage
-      spriteStorage[id].animations.add('tvON', [0, 1, 2, 3, 4, 5, 6], 5, true);
-      spriteStorage[id].animations.add('tvOFF', [7], 5, true);
+      if (model == 'beige'){
+        spriteStorage[id]=game.add.sprite(posx,posy,'tv');
+        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+        spriteStorage[id].body.immovable = true;
+        spriteStorage[id].body.setSize(70, 20, 10); //droite,bas,décalage
+        spriteStorage[id].animations.add('tvON', [0, 1, 2, 3, 4, 5, 6], 5, true);
+        spriteStorage[id].animations.add('tvOFF', [7], 5, true);
+      }
+      else if (model == 'noir'){
+        spriteStorage[id]=game.add.sprite(posx,posy,'tv2');
+        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+        spriteStorage[id].body.immovable = true;
+        spriteStorage[id].body.setSize(70, 20, 10); //droite,bas,décalage
+        spriteStorage[id].animations.add('tvON', [0, 1, 2], 5, true);
+        spriteStorage[id].animations.add('tvOFF', [3], 5, true);
+      }
     },
     update:function(key,id){
       game.physics.arcade.collide(louis, spriteStorage[id]);

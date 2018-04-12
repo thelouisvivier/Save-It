@@ -24,6 +24,7 @@ var Game = {
     game.load.spritesheet('radiateur', 'assets/sprites/objects/radiateur.png', 240, 150);
     game.load.spritesheet('fenetre', 'assets/sprites/objects/fenetre.png', 200, 162);
     game.load.spritesheet('radio', 'assets/sprites/objects/radio.png', 200, 56);
+    game.load.spritesheet('tv2', 'assets/sprites/objects/tv2.png', 100, 100);
   },
 
   create : function() {
@@ -35,7 +36,7 @@ var Game = {
     game.scale.setShowAll();
 
     //Ajout des sprite
-    Sprite.tv.create(1200,800,0/*id UNIQUE de l'objet*/);
+    Sprite.tv.create(1200,800,'noir',0/*id UNIQUE de l'objet*/);
     Sprite.lampe.create(1000,600,'jaune',1);
     Sprite.evier.create(1300,700,2);
     Sprite.radiateur.create(1400,800,3);
