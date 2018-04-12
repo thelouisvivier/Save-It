@@ -216,6 +216,38 @@ var Sprite = {
         spriteStorage[id].animations.play('radioOFF')
       }
     }
+  },
+  fenetre : {
+    create:function(posx,posy,version,id) {
+      stateStorage[id]=true;
+      spriteStorage[id]=game.add.sprite(posx,posy,'fenetre');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.7, 0.7);
+      spriteStorage[id].body.setSize(60,100,20); //droite,bas,décalage
+      spriteStorage[id].animations.add('fenetreON', [0], 5, true);
+      spriteStorage[id].animations.add('fenetreOFF', [version], 5, true);
+    },
+    update:function(key,id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+      if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
+        if (key.isDown){
+          if (!flipFlop[id]) {
+            stateStorage[id]^=true;
+            flipFlop[id] = true;
+          }
+        }
+        if (key.isUp) {
+          flipFlop[id] = false;
+        }
+      }
+      if (stateStorage[id]==true){
+        spriteStorage[id].animations.play('fenetreON');
+      }
+      else if (stateStorage[id]==false) {
+        spriteStorage[id].animations.play('fenetreOFF')
+      }
+    }
   }
 };
 

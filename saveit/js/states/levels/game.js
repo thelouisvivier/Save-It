@@ -22,6 +22,7 @@ var Game = {
     game.load.spritesheet('lampeJ', 'assets/sprites/objects/lampeJ.png', 100, 256);
     game.load.spritesheet('evier', 'assets/sprites/objects/evier.png', 200, 158);
     game.load.spritesheet('radiateur', 'assets/sprites/objects/radiateur.png', 240, 150);
+    game.load.spritesheet('fenetre', 'assets/sprites/objects/fenetre.png', 200, 162);
     game.load.spritesheet('radio', 'assets/sprites/objects/radio.png', 200, 56);
   },
 
@@ -39,6 +40,8 @@ var Game = {
     Sprite.evier.create(1300,700,2);
     Sprite.radiateur.create(1400,800,3);
     Sprite.radio.create(900,800,4);
+    Sprite.fenetre.create(800,600,4,5);
+    Sprite.fenetre.create(600,600,1,6);
 
     //Ajout du perso
     Sprite.louis.create();
@@ -60,6 +63,8 @@ var Game = {
     Sprite.evier.update(Keys.E(),2);
     Sprite.radiateur.update(Keys.R(),3);
     Sprite.radio.update(Keys.R(),4);
+    Sprite.fenetre.update(Keys.F(),5);
+    Sprite.fenetre.update(Keys.F(),6);
 
     if(total==0){
       timer.stop();
