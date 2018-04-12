@@ -7,12 +7,14 @@ radiateur -> 240,150
 radio -> 200,56
 fenetre -> 200,162
 tv2 -> 100,100
+plante -> NA
 
 setSize:
-tv -> 70,20,10
-lampe -> 60,40,10,220 (� changer)
-evier -> 180,0
-radiateur -> 90,20,80
-radio -> 60,5,70
-fenetre - > 60,100,20
-tv 2 -> 70.20.10
+tv -> 60,20,20,0 (NEW)
+tv 2 -> 60,20,20,0 (NEW)
+lampe -> 20,60,40,0 (NEW)
+evier -> 120,-20,40,0 (NEW)
+radiateur -> 100,0,70,0 (NEW)
+radio -> 60,0,70,0 (NEW)
+fenetre - > 110,100,50,0 (NEW)
+plante -> 5,-40,25,0 (NEW)

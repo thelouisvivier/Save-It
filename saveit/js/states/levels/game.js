@@ -25,6 +25,7 @@ var Game = {
     game.load.spritesheet('fenetre', 'assets/sprites/objects/fenetre.png', 200, 162);
     game.load.spritesheet('radio', 'assets/sprites/objects/radio.png', 200, 56);
     game.load.spritesheet('tv2', 'assets/sprites/objects/tv2.png', 100, 100);
+    game.load.image('plante', 'assets/sprites/objects/plante.png');
   },
 
   create : function() {
@@ -36,13 +37,13 @@ var Game = {
     game.scale.setShowAll();
 
     //Ajout des sprite
-    Sprite.tv.create(1200,800,'noir',0/*id UNIQUE de l'objet*/);
+    Sprite.tv.create(1200,800,'beige',0/*id UNIQUE de l'objet*/);
     Sprite.lampe.create(1000,600,'jaune',1);
     Sprite.evier.create(1300,700,2);
     Sprite.radiateur.create(1400,800,3);
     Sprite.radio.create(900,800,4);
-    Sprite.fenetre.create(800,600,4,5);
-    Sprite.fenetre.create(600,600,1,6);
+    Sprite.fenetre.create(600,600,1/*model de fenetre*/,6);
+    Sprite.plante.create(1000,1000,7);
 
     //Ajout du perso
     Sprite.louis.create();
@@ -64,8 +65,8 @@ var Game = {
     Sprite.evier.update(Keys.E(),2);
     Sprite.radiateur.update(Keys.R(),3);
     Sprite.radio.update(Keys.R(),4);
-    Sprite.fenetre.update(Keys.F(),5);
     Sprite.fenetre.update(Keys.F(),6);
+    Sprite.plante.update(7);
 
     if(total==0){
       timer.stop();

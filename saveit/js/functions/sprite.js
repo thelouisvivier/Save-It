@@ -11,7 +11,7 @@ var Sprite = {
   louis : {
     create:function() {
       louis = game.add.sprite(game.world.centerX, game.world.centerY, 'louis');
-      //louis.scale.setTo(0.5, 0.5);
+      //louis.scale.setTo(1.5,2);
       //louis.body.collideWorldBounds = true;
       game.physics.enable(louis, Phaser.Physics.ARCADE);
       cursors = game.input.keyboard.createCursorKeys();
@@ -60,7 +60,7 @@ var Sprite = {
         spriteStorage[id]=game.add.sprite(posx,posy,'tv');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
-        spriteStorage[id].body.setSize(70, 20, 10); //droite,bas,décalage
+        spriteStorage[id].body.setSize(60,20,20,0); //largeur,hauteur,decalage largeur,décalage hauteur
         spriteStorage[id].animations.add('tvON', [0, 1, 2, 3, 4, 5, 6], 5, true);
         spriteStorage[id].animations.add('tvOFF', [7], 5, true);
       }
@@ -68,7 +68,7 @@ var Sprite = {
         spriteStorage[id]=game.add.sprite(posx,posy,'tv2');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
-        spriteStorage[id].body.setSize(70, 20, 10); //droite,bas,décalage
+        spriteStorage[id].body.setSize(60,20,20,0); //largeur,hauteur,decalage largeur,décalage hauteur
         spriteStorage[id].animations.add('tvON', [0, 1, 2], 5, true);
         spriteStorage[id].animations.add('tvOFF', [3], 5, true);
       }
@@ -108,8 +108,7 @@ var Sprite = {
       spriteStorage[id].scale.setTo(0.5, 0.5);
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].body.setSize(60, 40,10,220);//lampe par derrière
-      //changer les parametres si on veut passer devant la lampe.
+      spriteStorage[id].body.setSize(20,60,40,0); //largeur,hauteur,decalage largeur,décalage hauteur
     },
     update : function(key,id) {
       game.physics.arcade.collide(louis, spriteStorage[id]);
@@ -139,7 +138,7 @@ var Sprite = {
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].scale.setTo(0.5, 0.5);
-      spriteStorage[id].body.setSize(180,0);
+      spriteStorage[id].body.setSize(120,-20,40,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('evierON', [0,1,2], 5, true);
       spriteStorage[id].animations.add('evierOFF', [3], 5, true);
     },
@@ -171,7 +170,7 @@ var Sprite = {
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].scale.setTo(0.7,0.7);
-      spriteStorage[id].body.setSize(180,0);
+      spriteStorage[id].body.setSize(100,0,70,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('radiateurON', [1,2,3,4,5], 5, true);
       spriteStorage[id].animations.add('radiateurOFF', [0], 5, true);
     },
@@ -202,7 +201,7 @@ var Sprite = {
       spriteStorage[id]=game.add.sprite(posx,posy,'radio');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].body.setSize(60, 20,70); //droite,bas,décalage
+      spriteStorage[id].body.setSize(60,0,70,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('radioON', [0,1,2], 5, true);
       spriteStorage[id].animations.add('radioOFF', [3], 5, true);
     },
@@ -234,7 +233,7 @@ var Sprite = {
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].scale.setTo(0.7, 0.7);
-      spriteStorage[id].body.setSize(60,100,20); //droite,bas,décalage
+      spriteStorage[id].body.setSize(110,100,50,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('fenetreON', [0], 5, true);
       spriteStorage[id].animations.add('fenetreOFF', [version], 5, true);
     },
@@ -257,6 +256,18 @@ var Sprite = {
       else if (stateStorage[id]==false) {
         spriteStorage[id].animations.play('fenetreOFF')
       }
+    }
+  },
+  plante : {
+    create:function(posx,posy,id) {
+      stateStorage[id]=true;
+      spriteStorage[id]=game.add.sprite(posx,posy,'plante');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].body.setSize(5,-40,25,0); //largeur,hauteur,decalage largeur,décalage hauteur
+    },
+    update:function(id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
     }
   }
 };
