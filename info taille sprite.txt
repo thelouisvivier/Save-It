@@ -8,6 +8,7 @@ radio -> 200,56
 fenetre -> 200,162
 tv2 -> 100,100
 plante -> NA
+walls -> 64,64
 
 setSize:
 tv -> 60,20,20,0 (NEW)
