@@ -5,7 +5,7 @@ Cette fonction permet d'ajouter des fenêtres popup où il faut cliquer pour la 
 Elle s'appelle de cette manière : Popup.create('#nom du message#',#position en x#,#position en y#);
 Elle est à inserer dans la partie "create" du jeu.
 
-Vous trouverer le nom des messages dans le fichier messages.js
+Vous trouverer le nom des messages dans le fichier /data/messages.js
 
 ***********************************************************************************************/
 var popupsprite;
@@ -22,8 +22,8 @@ function selectMessages (name){
 };
 
 var Popup = {
-  create:function(selmsg,posx,pos) {
-    popupsprite = game.add.sprite(posx, posy, 'popup');
+  create:function(selmsg,posx,posy) {
+    popupsprite = game.add.sprite(posx, posy, 'popupportrait');
     popupsprite.scale.setTo(0.4, 0.4);
     popupsprite.inputEnabled = true;
     popupsprite.input.useHandCursor = true;
