@@ -15,7 +15,7 @@ var Game = {
 
   preload: function (){
     game.load.image('sol','assets/textures/sol.png');
-    game.load.image('popup', 'assets/popup/popupwindow.png');
+    game.load.image('popupportrait', 'assets/popup/popupportrait.png');
     game.load.spritesheet('louis', 'assets/sprites/perso/louis.png', 100, 95);
     game.load.spritesheet('tv', 'assets/sprites/objects/tv.png', 100, 100);
     game.load.spritesheet('lampeB', 'assets/sprites/objects/lampeB.png', 100, 256);
@@ -44,6 +44,7 @@ var Game = {
     Sprite.radio.create(900,800,4);
     Sprite.fenetre.create(600,600,1/*model de fenetre*/,6);
     Sprite.plante.create(1000,1000,7);
+    //Popup.create('lampeinfo',1000,600);
 
     //Ajout du perso
     Sprite.louis.create();
