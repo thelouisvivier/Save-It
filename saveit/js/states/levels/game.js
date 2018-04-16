@@ -33,6 +33,7 @@ var Game = {
     game.load.image('plante', 'assets/sprites/objects/decorations/plante.png');
     game.load.image('plante1', 'assets/sprites/objects/decorations/plante1.png');
     game.load.image('plante2', 'assets/sprites/objects/decorations/plante2.png');
+    game.load.image('cadre', 'assets/sprites/objects/decorations/cadre.png');
   },
 
   create : function() {
@@ -50,7 +51,7 @@ var Game = {
     Appliances.microonde.create(1400,800,3);
     Appliances.radio.create(900,800,4);
     Appliances.fenetre.create(600,600,1/*model de fenetre*/,6);
-    Appliances.gaz.create(1000,1000,7);
+    Decorations.cadre.create(1000,1000,7);
     //Popup.create('lampeinfo',1000,600);
 
     //Ajout du perso
@@ -74,7 +75,7 @@ var Game = {
     Appliances.microonde.update(Keys.M(),3);
     Appliances.radio.update(Keys.R(),4);
     Appliances.fenetre.update(Keys.F(),6);
-    Appliances.gaz.update(Keys.G(),'gaz',7);
+    Decorations.cadre.update(7);
 
     if(total==0){
       timer.stop();
