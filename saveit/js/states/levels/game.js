@@ -65,7 +65,7 @@ var Game = {
 
   update : function (){
     //Update des differents élements ajoutés dans le create
-    Objects.louis.update();
+    Perso.louis.update();
     Objects.tv.update(Keys.T(),0);// Touche pour contôler l'objet et ID unique de cet objet
     Objects.lampe.update(Keys.L(),1);
     Objects.evier.update(Keys.E(),2);
