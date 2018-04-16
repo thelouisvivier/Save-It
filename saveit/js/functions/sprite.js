@@ -317,6 +317,38 @@ var Sprite = {
         spriteStorage[id].animations.play('ordinateurOFF')
       }
     }
+  },
+  machinealaver : {
+    create:function(posx,posy,id) {
+      stateStorage[id]=true;
+      spriteStorage[id]=game.add.sprite(posx,posy,'machinealaver');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.3, 0.3);
+      spriteStorage[id].body.setSize(60,20,270,90); //largeur,hauteur,decalage largeur,décalage hauteur
+      spriteStorage[id].animations.add('machineON', [0,1,2,3], 5, true);
+      spriteStorage[id].animations.add('machineOFF', [4], 1, true);
+    },
+    update:function(key,id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+      if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
+        if (key.isDown){
+          if (!flipFlop[id]) {
+            stateStorage[id]^=true;
+            flipFlop[id] = true;
+          }
+        }
+        if (key.isUp) {
+          flipFlop[id] = false;
+        }
+      }
+      if (stateStorage[id]==true){
+        spriteStorage[id].animations.play('machineON');
+      }
+      else if (stateStorage[id]==false) {
+        spriteStorage[id].animations.play('machineOFF')
+      }
+    }
   }
 };
 

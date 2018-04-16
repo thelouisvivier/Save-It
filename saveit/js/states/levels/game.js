@@ -26,6 +26,7 @@ var Game = {
     game.load.spritesheet('radio', 'assets/sprites/objects/radio.png', 200, 56);
     game.load.spritesheet('tv2', 'assets/sprites/objects/tv2.png', 100, 100);
     game.load.spritesheet('ordinateur', 'assets/sprites/objects/ordi.png', 200, 176);
+    game.load.spritesheet('machinealaver', 'assets/sprites/objects/machinealaver.png', 600, 564);
     game.load.image('plante', 'assets/sprites/objects/plante.png');
     game.load.image('plante1', 'assets/sprites/objects/plante1.png');
     game.load.image('plante2', 'assets/sprites/objects/plante2.png');
@@ -43,7 +44,7 @@ var Game = {
     Sprite.tv.create(1200,800,'beige',0/*id UNIQUE de l'objet*/);
     Sprite.lampe.create(1000,600,'jaune',1);
     Sprite.evier.create(1300,700,2);
-    Sprite.ordinateur.create(1400,800,3);
+    Sprite.machinealaver.create(1400,800,3);
     Sprite.radio.create(900,800,4);
     Sprite.fenetre.create(600,600,1/*model de fenetre*/,6);
     Sprite.plante.create(1000,1000,3,7);
@@ -67,7 +68,7 @@ var Game = {
     Sprite.tv.update(Keys.T(),0);// Touche pour contôler l'objet et ID unique de cet objet
     Sprite.lampe.update(Keys.L(),1);
     Sprite.evier.update(Keys.E(),2);
-    Sprite.ordinateur.update(Keys.O(),3);
+    Sprite.machinealaver.update(Keys.M(),3);
     Sprite.radio.update(Keys.R(),4);
     Sprite.fenetre.update(Keys.F(),6);
     Sprite.plante.update(7);
