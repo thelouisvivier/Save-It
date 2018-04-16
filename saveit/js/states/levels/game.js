@@ -42,9 +42,9 @@ var Game = {
     game.scale.setShowAll();
 
     //Ajout des sprite
-    Appliances.tv.create(1200,800,'beige',0/*id UNIQUE de l'objet*/);
+    Appliances.tv.create(1200,800,'noir',0/*id UNIQUE de l'objet*/);
     Appliances.lampe.create(1000,600,'jaune',1);
-    Appliances.evier.create(1300,700,2);
+    Appliances.radiateur.create(1300,700,2);
     Appliances.microonde.create(1400,800,3);
     Appliances.radio.create(900,800,4);
     Appliances.fenetre.create(600,600,1/*model de fenetre*/,6);
@@ -68,7 +68,7 @@ var Game = {
     Perso.louis.update();
     Appliances.tv.update(Keys.T(),0);// Touche pour contôler l'objet et ID unique de cet objet
     Appliances.lampe.update(Keys.L(),1);
-    Appliances.evier.update(Keys.E(),2);
+    Appliances.radiateur.update(Keys.R(),2);
     Appliances.microonde.update(Keys.M(),3);
     Appliances.radio.update(Keys.R(),4);
     Appliances.fenetre.update(Keys.F(),6);

@@ -6,5 +6,5 @@ game.state.add('ContinuerState', Continuer);
 game.state.add('CreditState', Credit);
 game.state.add('MenuState', Menu);
 game.state.add('Level1State', Level1);
-game.state.start('MenuState');
-//game.state.start('Level1State');
+//game.state.start('MenuState');
+game.state.start('GameState');
