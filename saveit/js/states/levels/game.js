@@ -21,14 +21,15 @@ var Game = {
     game.load.spritesheet('lampeB', 'assets/sprites/objects/appliances/lampeB.png', 100, 256);
     game.load.spritesheet('lampeJ', 'assets/sprites/objects/appliances/lampeJ.png', 100, 256);
     game.load.spritesheet('evier', 'assets/sprites/objects/appliances/evier.png', 200, 158);
-    game.load.spritesheet('radiateur', 'assets/sprites/objects/appliances/radiateur.png', 240, 150);
-    game.load.spritesheet('fenetre', 'assets/sprites/objects/appliances/fenetre.png', 200, 162);
-    game.load.spritesheet('radio', 'assets/sprites/objects/appliances/radio.png', 200, 56);
-    game.load.spritesheet('tv2', 'assets/sprites/objects/appliances/tv2.png', 100, 100);
-    game.load.spritesheet('ordinateur', 'assets/sprites/objects/appliances/ordi.png', 200, 176);
-    game.load.spritesheet('machinealaver', 'assets/sprites/objects/appliances/machinealaver.png', 600, 564);
-    game.load.spritesheet('microonde', 'assets/sprites/objects/appliances/micro-onde.png', 880, 612);
-    game.load.spritesheet('frigo', 'assets/sprites/objects/appliances/frigo.png', 800, 1000);
+    game.load.spritesheet('radiateur', 'assets/sprites/objects/appliances/radiateur.png', 240,150);
+    game.load.spritesheet('fenetre', 'assets/sprites/objects/appliances/fenetre.png', 200,162);
+    game.load.spritesheet('radio', 'assets/sprites/objects/appliances/radio.png', 200,56);
+    game.load.spritesheet('tv2', 'assets/sprites/objects/appliances/tv2.png', 100,100);
+    game.load.spritesheet('ordinateur', 'assets/sprites/objects/appliances/ordi.png', 200,176);
+    game.load.spritesheet('machinealaver', 'assets/sprites/objects/appliances/machinealaver.png', 600,564);
+    game.load.spritesheet('microonde', 'assets/sprites/objects/appliances/micro-onde.png', 880,612);
+    game.load.spritesheet('frigo', 'assets/sprites/objects/appliances/frigo.png', 800,1000);
+    game.load.spritesheet('gaz', 'assets/sprites/objects/appliances/gaz.png', 300,322);
     game.load.image('plante', 'assets/sprites/objects/decorations/plante.png');
     game.load.image('plante1', 'assets/sprites/objects/decorations/plante1.png');
     game.load.image('plante2', 'assets/sprites/objects/decorations/plante2.png');
@@ -49,7 +50,7 @@ var Game = {
     Appliances.microonde.create(1400,800,3);
     Appliances.radio.create(900,800,4);
     Appliances.fenetre.create(600,600,1/*model de fenetre*/,6);
-    Appliances.frigo.create(1000,1000,7);
+    Appliances.gaz.create(1000,1000,7);
     //Popup.create('lampeinfo',1000,600);
 
     //Ajout du perso
@@ -73,7 +74,7 @@ var Game = {
     Appliances.microonde.update(Keys.M(),3);
     Appliances.radio.update(Keys.R(),4);
     Appliances.fenetre.update(Keys.F(),6);
-    Appliances.frigo.update(Keys.F(),7);
+    Appliances.gaz.update(Keys.G(),'gaz',7);
 
     if(total==0){
       timer.stop();

@@ -104,6 +104,44 @@ var Appliances = {
       }
     }
   },
+  gaz : {
+    create:function(posx,posy,id) {
+      stateStorage[id]=true;
+      spriteStorage[id]=game.add.sprite(posx,posy,'gaz');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.3, 0.3);
+      spriteStorage[id].body.setSize(300,50,0,0); //largeur,hauteur,decalage largeur,décalage hauteur
+      spriteStorage[id].animations.add('gazON', [1,2], 5, true);
+      spriteStorage[id].animations.add('fourON', [3], 5, true);
+      spriteStorage[id].animations.add('gazOFF', [0], 5, true);
+    },
+    update:function(key,state,id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+      if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
+        if (key.isDown){
+          if (!flipFlop[id]) {
+            stateStorage[id]^=true;
+            flipFlop[id] = true;
+          }
+        }
+        if (key.isUp) {
+          flipFlop[id] = false;
+        }
+      }
+      if (stateStorage[id]==true){
+        if (state == 'four'){
+          spriteStorage[id].animations.play('fourON');
+        }
+        else if (state == 'gaz'){
+          spriteStorage[id].animations.play('gazON');
+        }
+      }
+      else if (stateStorage[id]==false) {
+        spriteStorage[id].animations.play('gazOFF')
+      }
+    }
+  },
   lampe : {
     create : function(posx,posy,color,id) {
       stateStorage[id]=true;
