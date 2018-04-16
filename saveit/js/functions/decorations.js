@@ -41,5 +41,25 @@ var Decorations = {
     update:function(id){
       game.physics.arcade.collide(louis, spriteStorage[id]);
     }
+  },
+  tapis : {
+    create:function(posx,posy,model,l,h,id) {
+      stateStorage[id]=true;
+      if (model == 'bleu'){
+        spriteStorage[id]=game.add.sprite(posx,posy,'tapisbleu');
+        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+        spriteStorage[id].body.immovable = true;
+        spriteStorage[id].scale.setTo(l/500,h/375);
+      }
+      else if (model =='vert'){
+        spriteStorage[id]=game.add.sprite(posx,posy,'tapisvert');
+        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+        spriteStorage[id].body.immovable = true;
+        spriteStorage[id].scale.setTo(l/500,h/375);
+      }
+    },
+    update:function(id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+    }
   }
 };

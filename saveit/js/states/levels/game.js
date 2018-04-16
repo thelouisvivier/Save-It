@@ -35,6 +35,8 @@ var Game = {
     game.load.image('plante3', 'assets/sprites/objects/decorations/plante3.png');
     game.load.image('plante4', 'assets/sprites/objects/decorations/plante4.png');
     game.load.image('cadre', 'assets/sprites/objects/decorations/cadre.png');
+    game.load.image('tapisbleu', 'assets/sprites/objects/decorations/tapis bleu.jpg');
+    game.load.image('tapisvert', 'assets/sprites/objects/decorations/tapis vert.jpg');
   },
 
   create : function() {
@@ -52,7 +54,7 @@ var Game = {
     Appliances.microonde.create(1400,800,3);
     Appliances.radio.create(900,800,4);
     Appliances.fenetre.create(600,600,1/*model de fenetre*/,6);
-    Decorations.plante.create(1000,1000,4,7);
+    Decorations.tapis.create(1000,1000,'vert',200,300,7);
     //Popup.create('lampeinfo',1000,600);
 
     //Ajout du perso
@@ -76,7 +78,7 @@ var Game = {
     Appliances.microonde.update(Keys.M(),3);
     Appliances.radio.update(Keys.R(),4);
     Appliances.fenetre.update(Keys.F(),6);
-    Decorations.plante.update(7);
+    Decorations.tapis.update(7);
 
     if(total==0){
       timer.stop();
@@ -92,7 +94,7 @@ var Game = {
 
   render :function () {
     game.debug.text('Argent restant: ' + total + '€', 1000 , 64);
-    game.debug.body(spriteStorage[7]);
+    //game.debug.body(spriteStorage[7]);
   },
 
 }
