@@ -7,7 +7,7 @@ Dans la partie "update" du jeu : Objects.tv.update(#Touche contrôle objet, cf k
 
 
 ***********************************************************************************************/
-var Objects = {
+var Appliances = {
   tv : {
     create:function(posx,posy,model,id) {
       stateStorage[id]=true;

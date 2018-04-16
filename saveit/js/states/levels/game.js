@@ -42,17 +42,17 @@ var Game = {
     game.scale.setShowAll();
 
     //Ajout des sprite
-    Objects.tv.create(1200,800,'beige',0/*id UNIQUE de l'objet*/);
-    Objects.lampe.create(1000,600,'jaune',1);
-    Objects.evier.create(1300,700,2);
-    Objects.microonde.create(1400,800,3);
-    Objects.radio.create(900,800,4);
-    Objects.fenetre.create(600,600,1/*model de fenetre*/,6);
+    Appliances.tv.create(1200,800,'beige',0/*id UNIQUE de l'objet*/);
+    Appliances.lampe.create(1000,600,'jaune',1);
+    Appliances.evier.create(1300,700,2);
+    Appliances.microonde.create(1400,800,3);
+    Appliances.radio.create(900,800,4);
+    Appliances.fenetre.create(600,600,1/*model de fenetre*/,6);
     Decorations.plante.create(1000,1000,3,7);
     //Popup.create('lampeinfo',1000,600);
 
     //Ajout du perso
-    Objects.louis.create();
+    Perso.louis.create();
 
     //  Create our Timer
     timer = game.time.create(false);
@@ -66,12 +66,12 @@ var Game = {
   update : function (){
     //Update des differents élements ajoutés dans le create
     Perso.louis.update();
-    Objects.tv.update(Keys.T(),0);// Touche pour contôler l'objet et ID unique de cet objet
-    Objects.lampe.update(Keys.L(),1);
-    Objects.evier.update(Keys.E(),2);
-    Objects.microonde.update(Keys.M(),3);
-    Objects.radio.update(Keys.R(),4);
-    Objects.fenetre.update(Keys.F(),6);
+    Appliances.tv.update(Keys.T(),0);// Touche pour contôler l'objet et ID unique de cet objet
+    Appliances.lampe.update(Keys.L(),1);
+    Appliances.evier.update(Keys.E(),2);
+    Appliances.microonde.update(Keys.M(),3);
+    Appliances.radio.update(Keys.R(),4);
+    Appliances.fenetre.update(Keys.F(),6);
     Decorations.plante.update(7);
 
     if(total==0){
