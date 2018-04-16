@@ -15,21 +15,27 @@ var Decorations = {
     create:function(posx,posy,model,id) {
       stateStorage[id]=true;
       if (model == 1){
-        spriteStorage[id]=game.add.sprite(posx,posy,'plante');
+        spriteStorage[id]=game.add.sprite(posx,posy,'plante1');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
       }
       else if (model == 2){
-        spriteStorage[id]=game.add.sprite(posx,posy,'plante1');
+        spriteStorage[id]=game.add.sprite(posx,posy,'plante2');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
         spriteStorage[id].scale.setTo(0.2,0.2);
       }
       else if (model == 3){
-        spriteStorage[id]=game.add.sprite(posx,posy,'plante2');
+        spriteStorage[id]=game.add.sprite(posx,posy,'plante3');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
         spriteStorage[id].scale.setTo(0.2,0.2);
+      }
+      else if (model == 4){
+        spriteStorage[id]=game.add.sprite(posx,posy,'plante4');
+        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+        spriteStorage[id].body.immovable = true;
+        spriteStorage[id].scale.setTo(0.15,0.15);
       }
     },
     update:function(id){
