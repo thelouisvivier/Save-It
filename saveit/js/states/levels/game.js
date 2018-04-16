@@ -21,9 +21,7 @@ var Game = {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.tileSprite(0, 0, 1920, 1920, 'sol');
     game.world.setBounds(0, 0, 1920, 1920);
-    //Full screen mode
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.setShowAll();
+
 
     //Ajout des sprite
     Appliances.tv.create(1200,800,'noir',0/*id UNIQUE de l'objet*/);

@@ -1,9 +1,16 @@
 //Tout de dont vous avez besoin dans le preload
 
 var Whattoload = function() {
+  //Textures
   game.load.image('sol','assets/textures/sol.png');
+
+  //Popup
   game.load.image('popupportrait', 'assets/popup/popupportrait.png');
+
+  //Perso
   game.load.spritesheet('louis', 'assets/sprites/perso/louis.png', 100, 95);
+
+  //Appliances
   game.load.spritesheet('tv', 'assets/sprites/objects/appliances/tv.png', 100, 100);
   game.load.spritesheet('lampeB', 'assets/sprites/objects/appliances/lampeB.png', 100, 256);
   game.load.spritesheet('lampeJ', 'assets/sprites/objects/appliances/lampeJ.png', 100, 256);
@@ -17,7 +24,11 @@ var Whattoload = function() {
   game.load.spritesheet('microonde', 'assets/sprites/objects/appliances/micro-onde.png', 880,612);
   game.load.spritesheet('frigo', 'assets/sprites/objects/appliances/frigo.png', 800,1000);
   game.load.spritesheet('gaz', 'assets/sprites/objects/appliances/gaz.png', 300,322);
+
+  //Furnitures
   game.load.spritesheet('armoire', 'assets/sprites/objects/furnitures/armoire.png', 400,376);
+
+  //Decorations
   game.load.image('plante1', 'assets/sprites/objects/decorations/plante1.png');
   game.load.image('plante2', 'assets/sprites/objects/decorations/plante2.png');
   game.load.image('plante3', 'assets/sprites/objects/decorations/plante3.png');
