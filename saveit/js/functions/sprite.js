@@ -287,15 +287,15 @@ var Sprite = {
     }
   },
   ordinateur : {
-    create:function(posx,posy,version,id) {
+    create:function(posx,posy,id) {
       stateStorage[id]=true;
-      spriteStorage[id]=game.add.sprite(posx,posy,'fenetre');
+      spriteStorage[id]=game.add.sprite(posx,posy,'ordinateur');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].scale.setTo(0.7, 0.7);
-      spriteStorage[id].body.setSize(110,100,50,0); //largeur,hauteur,decalage largeur,décalage hauteur
-      spriteStorage[id].animations.add('fenetreON', [0], 5, true);
-      spriteStorage[id].animations.add('fenetreOFF', [version], 5, true);
+      spriteStorage[id].scale.setTo(0.6, 0.7);
+      spriteStorage[id].body.setSize(100,10,50,5); //largeur,hauteur,decalage largeur,décalage hauteur
+      spriteStorage[id].animations.add('ordinateurON', [0], 1, true);
+      spriteStorage[id].animations.add('ordinateurOFF', [1], 1, true);
     },
     update:function(key,id){
       game.physics.arcade.collide(louis, spriteStorage[id]);
@@ -311,10 +311,10 @@ var Sprite = {
         }
       }
       if (stateStorage[id]==true){
-        spriteStorage[id].animations.play('fenetreON');
+        spriteStorage[id].animations.play('ordinateurON');
       }
       else if (stateStorage[id]==false) {
-        spriteStorage[id].animations.play('fenetreOFF')
+        spriteStorage[id].animations.play('ordinateurOFF')
       }
     }
   }

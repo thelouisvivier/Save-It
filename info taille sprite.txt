@@ -9,6 +9,7 @@ fenetre -> 200,162
 tv2 -> 100,100
 plante -> NA
 walls -> 64,64
+ordinateur -> 200,176
 
 setSize:
 tv -> 60,20,20,0
@@ -21,3 +22,4 @@ fenetre - > 110,100,50,0
 plante -> 5,-40,25,0
 plante1 -> 40,1,180,20
 plante2 -> -5,1,200,20
+ordinateur -> 100,10,50,5
