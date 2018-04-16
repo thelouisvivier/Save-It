@@ -2,12 +2,12 @@
 Notice d'utilisation :
 
 Cette fonction permet d'ajouter les differents objets au jeu.
-Dans la partie "create" du jeu : Sprite.tv.create(#position en x#,#position en y#,#identifiant unique de l'objet#);
-Dans la partie "update" du jeu : Sprite.tv.update(#Touche contrôle objet, cf keys.js#,#identifiant unique de l'objet#);
+Dans la partie "create" du jeu : Objects.tv.create(#position en x#,#position en y#,#identifiant unique de l'objet#);
+Dans la partie "update" du jeu : Objects.tv.update(#Touche contrôle objet, cf keys.js#,#identifiant unique de l'objet#);
 
 
 ***********************************************************************************************/
-var Sprite = {
+var Objects = {
   louis : {
     create:function() {
       louis = game.add.sprite(game.world.centerX, game.world.centerY, 'louis');
@@ -256,34 +256,6 @@ var Sprite = {
       else if (stateStorage[id]==false) {
         spriteStorage[id].animations.play('fenetreOFF')
       }
-    }
-  },
-  plante : {
-    create:function(posx,posy,model,id) {
-      stateStorage[id]=true;
-      if (model == 1){
-        spriteStorage[id]=game.add.sprite(posx,posy,'plante');
-        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
-        spriteStorage[id].body.immovable = true;
-        spriteStorage[id].body.setSize(5,-40,25,0); //largeur,hauteur,decalage largeur,décalage hauteur
-      }
-      else if (model == 2){
-        spriteStorage[id]=game.add.sprite(posx,posy,'plante1');
-        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
-        spriteStorage[id].body.immovable = true;
-        spriteStorage[id].scale.setTo(0.25,0.25);
-        spriteStorage[id].body.setSize(40,1,180,20); //largeur,hauteur,decalage largeur,décalage hauteur
-      }
-      else if (model == 3){
-        spriteStorage[id]=game.add.sprite(posx,posy,'plante2');
-        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
-        spriteStorage[id].body.immovable = true;
-        spriteStorage[id].scale.setTo(0.25,0.25);
-        spriteStorage[id].body.setSize(-5,1,200,20); //largeur,hauteur,decalage largeur,décalage hauteur
-      };
-    },
-    update:function(id){
-      game.physics.arcade.collide(louis, spriteStorage[id]);
     }
   },
   ordinateur : {
