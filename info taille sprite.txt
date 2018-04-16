@@ -3,6 +3,7 @@ MIS A JOUR APRES CORRECTION DE LA HITBOX DE LOUIS
 Preload:
   - Evier -> 200,158
   - Fenetre -> 200,162
+  - Frigo -> 800,1000
   - Lampe -> 100,256
   - Louis -> 100,95
   - Machine à laver -> 600,564
@@ -17,6 +18,7 @@ Preload:
 setSize:
   - Evier -> 196,10,0,-20
   - Fenetre -> 162,100,25,0
+  - Frigo -> 280,200,260,260
   - Lampe -> 100,80,0,0
   - Louis -> 60,95,20,0
   - Machine à laver -> 196,50,200,100
