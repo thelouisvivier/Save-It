@@ -11,6 +11,7 @@ plante -> NA
 walls -> 64,64
 ordinateur -> 200,176
 machine a laver -> 600,564
+micro-onde -> 880,612
 
 setSize:
 tv -> 60,20,20,0
@@ -25,3 +26,4 @@ plante1 -> 40,1,180,20
 plante2 -> -5,1,200,20
 ordinateur -> 100,10,50,5
 machine a laver -> 60,20,270,90
+micro-onde -> 100,5,320,0
