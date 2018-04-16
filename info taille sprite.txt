@@ -11,11 +11,13 @@ plante -> NA
 walls -> 64,64
 
 setSize:
-tv -> 60,20,20,0 (NEW)
-tv 2 -> 60,20,20,0 (NEW)
-lampe -> 20,60,40,0 (NEW)
-evier -> 120,-20,40,0 (NEW)
-radiateur -> 100,0,70,0 (NEW)
-radio -> 60,0,70,0 (NEW)
-fenetre - > 110,100,50,0 (NEW)
-plante -> 5,-40,25,0 (NEW)
+tv -> 60,20,20,0
+tv 2 -> 60,20,20,0
+lampe -> 20,60,40,0
+evier -> 120,-20,40,0
+radiateur -> 100,0,70,0
+radio -> 60,0,70,0
+fenetre - > 110,100,50,0
+plante -> 5,-40,25,0
+plante1 -> 40,1,180,20
+plante2 -> -5,1,200,20

@@ -26,6 +26,8 @@ var Game = {
     game.load.spritesheet('radio', 'assets/sprites/objects/radio.png', 200, 56);
     game.load.spritesheet('tv2', 'assets/sprites/objects/tv2.png', 100, 100);
     game.load.image('plante', 'assets/sprites/objects/plante.png');
+    game.load.image('plante1', 'assets/sprites/objects/plante1.png');
+    game.load.image('plante2', 'assets/sprites/objects/plante2.png');
   },
 
   create : function() {
@@ -43,7 +45,8 @@ var Game = {
     Sprite.radiateur.create(1400,800,3);
     Sprite.radio.create(900,800,4);
     Sprite.fenetre.create(600,600,1/*model de fenetre*/,6);
-    Sprite.plante.create(1000,1000,7);
+    Sprite.plante.create(1000,1000,3,7);
+    Sprite.plante.create(800,800,1,8);
     //Popup.create('lampeinfo',1000,600);
 
     //Ajout du perso
@@ -83,6 +86,7 @@ var Game = {
 
   render :function () {
     game.debug.text('Argent restant: ' + total + '€', 1000 , 64);
+    game.debug.body(spriteStorage[7]);
   },
 
 }
