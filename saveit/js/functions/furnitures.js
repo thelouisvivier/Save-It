@@ -28,4 +28,33 @@ var Furnitures = {
       game.physics.arcade.collide(louis, spriteStorage[id]);
     }
   },
+  canape : {
+    create:function(posx,posy,version,id) {
+      stateStorage[id]=true;
+      spriteStorage[id] = game.add.sprite(posx,posy,'canape');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.15, 0.15);
+      spriteStorage[id].animations.add('face', [0], 1, true);
+      spriteStorage[id].animations.add('dos', [1], 1, true);
+      spriteStorage[id].animations.add('droite', [2], 1, true);
+      spriteStorage[id].animations.add('gauche', [3], 1, true);
+      if (version == 'face'){
+        spriteStorage[id].body.setSize(1273,200,0,100); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      else if (version == 'dos'){
+        spriteStorage[id].body.setSize(1273,50,0,100); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      else if (version == 'droite'){
+        spriteStorage[id].body.setSize(505,400,400,0); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      else if (version == 'gauche'){
+        spriteStorage[id].body.setSize(505,400,400,0); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      spriteStorage[id].animations.play(version);
+    },
+    update:function(id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+    }
+  }
 };
