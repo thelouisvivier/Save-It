@@ -30,7 +30,7 @@ var Game = {
     Appliances.microonde.create(1400,800,3);
     Appliances.radio.create(900,800,4);
     Appliances.fenetre.create(600,600,1/*model de fenetre*/,6);
-    Furnitures.canape.create(1000,1000,'gauche',7);
+    Furnitures.tablebasse.create(1000,1000,7);
     //Popup.create('lampeinfo',1000,600);
 
     //Ajout du perso
@@ -54,7 +54,7 @@ var Game = {
     Appliances.microonde.update(Keys.M(),3);
     Appliances.radio.update(Keys.R(),4);
     Appliances.fenetre.update(Keys.F(),6);
-    Furnitures.armoire.update(7);
+    Furnitures.tablebasse.update(7);
 
     if(total==0){
       timer.stop();

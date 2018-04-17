@@ -4,6 +4,7 @@ Preload:
   - Armoire -> 400,376
   - Canapé -> 1280,958
   - Evier -> 200,158
+  -Fauteuil -> 83,84
   - Fenetre -> 200,162
   - Frigo -> 800,1000
   - Gaz -> 300,322
@@ -28,6 +29,9 @@ setSize:
           /droite -> 505,400,400,0
           /gauche -> 505,400,400,0
   - Evier -> 196,10,0,-20
+  - Fauteuil/face -> 82,5,0,5
+            /droite -> 82,5,0,0
+            /gauche -> 82,5,0,0
   - Fenetre -> 162,100,25,0
   - Frigo -> 280,200,260,260
   - Gaz -> 300,50,0,0
