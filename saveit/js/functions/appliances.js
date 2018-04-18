@@ -8,6 +8,38 @@ Dans la partie "update" du jeu : Objects.tv.update(#Touche contrôle objet, cf k
 
 ***********************************************************************************************/
 var Appliances = {
+  baignoire : {
+    create:function(posx,posy,id) {
+      stateStorage[id]=true;
+      spriteStorage[id]=game.add.sprite(posx,posy,'baignoire');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.6, 0.6);
+      spriteStorage[id].body.setSize(254,5,25,125); //largeur,hauteur,decalage largeur,décalage hauteur
+      spriteStorage[id].animations.add('baignoireON', [1,2,3], 5, true);
+      spriteStorage[id].animations.add('baignoireOFF', [0], 1, true);
+    },
+    update:function(key,id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+      if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
+        if (key.isDown){
+          if (!flipFlop[id]) {
+            stateStorage[id]^=true;
+            flipFlop[id] = true;
+          }
+        }
+        if (key.isUp) {
+          flipFlop[id] = false;
+        }
+      }
+      if (stateStorage[id]==true){
+        spriteStorage[id].animations.play('baignoireON');
+      }
+      else if (stateStorage[id]==false) {
+        spriteStorage[id].animations.play('baignoireOFF')
+      }
+    }
+  },
   evier : {
     create : function(posx,posy,id) {
       stateStorage[id]=true;

@@ -2,9 +2,10 @@ MIS A JOUR APRES CORRECTION DE LA HITBOX DE LOUIS
 
 Preload:
   - Armoire -> 400,376
+  - Baignoire -> 300,300
   - Canapé -> 1280,958
   - Evier -> 200,158
-  -Fauteuil -> 83,84
+  - Fauteuil -> 83,84
   - Fenetre -> 200,162
   - Frigo -> 800,1000
   - Gaz -> 300,322
@@ -24,6 +25,7 @@ setSize:
           /facecommode -> 196,40,100,150
           /cotelivre -> 85,180,160,0
           /cotecommode -> 85,130,160,50
+  - Baignoire -> 254,5,25,125
   - Canapé/face -> 1273,200,0,100
           /dos -> 1273,50,0,100
           /droite -> 505,400,400,0
