@@ -82,17 +82,30 @@ var Furnitures = {
       game.physics.arcade.collide(louis, spriteStorage[id]);
     },
   },
-    tablebasse : {
-      create:function(posx,posy,id) {
-        stateStorage[id]=true;
-        spriteStorage[id] = game.add.sprite(posx,posy,'table basse');
-        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
-        spriteStorage[id].body.immovable = true;
-        spriteStorage[id].scale.setTo(0.2,0.2);
-        //spriteStorage[id].body.setSize(640,237,0,0); //largeur,hauteur,decalage largeur,décalage hauteur
-      },
-      update:function(id){
-        //game.physics.arcade.collide(louis, spriteStorage[id]);
-      }
+  table : {
+    create:function(posx,posy,id) {
+      stateStorage[id]=true;
+      spriteStorage[id] = game.add.sprite(posx,posy,'table');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.2,0.2);
+      spriteStorage[id].body.setSize(640,5,0,-50); //largeur,hauteur,decalage largeur,décalage hauteur
+    },
+    update:function(id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+    }
+  },
+  tablebasse : {
+    create:function(posx,posy,id) {
+      stateStorage[id]=true;
+      spriteStorage[id] = game.add.sprite(posx,posy,'table basse');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.2,0.2);
+      //spriteStorage[id].body.setSize(640,237,0,0); //largeur,hauteur,decalage largeur,décalage hauteur
+    },
+    update:function(id){
+      //game.physics.arcade.collide(louis, spriteStorage[id]);
+    }
   }
 };

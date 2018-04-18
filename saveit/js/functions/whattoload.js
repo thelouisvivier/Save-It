@@ -30,6 +30,7 @@ var Whattoload = function() {
   game.load.spritesheet('canape', 'assets/sprites/objects/furnitures/canapé.png', 1280,958);
   game.load.spritesheet('fauteuil', 'assets/sprites/objects/furnitures/fauteuil.png', 83,84);
   game.load.image('table basse', 'assets/sprites/objects/furnitures/table basse.png');
+  game.load.image('table', 'assets/sprites/objects/furnitures/table.png');
 
   //Decorations
   game.load.image('plante1', 'assets/sprites/objects/decorations/plante1.png');
