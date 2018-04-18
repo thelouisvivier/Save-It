@@ -20,11 +20,12 @@ var Whattoload = function() {
   game.load.spritesheet('lampeJ', 'assets/sprites/objects/appliances/lampeJ.png', 100, 256);
   game.load.spritesheet('machinealaver', 'assets/sprites/objects/appliances/machinealaver.png', 600,564);
   game.load.spritesheet('microonde', 'assets/sprites/objects/appliances/micro-onde.png', 880,612);
-  game.load.spritesheet('ordinateur', 'assets/sprites/objects/appliances/ordi.png', 200,176);
+  game.load.spritesheet('ordinateur', 'assets/sprites/objects/appliances/ordinateur.png', 200,176);
   game.load.spritesheet('radiateur', 'assets/sprites/objects/appliances/radiateur.png', 240,150);
   game.load.spritesheet('radio', 'assets/sprites/objects/appliances/radio.png', 200,56);
   game.load.spritesheet('tv', 'assets/sprites/objects/appliances/tv.png', 100, 100);
   game.load.spritesheet('tv2', 'assets/sprites/objects/appliances/tv2.png', 100,100);
+  game.load.spritesheet('ventilateur', 'assets/sprites/objects/appliances/ventilateur.png', 200,500);
 
   //Furnitures
   game.load.spritesheet('armoire', 'assets/sprites/objects/furnitures/armoire.png', 400,376);

@@ -410,6 +410,38 @@ var Appliances = {
         spriteStorage[id].animations.play('tvOFF')
       }
     }
+  },
+  ventilateur : {
+    create:function(posx,posy,id) {
+      stateStorage[id]=true;
+      spriteStorage[id]=game.add.sprite(posx,posy,'ventilateur');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.45, 0.45);
+      spriteStorage[id].body.setSize(90,70,55,180); //largeur,hauteur,decalage largeur,décalage hauteur
+      spriteStorage[id].animations.add('ventilateurON', [0,1], 5, true);
+      spriteStorage[id].animations.add('ventilateurOFF', [2], 1, true);
+    },
+    update:function(key,id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+      if(louis.body.x-spriteStorage[id].body.x<=100 && spriteStorage[id].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[id].body.y<=100 && spriteStorage[id].body.y-louis.body.y<=100){
+        if (key.isDown){
+          if (!flipFlop[id]) {
+            stateStorage[id]^=true;
+            flipFlop[id] = true;
+          }
+        }
+        if (key.isUp) {
+          flipFlop[id] = false;
+        }
+      }
+      if (stateStorage[id]==true){
+        spriteStorage[id].animations.play('ventilateurON');
+      }
+      else if (stateStorage[id]==false) {
+        spriteStorage[id].animations.play('ventilateurOFF')
+      }
+    }
   }
 };
 

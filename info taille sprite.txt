@@ -18,6 +18,7 @@ Preload:
   - Radio -> 200,56
   - TV -> 100,100
   - TV2 -> 100,100
+  - Ventilateur -> 200,500
 
 
 setSize:
@@ -47,4 +48,4 @@ setSize:
   - Table -> 640,5,0,-50
   - TV -> 96,10,1,0
   - TV2 -> 96,20,1,0
-  -
+  - Ventilateur -> 90,70,55,180
