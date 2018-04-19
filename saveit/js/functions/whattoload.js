@@ -42,4 +42,17 @@ var Whattoload = function() {
   game.load.image('plante4', 'assets/sprites/objects/decorations/plante4.png');
   game.load.image('tapisbleu', 'assets/sprites/objects/decorations/tapis bleu.jpg');
   game.load.image('tapisvert', 'assets/sprites/objects/decorations/tapis vert.jpg');
+
+  //walls
+  game.load.image('wall-beigeclair', 'assets/textures/wall-beigeclair.png');
+  game.load.image('wall-beigefonce', 'assets/textures/wall-beigefonce.png');
+  game.load.image('wall-bleu', 'assets/textures/wall-bleu.png');
+  game.load.image('wall-cacadoie', 'assets/textures/wall-cacadoie.png');
+  game.load.image('wall-gris', 'assets/textures/wall-gris.png');
+  game.load.image('wall-grisclair', 'assets/textures/wall-grisclair.png');
+  game.load.image('wall-marron', 'assets/textures/wall-marron.png');
+  game.load.image('wall-noir', 'assets/textures/wall-noir.png');
+  game.load.image('wall-orange', 'assets/textures/wall-orange.png');
+  game.load.image('wall-rose', 'assets/textures/wall-rose.png');
+  game.load.image('wall-vert', 'assets/textures/wall-vert.png');
 };
