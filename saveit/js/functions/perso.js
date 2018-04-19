@@ -15,23 +15,23 @@ var Perso = {
     update:function(){
       if (cursors.up.isDown){
         //louis.body.moveUp(300)
-        louis.body.velocity.y = -300;
+        louis.body.velocity.y = -600;
         louis.body.velocity.x=0;
         louis.animations.play('up');
       }
       else if (cursors.down.isDown){
         //louis.body.moveDown(300);
-        louis.body.velocity.y = 300;
+        louis.body.velocity.y = 600;
         louis.body.velocity.x=0;
         louis.animations.play('down');
       }
       else if (cursors.left.isDown){
-        louis.body.velocity.x = -300;
+        louis.body.velocity.x = -600;
         louis.body.velocity.y=0;
         louis.animations.play('left');
       }
       else if (cursors.right.isDown){
-        louis.body.velocity.x =300;
+        louis.body.velocity.x =600;
         louis.body.velocity.y=0;
         louis.animations.play('right');
       }
