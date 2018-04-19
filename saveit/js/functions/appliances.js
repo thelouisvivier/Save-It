@@ -34,9 +34,11 @@ var Appliances = {
       }
       if (stateStorage[id]==true){
         spriteStorage[id].animations.play('baignoireON');
+
       }
       else if (stateStorage[id]==false) {
         spriteStorage[id].animations.play('baignoireOFF')
+
       }
     }
   },
@@ -405,9 +407,11 @@ var Appliances = {
       }
       if (stateStorage[id]==true){
         spriteStorage[id].animations.play('tvON');
+
       }
       else if (stateStorage[id]==false) {
         spriteStorage[id].animations.play('tvOFF')
+
       }
     }
   },
