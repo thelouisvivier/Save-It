@@ -3,6 +3,8 @@
 var Whattoload = function() {
   //Textures
   game.load.image('sol','assets/textures/sol.png');
+  game.load.image('parquet','assets/textures/parquet.jpg');
+  game.load.image('carrelage','assets/textures/carrelage.png');
 
   //Popup
   game.load.image('popupportrait', 'assets/popup/popupportrait.png');
