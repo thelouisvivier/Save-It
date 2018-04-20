@@ -51,6 +51,9 @@ var Game = {
     console.log(spriteStorage[1]);
     console.log(spriteStorage[2]);
 
+    //Menu Pause
+    menuPause();
+
   },
 
   update : function (){
