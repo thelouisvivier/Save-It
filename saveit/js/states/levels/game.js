@@ -55,6 +55,7 @@ var Game = {
     console.log(spriteStorage[1]);
     console.log(spriteStorage[2]);
 
+<<<<<<< HEAD
     for (o of stateStorage){
     nbobj++;};
 
@@ -63,6 +64,10 @@ var Game = {
 
 
 
+=======
+    //Menu Pause
+    menuPause();
+>>>>>>> 265442f29ff0fd016e1989e1eb09bc3156fc8e80
 
   },
 
