@@ -57,4 +57,10 @@ var Whattoload = function() {
   game.load.image('wall-orange', 'assets/textures/wall-orange.png');
   game.load.image('wall-rose', 'assets/textures/wall-rose.png');
   game.load.image('wall-vert', 'assets/textures/wall-vert.png');
+
+  //pause
+  game.load.spritesheet('fondPause', 'assets/textures/pause.png');
+  game.load.spritesheet('b_demarrer','./assets/buttons/demarrer.png', 0, 357);
+  game.load.spritesheet('b_continuer','./assets/buttons/continuer.png', 0, 357);
+  game.load.spritesheet('b_credits','./assets/buttons/credits.png', 0, 357);
 };
