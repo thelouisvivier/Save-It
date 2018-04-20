@@ -1,12 +1,14 @@
 //Pour le joueur
 var louis;
 var cursors;
-var nbobjon;
+var nbobj;
 //Pour les objets
 var spriteStorage = [];
 var stateStorage = [];
 var flipFlop = [];
-
+var turnon;
+var coutobjprecedent;
+coutobjprecedent=0
 //Compteur
 var timer;
 var total;
@@ -19,7 +21,7 @@ var Game = {
 
   create : function() {
     total=100;
-    nbobjon=0;
+    nbobj=0;
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.tileSprite(0, 0, 1920, 1920, 'sol');
     game.world.setBounds(0, 0, 1920, 1920);
@@ -46,10 +48,21 @@ var Game = {
     //  It won't start automatically, allowing you to hook it to button events and the like.
     timer.start();
     timer.loop(1000, Game.countobjon,this);
+    timer.loop(2000, Game.allumeobj,this);
+
     console.log(spriteStorage[0].key);
     console.log(spriteStorage[0]);
     console.log(spriteStorage[1]);
     console.log(spriteStorage[2]);
+
+    for (o of stateStorage){
+    nbobj++;};
+
+
+
+
+
+
 
   },
 
@@ -70,7 +83,7 @@ var Game = {
   },
 
   updateCounter : function (){
-    total
+    total;
   },
 
   render :function () {
@@ -81,20 +94,63 @@ var Game = {
   {
     for(i of spriteStorage){
       if(i.key=='tv2' && stateStorage[i.z-1]){
-     total-=2;
+        objectcost.forEach(function(element) {
+          index = objectcost.indexOf(element);
+          if (objectcost[index].name == 'tv2'){
+            total -= objectcost[index].cost;
+          }
+        });
    };
       if(i.key=='radio' && stateStorage[i.z-1])
       {
-        total-=1.5;
+        objectcost.forEach(function(element) {
+          index = objectcost.indexOf(element);
+          if (objectcost[index].name == 'radio'){
+            total -= objectcost[index].cost;
+          }
+        });
       };
       if(i.key=='lampe' && stateStorage[i.z-1])
       {
-        total-=1;
+        objectcost.forEach(function(element) {
+          index = objectcost.indexOf(element);
+          if (objectcost[index].name == 'lampe'){
+            total -= objectcost[index].cost;
+          }
+        });
       };
       if(i.key=='ventilateur' && stateStorage[i.z-1])
       {
-        total-=1.3;
+        objectcost.forEach(function(element) {
+          index = objectcost.indexOf(element);
+          if (objectcost[index].name == 'ventilateur'){
+            total -= objectcost[index].cost;
+          }
+        });
       };
     }
+},
+allumeobj :function()
+{
+  console.log(coutobjprecedent);
+  if(coutobjprecedent <= 1.75)
+  {
+    turnon = Math.random() * (nbobj);
+    turnon=Math.trunc(turnon);
+    stateStorage[turnon]=true;
+    objectcost.forEach(function(element)
+      {
+        index = objectcost.indexOf(element);
+        if (objectcost[index].name == spriteStorage[turnon].key)
+        {
+          coutobjprecedent= objectcost[index].cost;
+          console.log(coutobjprecedent);
+        }
+      });
 }
+else {
+  coutobjprecedent=coutobjprecedent-1;
+}
+
+},
 }

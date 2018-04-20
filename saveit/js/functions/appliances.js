@@ -10,7 +10,7 @@ Dans la partie "update" du jeu : Objects.tv.update(#Touche contrôle objet, cf k
 var Appliances = {
   baignoire : {
     create:function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'baignoire');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -44,7 +44,7 @@ var Appliances = {
   },
   evier : {
     create : function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id] = game.add.sprite(posx,posy,'evier');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -76,7 +76,7 @@ var Appliances = {
   },
   fenetre : {
     create:function(posx,posy,version,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'fenetre');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -108,7 +108,7 @@ var Appliances = {
   },
   frigo : {
     create:function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'frigo');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -140,7 +140,7 @@ var Appliances = {
   },
   gaz : {
     create:function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'gaz');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -178,7 +178,7 @@ var Appliances = {
   },
   lampe : {
     create : function(posx,posy,color,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       if (color == 'bleu') {
         spriteStorage[id]=game.add.sprite(posx,posy,'lampeB');
       }
@@ -215,7 +215,7 @@ var Appliances = {
   },
   machinealaver : {
     create:function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'machinealaver');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -247,7 +247,7 @@ var Appliances = {
   },
   microonde : {
     create:function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'microonde');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -279,7 +279,7 @@ var Appliances = {
   },
   ordinateur : {
     create:function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'ordinateur');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -311,7 +311,7 @@ var Appliances = {
   },
   radiateur : {
     create : function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id] = game.add.sprite(posx,posy,'radiateur');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -343,7 +343,7 @@ var Appliances = {
   },
   radio : {
     create:function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'radio');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
@@ -374,7 +374,7 @@ var Appliances = {
   },
   tv : {
     create:function(posx,posy,model,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       if (model == 'beige'){
         spriteStorage[id]=game.add.sprite(posx,posy,'tv');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
@@ -417,7 +417,7 @@ var Appliances = {
   },
   ventilateur : {
     create:function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'ventilateur');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
