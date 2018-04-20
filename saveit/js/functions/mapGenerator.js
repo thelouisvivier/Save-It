@@ -3,9 +3,9 @@ var MapGen = {
     game.add.tileSprite(10, 0, 1400, 825, 'parquet'); //Bureau
     game.add.tileSprite(10, 825, 1400, 1125, 'carrelage'); //Cuisine
     game.add.tileSprite(1710, 125, 1400, 850, 'carrelage'); //SDB
-    game.add.tileSprite(1710, 1100, 1400, 850, 'parquet'); //Chambre
-    game.add.tileSprite(0, 2075, 3100, 1125, 'parquet'); //Salon
-    game.add.tileSprite(1410, 0, 300, 2075, 'carrelage'); //Couloir
+    game.add.tileSprite(1710, 1100, 1400, 850, 'moquette'); //Chambre
+    game.add.tileSprite(0, 2075, 3100, 1125, 'parquet2'); //Salon
+    game.add.tileSprite(1410, 0, 300, 2075, 'parquet2'); //Couloir
 
     Walls.horizontal.create(0,0,'beigeclair',1400,125,0);//Bureau fond
     Walls.horizontal.create(0,0,'noir',1400,20,1);//Bureau fond
