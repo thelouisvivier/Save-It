@@ -1,20 +1,24 @@
 var MapGen = {
   create : function(){
-    game.add.tileSprite(0, 0, 1400, 825, 'parquet');
+    game.add.tileSprite(10, 0, 1400, 825, 'parquet'); //Bureau
+    game.add.tileSprite(10, 825, 1400, 1125, 'carrelage'); //Cuisine
+    game.add.tileSprite(1710, 125, 1400, 850, 'carrelage'); //SDB
+    game.add.tileSprite(1710, 1100, 1400, 850, 'parquet'); //Chambre
+    game.add.tileSprite(0, 2075, 3100, 1125, 'parquet'); //Salon
+    game.add.tileSprite(1410, 0, 300, 2075, 'carrelage'); //Couloir
+
     Walls.horizontal.create(0,0,'beigeclair',1400,125,0);//Bureau fond
     Walls.horizontal.create(0,0,'noir',1400,20,1);//Bureau fond
     Walls.vertical.create(0,0,'noir',50,825,2);//Bureau gauche
     Walls.vertical.create(1400,0,'noir',20,350,3);//Bureau part1
     Walls.vertical.create(1400,475,'noir',20,350,4);//Bureau part2 --- Attention, laisser 125 d'ouverture pour louis
 
-    game.add.tileSprite(0, 825, 1400, 1125, 'carrelage');
     Walls.horizontal.create(0,825,'cacadoie',1400,125,5);//Cuisine fond
     Walls.horizontal.create(0,825,'noir',1400,20,6);//Cuisine fond
     Walls.vertical.create(0,825,'noir',50,1125,7);//Cusine gauche
     Walls.vertical.create(1400,825,'noir',20,500,8);//Cuisine part1
     Walls.vertical.create(1400,1450,'noir',20,500,9);//Cuisine part2
 
-    game.add.tileSprite(1700, 0, 1400, 850, 'carrelage');
     Walls.horizontal.create(1700,0,'vert',1400,125,10);//SDB fond
     Walls.horizontal.create(1700,0,'noir',1400,20,11);//SDB fond
     Walls.vertical.create(3050,0,'noir',50,975,12);//SDB gauche
@@ -37,6 +41,8 @@ var MapGen = {
 
     Walls.horizontal.create(1420,0,'marron',280,125,27);//couloir fond
     Walls.horizontal.create(1420,0,'noir',280,20,28);//couloir fond
+    Walls.vertical.create(1400,1950,'noir',20,125,29);//Couloir bas gauche
+    Walls.vertical.create(1700,1950,'noir',20,125,30);//Couloir bas droite
   },
   update : function(){
     Walls.horizontal.update(0);
@@ -73,5 +79,7 @@ var MapGen = {
 
     Walls.horizontal.update(27);
     Walls.horizontal.update(28);
+    Walls.vertical.update(29);
+    Walls.vertical.update(30);
   }
 }
