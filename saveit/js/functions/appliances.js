@@ -80,8 +80,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'fenetre');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].scale.setTo(0.7, 0.7);
-      spriteStorage[id].body.setSize(162,100,25,0); //largeur,hauteur,decalage largeur,décalage hauteur
+      spriteStorage[id].scale.setTo(0.6, 0.6);
+      spriteStorage[id].body.setSize(162,60,25,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('fenetreON', [0], 5, true);
       spriteStorage[id].animations.add('fenetreOFF', [version], 5, true);
     },
@@ -318,7 +318,7 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'ordinateur');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].scale.setTo(0.6, 0.7);
+      spriteStorage[id].scale.setTo(0.8, 0.9);
       spriteStorage[id].body.setSize(182,50,8,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('ordinateurON', [0], 1, true);
       spriteStorage[id].animations.add('ordinateurOFF', [1], 1, true);

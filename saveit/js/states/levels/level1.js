@@ -25,8 +25,12 @@ var Level1 = {
     MapGen.create();
 
     //Ajout des élements
-    Appliances.fenetre.create(200,0,2,0);
-    Appliances.ordinateur.create(500,0,1);
+    Appliances.fenetre.create(400,0,2,0);
+    Appliances.ordinateur.create(100,60,1);
+    Appliances.radiateur.create(375,70,2);
+    Appliances.lampe.create(800,350,'jaune',3);
+    Furnitures.armoire.create(600,-20,'facelivre',4);
+    Decorations.plante.create(300,60,'4',5);
 
     //Ajout du perso
     Perso.louis.create();
@@ -41,12 +45,16 @@ var Level1 = {
 
     Appliances.fenetre.update(Keys.F(),0);
     Appliances.ordinateur.update(Keys.O(),1);
+    Appliances.radiateur.update(Keys.R(),2);
+    Appliances.lampe.update(Keys.L(),3);
+    Furnitures.armoire.update(4);
+    Decorations.plante.update(5);
 
 
   },
   render :function() {
     //Debug
-    game.debug.cameraInfo(game.camera, 32, 32);
+    //game.debug.cameraInfo(game.camera, 32, 32);
 
   }
 }
