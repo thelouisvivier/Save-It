@@ -82,6 +82,31 @@ var Furnitures = {
       game.physics.arcade.collide(louis, spriteStorage[id]);
     },
   },
+  lit : {
+    create:function(posx,posy,version,id) {
+      stateStorage[id]=true;
+      spriteStorage[id] = game.add.sprite(posx,posy,'lit');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.7, 0.7);
+      spriteStorage[id].animations.add('gauche', [0], 1, true);
+      spriteStorage[id].animations.add('droite', [1], 1, true);
+      spriteStorage[id].animations.add('face', [2], 1, true);
+      if (version == 'gauche'){
+        spriteStorage[id].body.setSize(230,50,10,50); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      else if (version == 'droite'){
+        spriteStorage[id].body.setSize(230,50,0,50); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      else if (version == 'face'){
+        spriteStorage[id].body.setSize(180,60,30,40); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      spriteStorage[id].animations.play(version);
+    },
+    update:function(id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+    }
+  },
   tables_chaises : {
     create:function(posx,posy,version,color,orientation,id) {
       stateStorage[id]=true;

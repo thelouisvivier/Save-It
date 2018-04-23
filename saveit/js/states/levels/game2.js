@@ -26,7 +26,7 @@ var Game2 = {
     game.scale.setShowAll();
 
     //Ajout des sprite
-    Furnitures.tables_chaises.create(1200,800,'table+chaises','beige','cote',0);
+    Furnitures.lit.create(1200,800,'face',0);
     Appliances.lampe.create(1000,600,'vert',1);
     Appliances.lavabo.create(1300,700,2);
 
@@ -37,7 +37,7 @@ var Game2 = {
   update : function (){
     //Update des differents élements ajoutés dans le create
     Perso.louis.update();
-    Furnitures.tables_chaises.update(0);
+    Furnitures.lit.update(0);
     Appliances.lampe.update(Keys.L(),1);// Touche pour contôler l'objet et ID unique de cet objet
     Appliances.lavabo.update(Keys.L(),2);
   },
