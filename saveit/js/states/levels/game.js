@@ -59,17 +59,10 @@ var Game = {
     for (o of stateStorage){
     nbobj++;};
 
-
-
-
-
-
-//=======
     //Menu Pause
-/*    menuPause();
->>>>>>> 265442f29ff0fd016e1989e1eb09bc3156fc8e80
-*/
+    menuPause('GameState');
   },
+
 
   update : function (){
     //Update des differents élements ajoutés dans le create

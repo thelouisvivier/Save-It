@@ -1,6 +1,10 @@
-var menuPause = function(){
+//Lors de l'appel de la fonction il faut bien mettre le nom du state
+//afin que le bouton "recommencer fonctionne correctement"
+var menuPause = function(nameState){
   var groupePause = game.add.group();
   var touchePause = game.input.keyboard.addKey(Phaser.Keyboard.ESC);
+  var scaleBoutonX = 0.65;
+  var scaleBoutonY = 0.65;
   touchePause.onDown.add(()=>{
     var posMenuPauseX = game.camera.x + 250;
     var posMenuPauseY = game.camera.y + 200;
@@ -14,29 +18,29 @@ var menuPause = function(){
       game.paused = true;
 
       //Bouton continuer
-      var continuerPause = game.add.button(posMenuPauseX + 20, posMenuPauseY + 300, 'b_demarrer', ()=>{
+      var continuerPause = game.add.button(posMenuPauseX + 20, posMenuPauseY + 300, 'b_reprendre', ()=>{
         groupePause.removeAll(true, true);
         game.paused = false;
       }, this, 1, 0, 2);
-      continuerPause.scale.setTo(0.25,0.25);
+      continuerPause.scale.setTo(scaleBoutonX, scaleBoutonY);
       groupePause.add(continuerPause);
 
       //Bouton recommencer
-      var recommencerPause = game.add.button(posMenuPauseX + 220, posMenuPauseY + 300, 'b_continuer', ()=>{
+      var recommencerPause = game.add.button(posMenuPauseX + 290, posMenuPauseY + 300, 'b_recommencer', ()=>{
         groupePause.removeAll(true, true);
         game.paused = false;
-        game.state.start('GameState');
+        game.state.start(nameState);
       }, this, 1, 0, 2);
-      recommencerPause.scale.setTo(0.25,0.25);
+      recommencerPause.scale.setTo(scaleBoutonX, scaleBoutonY);
       groupePause.add(recommencerPause);
 
       //Bouton sortie
-      var sortiePause = game.add.button(posMenuPauseX + 400, posMenuPauseY + 300, 'b_credits', ()=>{
+      var sortiePause = game.add.button(posMenuPauseX + 570, posMenuPauseY + 300, 'b_ecranTitre', ()=>{
         groupePause.removeAll(true, true);
         game.paused = false;
         game.state.start('MenuState');
       }, this, 1, 0, 2);
-      sortiePause.scale.setTo(0.25,0.25);
+      sortiePause.scale.setTo(scaleBoutonX, scaleBoutonY);
       groupePause.add(sortiePause);
     }
   }, this);

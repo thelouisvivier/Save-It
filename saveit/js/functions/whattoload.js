@@ -65,7 +65,7 @@ var Whattoload = function() {
 
   //pause
   game.load.spritesheet('fondPause', 'assets/textures/pause.png');
-  game.load.spritesheet('b_demarrer','./assets/buttons/demarrer.png', 0, 357);
-  game.load.spritesheet('b_continuer','./assets/buttons/continuer.png', 0, 357);
-  game.load.spritesheet('b_credits','./assets/buttons/credits.png', 0, 357);
+  game.load.spritesheet('b_reprendre','./assets/buttons/reprendresprite.png', 0, 125);
+  game.load.spritesheet('b_recommencer','./assets/buttons/recommencersprite.png', 0, 120);
+  game.load.spritesheet('b_ecranTitre','./assets/buttons/ecrantitresprite.png', 0, 123);
 };
