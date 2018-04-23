@@ -67,5 +67,5 @@ var Whattoload = function() {
   game.load.spritesheet('fondPause', 'assets/textures/pause.png');
   game.load.spritesheet('b_reprendre','./assets/buttons/reprendresprite.png', 0, 125);
   game.load.spritesheet('b_recommencer','./assets/buttons/recommencersprite.png', 0, 120);
-  game.load.spritesheet('b_ecranTitre','./assets/buttons/ecrantitresprite.png', 0, 123);
+  game.load.spritesheet('b_ecranTitre','./assets/buttons/ecrantitresprite.png', 0, 122);
 };
