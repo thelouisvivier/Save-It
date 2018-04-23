@@ -26,8 +26,8 @@ var Game2 = {
     game.scale.setShowAll();
 
     //Ajout des sprite
-    Appliances.tv.create(1200,800,'noir',0/*id UNIQUE de l'objet*/);
-    Appliances.lampe.create(1000,600,'jaune',1);
+    Furnitures.tables_chaises.create(1200,800,'table+chaises','beige','cote',0);
+    Appliances.lampe.create(1000,600,'vert',1);
     Appliances.lavabo.create(1300,700,2);
 
     //Ajout du perso
@@ -37,14 +37,14 @@ var Game2 = {
   update : function (){
     //Update des differents élements ajoutés dans le create
     Perso.louis.update();
-    Appliances.tv.update(Keys.T(),0);// Touche pour contôler l'objet et ID unique de cet objet
-    Appliances.lampe.update(Keys.L(),1);
+    Furnitures.tables_chaises.update(0);
+    Appliances.lampe.update(Keys.L(),1);// Touche pour contôler l'objet et ID unique de cet objet
     Appliances.lavabo.update(Keys.L(),2);
   },
 
   render :function () {
     game.debug.text('Argent restant: ' + total + '€', 1000 , 64);
-    game.debug.body(spriteStorage[2]);
+    game.debug.body(spriteStorage[0]);
   },
 
 }

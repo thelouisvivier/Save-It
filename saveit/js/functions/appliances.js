@@ -187,7 +187,6 @@ var Appliances = {
       }
       else if (color == 'vert'){
         spriteStorage[id]=game.add.sprite(posx,posy,'lampe_verte');
-        console.log('vert');
       };
       spriteStorage[id].animations.add('lampeON', [0], 5, true);
       spriteStorage[id].animations.add('lampeOFF', [1], 5, true);

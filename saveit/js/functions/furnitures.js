@@ -82,14 +82,42 @@ var Furnitures = {
       game.physics.arcade.collide(louis, spriteStorage[id]);
     },
   },
-  table : {
-    create:function(posx,posy,id) {
+  tables_chaises : {
+    create:function(posx,posy,version,color,orientation,id) {
       stateStorage[id]=true;
-      spriteStorage[id] = game.add.sprite(posx,posy,'table');
+      spriteStorage[id] = game.add.sprite(posx,posy,'tables+chaises');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].scale.setTo(0.2,0.2);
-      spriteStorage[id].body.setSize(640,5,0,-50); //largeur,hauteur,decalage largeur,décalage hauteur
+      //spriteStorage[id].scale.setTo(0.6, 0.6);
+      spriteStorage[id].animations.add('tablemarronface', [0], 1, true);
+      spriteStorage[id].animations.add('tablegrisface', [1], 1, true);
+      spriteStorage[id].animations.add('tabletaupeface', [2], 1, true);
+      spriteStorage[id].animations.add('tablebeigeface', [3], 1, true);
+      spriteStorage[id].animations.add('table+chaisesmarronface', [4], 1, true);
+      spriteStorage[id].animations.add('table+chaisesgrisface', [5], 1, true);
+      spriteStorage[id].animations.add('table+chaisestaupeface', [6], 1, true);
+      spriteStorage[id].animations.add('table+chaisesbeigeface', [7], 1, true);
+      spriteStorage[id].animations.add('tablemarroncote', [8], 1, true);
+      spriteStorage[id].animations.add('tablegriscote', [9], 1, true);
+      spriteStorage[id].animations.add('tabletaupecote', [10], 1, true);
+      spriteStorage[id].animations.add('tablebeigecote', [11], 1, true);
+      spriteStorage[id].animations.add('table+chaisesmarroncote', [12], 1, true);
+      spriteStorage[id].animations.add('table+chaisesgriscote', [13], 1, true);
+      spriteStorage[id].animations.add('table+chaisestaupecote', [14], 1, true);
+      spriteStorage[id].animations.add('table+chaisesbeigecote', [15], 1, true);
+      if (version == 'table' && orientation == 'face'){
+        spriteStorage[id].body.setSize(155,10,25,65); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      else if (version == 'table+chaises' && orientation == 'face'){
+        spriteStorage[id].body.setSize(155,50,25,40); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      else if (version == 'table' && orientation == 'cote'){
+        spriteStorage[id].body.setSize(110,70,50,30); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      else if (version == 'table+chaises' && orientation == 'cote'){
+        spriteStorage[id].body.setSize(150,70,30,30); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      spriteStorage[id].animations.play(version+color+orientation);
     },
     update:function(id){
       game.physics.arcade.collide(louis, spriteStorage[id]);
