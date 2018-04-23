@@ -19,7 +19,6 @@ var Level1 = {
   create : function() {
     //Definition du monde
     game.physics.startSystem(Phaser.Physics.ARCADE);
-    game.add.tileSprite(0, 0, 2000, 1500, 'sol');
     game.world.setBounds(0, 0, 2000, 1500);
 
     //Creation de la map
