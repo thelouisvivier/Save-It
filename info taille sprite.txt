@@ -1,4 +1,4 @@
-MIS A JOUR APRES CORRECTION DE LA HITBOX DE LOUIS
+Non mis à jour depuis longtemps. Statut : abandonné (?)
 
 Preload:
   - Armoire -> 400,376

@@ -180,10 +180,14 @@ var Appliances = {
     create : function(posx,posy,color,id) {
       stateStorage[id]=false;
       if (color == 'bleu') {
-        spriteStorage[id]=game.add.sprite(posx,posy,'lampeB');
+        spriteStorage[id]=game.add.sprite(posx,posy,'lampe_bleue');
       }
-      else if (color = 'jaune'){
-        spriteStorage[id]=game.add.sprite(posx,posy,'lampeJ');
+      else if (color == 'jaune'){
+        spriteStorage[id]=game.add.sprite(posx,posy,'lampe_jaune');
+      }
+      else if (color == 'vert'){
+        spriteStorage[id]=game.add.sprite(posx,posy,'lampe_verte');
+        console.log('vert');
       };
       spriteStorage[id].animations.add('lampeON', [0], 5, true);
       spriteStorage[id].animations.add('lampeOFF', [1], 5, true);
