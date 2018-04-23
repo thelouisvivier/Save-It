@@ -19,11 +19,15 @@ var Level1 = {
   create : function() {
     //Definition du monde
     game.physics.startSystem(Phaser.Physics.ARCADE);
-    game.add.tileSprite(0, 0, 3100, 3075, 'sol');
-    game.world.setBounds(0, 0, 3100, 3075);
+    game.add.tileSprite(0, 0, 1550, 1537.5, 'sol');
+    game.world.setBounds(0, 0, 1550, 1537.5);
 
-    //Ajout des sprite
+    //Creation de la map
     MapGen.create();
+
+    //Ajout des élements
+    Appliances.fenetre.create(200,0,2,0);
+    Appliances.ordinateur.create(500,0,1);
 
     //Ajout du perso
     Perso.louis.create();
@@ -36,6 +40,8 @@ var Level1 = {
 
     MapGen.update();
 
+    Appliances.fenetre.update(Keys.F(),0);
+    Appliances.ordinateur.update(Keys.O(),1);
 
 
   },
