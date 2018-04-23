@@ -76,7 +76,7 @@ var Appliances = {
   },
   fenetre : {
     create:function(posx,posy,version,id) {
-      stateStorage[id]=false;
+      stateStorage[id]=true;
       spriteStorage[id]=game.add.sprite(posx,posy,'fenetre');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
