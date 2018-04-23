@@ -21,7 +21,7 @@ var menuPause = function(nameState){
       var continuerPause = game.add.button(posMenuPauseX + 20, posMenuPauseY + 300, 'b_reprendre', ()=>{
         groupePause.removeAll(true, true);
         game.paused = false;
-      }, this, 1, 0, 2);
+      }, this, 0, 0, 1);
       continuerPause.scale.setTo(scaleBoutonX, scaleBoutonY);
       groupePause.add(continuerPause);
 
@@ -30,7 +30,7 @@ var menuPause = function(nameState){
         groupePause.removeAll(true, true);
         game.paused = false;
         game.state.start(nameState);
-      }, this, 1, 0, 2);
+      }, this, 0, 0, 1);
       recommencerPause.scale.setTo(scaleBoutonX, scaleBoutonY);
       groupePause.add(recommencerPause);
 
@@ -39,7 +39,7 @@ var menuPause = function(nameState){
         groupePause.removeAll(true, true);
         game.paused = false;
         game.state.start('MenuState');
-      }, this, 1, 0, 2);
+      }, this, 0, 0, 1);
       sortiePause.scale.setTo(scaleBoutonX, scaleBoutonY);
       groupePause.add(sortiePause);
     }
