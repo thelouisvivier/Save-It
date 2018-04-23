@@ -75,6 +75,7 @@ var Game2 = {
 
   render :function () {
     game.debug.text('Argent restant: ' + total + '€', 1000 , 64);
+    game.debug.body(spriteStorage[4]);
   },
 
 }

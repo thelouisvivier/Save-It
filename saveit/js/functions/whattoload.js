@@ -23,7 +23,7 @@ var Whattoload = function() {
   game.load.spritesheet('lampeB', 'assets/sprites/objects/appliances/lampeB.png', 100, 256);
   game.load.spritesheet('lampeJ', 'assets/sprites/objects/appliances/lampeJ.png', 100, 256);
   game.load.spritesheet('machinealaver', 'assets/sprites/objects/appliances/machinealaver.png', 600,564);
-  //game.load.spritesheet('microonde', 'assets/sprites/objects/appliances/microonde.png', 880,612);
+  game.load.spritesheet('microonde', 'assets/sprites/objects/appliances/microonde.png', 200,200);
   game.load.spritesheet('ordinateur', 'assets/sprites/objects/appliances/ordinateur.png', 200,176);
   game.load.spritesheet('radiateur', 'assets/sprites/objects/appliances/radiateur.png', 240,150);
   game.load.spritesheet('radio', 'assets/sprites/objects/appliances/radio.png', 200,56);
