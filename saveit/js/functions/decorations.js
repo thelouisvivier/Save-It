@@ -57,9 +57,15 @@ var Decorations = {
         spriteStorage[id].body.immovable = true;
         spriteStorage[id].scale.setTo(l/500,h/375);
       }
+      else if (model =='beige'){
+        spriteStorage[id]=game.add.sprite(posx,posy,'tapisbeige');
+        game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+        spriteStorage[id].body.immovable = true;
+        spriteStorage[id].scale.setTo(l/1242,h/810);
+      }
     },
     update:function(id){
-      game.physics.arcade.collide(louis, spriteStorage[id]);
+      //game.physics.arcade.collide(louis, spriteStorage[id]);
     }
   }
 };

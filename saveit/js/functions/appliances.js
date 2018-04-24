@@ -218,7 +218,7 @@ var Appliances = {
   },
   lavabo : {
     create:function(posx,posy,id) {
-      stateStorage[id]=false;
+      stateStorage[id]=true;
       spriteStorage[id]=game.add.sprite(posx,posy,'lavabo');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;

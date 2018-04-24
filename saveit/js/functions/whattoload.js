@@ -47,6 +47,7 @@ var Whattoload = function() {
   game.load.image('plante2', 'assets/sprites/objects/decorations/plante2.png');
   game.load.image('plante3', 'assets/sprites/objects/decorations/plante3.png');
   game.load.image('plante4', 'assets/sprites/objects/decorations/plante4.png');
+  game.load.image('tapisbeige', 'assets/sprites/objects/decorations/tapis beige.jpg');
   game.load.image('tapisbleu', 'assets/sprites/objects/decorations/tapis bleu.jpg');
   game.load.image('tapisvert', 'assets/sprites/objects/decorations/tapis vert.jpg');
 
