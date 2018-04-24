@@ -40,7 +40,7 @@ var MapGen = {
     Walls.horizontal.create(0,1470,'noir',2000,30,26);//Salon bas
 
     Walls.horizontal.create(910,0,'marron',190,125,27);//couloir fond
-    Walls.horizontal.create(910,0,'noir',190,20,28);//couloir fond
+    Walls.horizontal.create(910,0,'noir',190,10,28);//couloir fond
     Walls.vertical.create(900,1000,'noir',10,125,29);//Couloir bas gauche
     Walls.vertical.create(1100,1000,'noir',10,125,30);//Couloir bas droite
 
