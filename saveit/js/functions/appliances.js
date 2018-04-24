@@ -382,6 +382,7 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'radio');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.8,0.8);
       spriteStorage[id].body.setSize(100,5,50,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('radioON', [0,1,2], 5, true);
       spriteStorage[id].animations.add('radioOFF', [3], 5, true);

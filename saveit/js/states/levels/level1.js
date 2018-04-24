@@ -44,6 +44,15 @@ var Level1 = {
     Appliances.machinealaver.create(1050,300,14);
     Decorations.plante.create(1910,310,'1',15);
     Decorations.tapis.create(1400,200,'beige',300,200,16);
+    //Chambre
+    Appliances.radiateur.create(1250,550,17);
+    Appliances.lampe.create(1150,540,'bleu',18);
+    Appliances.tv.create(1780,850,'noir',19);
+    Furnitures.lit.create(1750,565,'face',20);
+    Furnitures.armoire.create(1450,460,'facecommode',21);
+    Appliances.radio.create(1490,530,22);
+
+
 
     //Ajout du perso
     Perso.louis.create();
@@ -74,6 +83,13 @@ var Level1 = {
     Appliances.machinealaver.update(Keys.M(),14);
     //Decorations.plante.update(15);
     Decorations.tapis.update(16);
+
+    Appliances.radiateur.update(Keys.R(),17);
+    Appliances.lampe.update(Keys.L(),18);
+    Appliances.tv.update(Keys.T(),19);
+    Furnitures.lit.update(20);
+    Furnitures.armoire.update(21);
+    Appliances.radio.update(Keys.R(),22);
 
   },
   render :function() {

@@ -88,7 +88,7 @@ var Furnitures = {
       spriteStorage[id] = game.add.sprite(posx,posy,'lit');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].scale.setTo(0.7, 0.7);
+      spriteStorage[id].scale.setTo(0.7, 0.8);
       spriteStorage[id].animations.add('gauche', [0], 1, true);
       spriteStorage[id].animations.add('droite', [1], 1, true);
       spriteStorage[id].animations.add('face', [2], 1, true);
