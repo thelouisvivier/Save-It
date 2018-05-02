@@ -57,6 +57,31 @@ var Furnitures = {
       game.physics.arcade.collide(louis, spriteStorage[id]);
     }
   },
+  cuisine : {
+    create:function(posx,posy,model,color,id) {
+      stateStorage[id]=true;
+      spriteStorage[id] = game.add.sprite(posx,posy,'cuisine');
+      game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
+      spriteStorage[id].body.immovable = true;
+      spriteStorage[id].scale.setTo(0.1, 0.1);
+      spriteStorage[id].animations.add('meubleblanc', [0], 1, true);
+      spriteStorage[id].animations.add('meublemarron', [1], 1, true);
+      spriteStorage[id].animations.add('meublebeige', [2], 1, true);
+      spriteStorage[id].animations.add('armoireblanche', [3], 1, true);
+      spriteStorage[id].animations.add('armoiremarron', [4], 1, true);
+      spriteStorage[id].animations.add('armoirebeige', [5], 1, true);
+      if (model == 'meuble'){
+        spriteStorage[id].body.setSize(1600,800,200,200); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      else if (model == 'armoire'){
+        spriteStorage[id].body.setSize(750,400,600,300); //largeur,hauteur,decalage largeur,décalage hauteur
+      }
+      spriteStorage[id].animations.play(model+color);
+    },
+    update:function(id){
+      game.physics.arcade.collide(louis, spriteStorage[id]);
+    }
+  },
   fauteuil : {
     create:function(posx,posy,version,id) {
       stateStorage[id]=true;

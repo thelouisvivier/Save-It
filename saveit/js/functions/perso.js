@@ -5,6 +5,7 @@ var Perso = {
       //louis.body.collideWorldBounds = true;
       game.physics.enable(louis, Phaser.Physics.ARCADE);
       louis.body.setSize(60,95,20,0); //largeur,hauteur,decalage largeur,décalage hauteur
+      louis.scale.setTo(1,1.1);
       cursors = game.input.keyboard.createCursorKeys();
       game.camera.follow(louis, Phaser.Camera.FOLLOW_LOCKON, 0.1, 0.1);
       louis.animations.add('up', [9, 10, 11], 10, true);

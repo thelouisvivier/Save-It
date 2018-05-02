@@ -51,6 +51,10 @@ var Level1 = {
     Furnitures.lit.create(1750,565,'face',20);
     Furnitures.armoire.create(1450,460,'facecommode',21);
     Appliances.radio.create(1490,530,22);
+    //Cuisine
+    Furnitures.cuisine.create(200,750,'meuble','marron',23);
+
+
 
 
 
@@ -91,10 +95,13 @@ var Level1 = {
     Furnitures.armoire.update(21);
     Appliances.radio.update(Keys.R(),22);
 
+    Furnitures.cuisine.update(23);
+
   },
   render :function() {
     //Debug
     //game.debug.cameraInfo(game.camera, 32, 32);
+    game.debug.body(spriteStorage[23]);
 
   }
 }

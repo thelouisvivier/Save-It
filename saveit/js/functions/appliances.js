@@ -43,15 +43,25 @@ var Appliances = {
     }
   },
   evier : {
-    create : function(posx,posy,id) {
+    create : function(posx,posy,color,id) {
       stateStorage[id]=false;
-      spriteStorage[id] = game.add.sprite(posx,posy,'evier');
+      spriteStorage[id] = game.add.sprite(posx,posy,'cuisine');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].scale.setTo(0.5, 0.5);
-      spriteStorage[id].body.setSize(196,10,0,-20); //largeur,hauteur,decalage largeur,décalage hauteur
-      spriteStorage[id].animations.add('evierON', [0,1,2], 5, true);
-      spriteStorage[id].animations.add('evierOFF', [3], 5, true);
+      spriteStorage[id].scale.setTo(0.1, 0.1);
+      spriteStorage[id].body.setSize(1300,600,350,350); //largeur,hauteur,decalage largeur,décalage hauteur
+      if (color == 'blanc'){
+        spriteStorage[id].animations.add('evierON', [7,8,9], 5, true);
+        spriteStorage[id].animations.add('evierOFF', [6], 5, true);
+      }
+      else if (color =='marron'){
+        spriteStorage[id].animations.add('evierON', [11,12,13], 5, true);
+        spriteStorage[id].animations.add('evierOFF', [10], 5, true);
+      }
+      else if (color == 'beige'){
+        spriteStorage[id].animations.add('evierON', [15,16,17], 5, true);
+        spriteStorage[id].animations.add('evierOFF', [14], 5, true);
+      }
     },
     update : function(key,id) {
       game.physics.arcade.collide(louis, spriteStorage[id]);

@@ -16,7 +16,7 @@ var Whattoload = function() {
 
   //Appliances
   game.load.spritesheet('baignoire', 'assets/sprites/objects/appliances/baignoire.png', 300,300);
-  game.load.spritesheet('evier', 'assets/sprites/objects/appliances/evier.png', 200, 158);
+  game.load.spritesheet('cuisine', 'assets/sprites/objects/appliances/cuisine.png', 2000, 2000);
   game.load.spritesheet('fenetre', 'assets/sprites/objects/appliances/fenetre.png', 200,162);
   game.load.spritesheet('frigo', 'assets/sprites/objects/appliances/frigo.png', 800,1000);
   game.load.spritesheet('gaz', 'assets/sprites/objects/appliances/gaz.png', 300,322);
