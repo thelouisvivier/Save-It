@@ -52,8 +52,13 @@ var Level1 = {
     Furnitures.armoire.create(1450,460,'facecommode',21);
     Appliances.radio.create(1490,530,22);
     //Cuisine
-    Furnitures.cuisine.create(200,750,'meuble','marron',23);
-
+    Appliances.evier.create(300,490,'beige',23);
+    Appliances.frigo.create(80,470,24);
+    Furnitures.cuisine.create(175,503,'armoire','beige',25);
+    Furnitures.cuisine.create(448,490,'meuble','beige',26);
+    Appliances.gaz.create(645,584,27);
+    Appliances.microonde.create(480,555,28);
+    Furnitures.tables_chaises.create(350,770,'table+chaises','gris','face',29);
 
 
 
@@ -93,15 +98,21 @@ var Level1 = {
     Appliances.tv.update(Keys.T(),19);
     Furnitures.lit.update(20);
     Furnitures.armoire.update(21);
-    Appliances.radio.update(Keys.R(),22);
+    Appliances.radio.update(Keys.R(),22); 
 
-    Furnitures.cuisine.update(23);
+    Appliances.evier.update(Keys.E(),23);
+    Appliances.frigo.update(Keys.F(),24);
+    Furnitures.cuisine.update(25);
+    Furnitures.cuisine.update(26);
+    Appliances.gaz.update(Keys.G(),'gaz',27);
+    Appliances.microonde.update(Keys.M(),28);
+    Furnitures.tables_chaises.update(29);
 
   },
   render :function() {
     //Debug
     //game.debug.cameraInfo(game.camera, 32, 32);
-    game.debug.body(spriteStorage[23]);
+    //game.debug.body(spriteStorage[23]);
 
   }
 }

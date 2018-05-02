@@ -122,8 +122,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'frigo');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].scale.setTo(0.3, 0.3);
-      spriteStorage[id].body.setSize(280,200,260,260); //largeur,hauteur,decalage largeur,décalage hauteur
+      spriteStorage[id].scale.setTo(0.28, 0.28);
+      spriteStorage[id].body.setSize(280,160,260,260); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('frigoON', [1], 1, true);
       spriteStorage[id].animations.add('frigoOFF', [0], 1, true);
     },
@@ -155,7 +155,7 @@ var Appliances = {
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].scale.setTo(0.3, 0.3);
-      spriteStorage[id].body.setSize(300,50,0,0); //largeur,hauteur,decalage largeur,décalage hauteur
+      spriteStorage[id].body.setSize(300,50,0,-50); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('gazON', [1,2], 5, true);
       spriteStorage[id].animations.add('fourON', [3], 5, true);
       spriteStorage[id].animations.add('gazOFF', [0], 5, true);
@@ -296,7 +296,7 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'microonde');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].scale.setTo(0.5, 0.5);
+      spriteStorage[id].scale.setTo(0.4, 0.4);
       spriteStorage[id].body.setSize(165,30,15,30); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('microondeON', [0], 1, true);
       spriteStorage[id].animations.add('microondeOFF', [1], 1, true);
