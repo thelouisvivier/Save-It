@@ -3,15 +3,15 @@ var gamerule = {
     for(var i of spriteStorage){
 
 
-      if(i.key=='tv2' && stateStorage[i.id]){
+      if(i.custType=='tv' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'tv2'){
+          if (objectcost[index].name == 'tv'){
             total -= objectcost[index].cost;
           }
         });
       };
-      if(i.key=='radio' && stateStorage[i.id]){
+      if(i.custType=='radio' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'radio'){
@@ -19,7 +19,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='lampe_bleue' && stateStorage[i.id]){
+      if(i.custType=='lampe' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'lampe'){
@@ -27,23 +27,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='lampe_jaune' && stateStorage[i.id]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'lampe'){
-            total -= objectcost[index].cost;
-          }
-        });
-      };
-      if(i.key=='lampe_verte' && stateStorage[i.id]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'lampe'){
-            total -= objectcost[index].cost;
-          }
-        });
-      };
-      if(i.key=='ventilateur' && stateStorage[i.id]){
+      if(i.custType=='ventilateur' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'ventilateur'){
@@ -51,7 +35,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='baignoire' && stateStorage[i.id]){
+      if(i.custType=='baignoire' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'baignoire'){
@@ -59,7 +43,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='evier' && stateStorage[i.id]){
+      if(i.custType=='evier' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'evier'){
@@ -67,7 +51,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='fenetre' && stateStorage[i.id]){
+      if(i.custType=='fenetre' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'fenetre'){
@@ -75,7 +59,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='frigo' && stateStorage[i.id]){
+      if(i.custType=='frigo' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'frigo'){
@@ -83,7 +67,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='lavabo' && stateStorage[i.id]){
+      if(i.custType=='lavabo' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'lavabo'){
@@ -91,7 +75,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='machinealaver' && stateStorage[i.id]){
+      if(i.custType=='machinealaver' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'machinealaver'){
@@ -99,7 +83,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='microonde' && stateStorage[i.id]){
+      if(i.custType=='microonde' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'microonde'){
@@ -107,7 +91,7 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='ordinateur' && stateStorage[i.id]){
+      if(i.custType=='ordinateur' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'ordinateur'){
@@ -115,18 +99,10 @@ var gamerule = {
           }
         });
       };
-      if(i.key=='radiateur' && stateStorage[i.id]){
+      if(i.custType=='radiateur' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
           if (objectcost[index].name == 'radiateur'){
-            total -= objectcost[index].cost;
-          }
-        });
-      };
-      if(i.key=='tv' && stateStorage[i.id]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'tv'){
             total -= objectcost[index].cost;
           }
         });
@@ -142,7 +118,7 @@ var gamerule = {
       stateStorage[turnon]=true;
       objectcost.forEach(function(element){
         index = objectcost.indexOf(element);
-        if (objectcost[index].name == spriteStorage[turnon].key){
+        if (objectcost[index].name == spriteStorage[turnon].custType){
           coutobjprecedent= objectcost[index].cost;
           console.log(index);
         }
