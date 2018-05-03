@@ -86,14 +86,14 @@ var Appliances = {
   },
   fenetre : {
     create:function(posx,posy,version,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'fenetre');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].scale.setTo(0.6, 0.6);
       spriteStorage[id].body.setSize(162,60,25,0); //largeur,hauteur,decalage largeur,décalage hauteur
-      spriteStorage[id].animations.add('fenetreON', [0], 5, true);
-      spriteStorage[id].animations.add('fenetreOFF', [version], 5, true);
+      spriteStorage[id].animations.add('fenetreOFF', [0], 5, true);
+      spriteStorage[id].animations.add('fenetreON', [version], 5, true);
     },
     update:function(key,id){
       game.physics.arcade.collide(louis, spriteStorage[id]);
@@ -228,14 +228,14 @@ var Appliances = {
   },
   lavabo : {
     create:function(posx,posy,id) {
-      stateStorage[id]=true;
+      stateStorage[id]=false;
       spriteStorage[id]=game.add.sprite(posx,posy,'lavabo');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].scale.setTo(0.6, 0.6);
       spriteStorage[id].body.setSize(115,10,40,40); //largeur,hauteur,decalage largeur,décalage hauteur
-      spriteStorage[id].animations.add('lavaboON', [0], 1, true);
-      spriteStorage[id].animations.add('lavaboOFF', [1,2,3,4,5],5, true);
+      spriteStorage[id].animations.add('lavaboOFF', [0], 1, true);
+      spriteStorage[id].animations.add('lavaboON', [1,2,3,4,5],5, true);
     },
     update:function(key,id){
       game.physics.arcade.collide(louis, spriteStorage[id]);
@@ -255,6 +255,63 @@ var Appliances = {
       }
       else if (stateStorage[id]==false) {
         spriteStorage[id].animations.play('lavaboOFF');
+      }
+    }
+  },
+  lumiere : {
+    create:function(posxApp,posyApp,posxInt,posyInt,color,forme,idApp,idInt) {
+      stateStorage[idApp]=false;
+      stateStorage[idInt]=false;
+      spriteStorage[idApp]=game.add.sprite(posxApp,posyApp,'appliques');
+      spriteStorage[idInt]=game.add.sprite(posxInt,posyInt,'interrupteur');
+      game.physics.enable(spriteStorage[idApp], Phaser.Physics.ARCADE);
+      spriteStorage[idApp].body.immovable = true;
+      game.physics.enable(spriteStorage[idInt], Phaser.Physics.ARCADE);
+      spriteStorage[idInt].body.immovable = true;
+      spriteStorage[idApp].scale.setTo(0.4, 0.4);
+      spriteStorage[idInt].scale.setTo(0.5, 0.5);
+      if (color == 'blanc'&& forme =='rectangulaire'){
+        spriteStorage[idApp].animations.add('lumièreOFF', [0], 1, true);
+        spriteStorage[idApp].animations.add('lumièreON', [1],1, true);
+      }
+      else if (color =='marron' && forme =='rectangulaire'){
+        spriteStorage[idApp].animations.add('lumièreOFF', [2], 1, true);
+        spriteStorage[idApp].animations.add('lumièreON', [3],1, true);
+      }
+      else if (color =='noir' && forme =='rectangulaire'){
+        spriteStorage[idApp].animations.add('lumièreOFF', [4], 1, true);
+        spriteStorage[idApp].animations.add('lumièreON', [5],1, true);
+      }
+      else if (color =='blanc' && forme =='rond'){
+        spriteStorage[idApp].animations.add('lumièreOFF', [6], 1, true);
+        spriteStorage[idApp].animations.add('lumièreON', [7],1, true);
+      }
+      else if (color =='marron' && forme =='rond'){
+        spriteStorage[idApp].animations.add('lumièreOFF', [8], 1, true);
+        spriteStorage[idApp].animations.add('lumièreON', [9],1, true);
+      }
+      else if (color =='noir' && forme =='rond'){
+        spriteStorage[idApp].animations.add('lumièreOFF', [10], 1, true);
+        spriteStorage[idApp].animations.add('lumièreON', [11],1, true);
+      }
+    },
+    update:function(key,idApp,idInt){
+      if(louis.body.x-spriteStorage[idInt].body.x<=100 && spriteStorage[idInt].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[idInt].body.y<=100 && spriteStorage[idInt].body.y-louis.body.y<=100){
+        if (key.isDown){
+          if (!flipFlop[idApp]) {
+            stateStorage[idApp]^=true;
+            flipFlop[idApp] = true;
+          }
+        }
+        if (key.isUp) {
+          flipFlop[idApp] = false;
+        }
+      }
+      if (stateStorage[idApp]==true){
+        spriteStorage[idApp].animations.play('lumièreON');
+      }
+      else if (stateStorage[idApp]==false) {
+        spriteStorage[idApp].animations.play('lumièreOFF');
       }
     }
   },
