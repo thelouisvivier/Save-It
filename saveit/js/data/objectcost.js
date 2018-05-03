@@ -12,4 +12,7 @@ var objectcost = [
     {name:'ordinateur', cost:2.5},
     {name:'radiateur', cost:0},
     {name:'tv', cost:2},
+    //Manque gaz
+    //Manque Applique
+    //Manque mirroir
 ];
