@@ -21,7 +21,25 @@ var gamerule = {
         }
       });
     };
-    if(i.key=='lampe' && stateStorage[i.z-1])
+    if(i.key=='lampe_bleue' && stateStorage[i.z-1])
+    {
+      objectcost.forEach(function(element) {
+        index = objectcost.indexOf(element);
+        if (objectcost[index].name == 'lampe'){
+          total -= objectcost[index].cost;
+        }
+      });
+    };
+    if(i.key=='lampe_jaune' && stateStorage[i.z-1])
+    {
+      objectcost.forEach(function(element) {
+        index = objectcost.indexOf(element);
+        if (objectcost[index].name == 'lampe'){
+          total -= objectcost[index].cost;
+        }
+      });
+    };
+    if(i.key=='lampe_verte' && stateStorage[i.z-1])
     {
       objectcost.forEach(function(element) {
         index = objectcost.indexOf(element);
