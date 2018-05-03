@@ -21,6 +21,7 @@ var Game = {
 
   create : function() {
     total=100;
+    tempsrestant=120;
     nbobj=0;
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.tileSprite(0, 0, 1920, 1920, 'sol');
@@ -75,7 +76,7 @@ var Game = {
 
   render :function () {
     game.debug.text('Argent restant: ' + total.toFixed(2) + '€', 1000 , 64);
-
+    game.debug.text('Temps restant: ' + tempsrestant + ' s', 100 , 64);
   },
 
 }

@@ -1,5 +1,5 @@
 var timer;
-
+var tempsrestant;
 var timers = {
 
 
@@ -13,6 +13,7 @@ create : function() {
   timer.start();
 
   timer.loop(1000, timers.updateCounter, this);
+  timer.loop(1000, timers.whattimeisit, this);
   timer.loop(1000, gamerule.countobjon,this);
   timer.loop(2000, gamerule.allumeobj,this);
 },
@@ -21,4 +22,7 @@ create : function() {
 updateCounter : function (){
     total;
   },
+  whattimeisit : function(){
+    tempsrestant--;
+  }
 }
