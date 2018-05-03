@@ -14,7 +14,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'baignoire');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'baignoire';
       spriteStorage[id].scale.setTo(0.6, 0.6);
       spriteStorage[id].body.setSize(254,5,25,125); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('baignoireON', [1,2,3], 5, true);
@@ -49,7 +50,8 @@ var Appliances = {
       spriteStorage[id] = game.add.sprite(posx,posy,'cuisine');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'evier';
       spriteStorage[id].scale.setTo(0.1, 0.1);
       spriteStorage[id].body.setSize(1300,600,350,350); //largeur,hauteur,decalage largeur,décalage hauteur
       if (color == 'blanc'){
@@ -92,8 +94,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'fenetre');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'fenetre';
       spriteStorage[id].scale.setTo(0.6, 0.6);
       spriteStorage[id].body.setSize(162,60,25,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('fenetreOFF', [0], 5, true);
@@ -126,7 +128,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'frigo');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'frigo';
       spriteStorage[id].scale.setTo(0.28, 0.28);
       spriteStorage[id].body.setSize(280,160,260,260); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('frigoON', [1], 1, true);
@@ -159,7 +162,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'gaz');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'gaz';
       spriteStorage[id].scale.setTo(0.3, 0.3);
       spriteStorage[id].body.setSize(300,50,0,-50); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('gazON', [1,2], 5, true);
@@ -209,7 +213,8 @@ var Appliances = {
       spriteStorage[id].scale.setTo(0.5, 0.5);
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'lampe';
       spriteStorage[id].body.setSize(100,80,0,0); //largeur,hauteur,decalage largeur,décalage hauteur
     },
     update : function(key,id) {
@@ -239,7 +244,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'lavabo');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'lavabo';
       spriteStorage[id].scale.setTo(0.6, 0.6);
       spriteStorage[id].body.setSize(115,10,40,40); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('lavaboOFF', [0], 1, true);
@@ -275,9 +281,11 @@ var Appliances = {
       game.physics.enable(spriteStorage[idApp], Phaser.Physics.ARCADE);
       spriteStorage[idApp].body.immovable = true;
       spriteStorage[idApp].id = idApp;
+      spriteStorage[idApp].custType= 'applique';
       game.physics.enable(spriteStorage[idInt], Phaser.Physics.ARCADE);
       spriteStorage[idInt].body.immovable = true;
       spriteStorage[idInt].id = idInt;
+      spriteStorage[idInt].custType= 'interrupteur';
       spriteStorage[idApp].scale.setTo(0.4, 0.4);
       spriteStorage[idInt].scale.setTo(0.5, 0.5);
       if (color == 'blanc'&& forme =='rectangulaire'){
@@ -306,7 +314,7 @@ var Appliances = {
       }
     },
     update:function(key,idApp,idInt){
-      if(louis.body.x-spriteStorage[idInt].body.x<=100 && spriteStorage[idInt].body.x-louis.body.x<=100 && louis.body.y-spriteStorage[idInt].body.y<=100 && spriteStorage[idInt].body.y-louis.body.y<=100){
+      if(louis.body.x-spriteStorage[idInt].body.x<=60 && spriteStorage[idInt].body.x-louis.body.x<=60 && louis.body.y-spriteStorage[idInt].body.y<=60 && spriteStorage[idInt].body.y-louis.body.y<=60){
         if (key.isDown){
           if (!flipFlop[idApp]) {
             stateStorage[idApp]^=true;
@@ -331,7 +339,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'machinealaver');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'machinealaver';
       spriteStorage[id].scale.setTo(0.3, 0.3);
       spriteStorage[id].body.setSize(196,50,200,100); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('machineON', [0,1,2,3], 5, true);
@@ -364,7 +373,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'microonde');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'microonde';
       spriteStorage[id].scale.setTo(0.4, 0.4);
       spriteStorage[id].body.setSize(165,30,15,30); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('microondeON', [0], 1, true);
@@ -397,7 +407,8 @@ var Appliances = {
       spriteStorage[id] = game.add.sprite(posx,posy,'miroir');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'miroir';
       spriteStorage[id].scale.setTo(0.2,0.2);
       //spriteStorage[id].body.setSize(160,20,40,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('miroirON', [2], 5, true);
@@ -430,7 +441,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'ordinateur');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'ordinateur';
       spriteStorage[id].scale.setTo(0.8, 0.9);
       spriteStorage[id].body.setSize(182,50,8,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('ordinateurON', [0], 1, true);
@@ -463,7 +475,8 @@ var Appliances = {
       spriteStorage[id] = game.add.sprite(posx,posy,'radiateur');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'radiateur';
       spriteStorage[id].scale.setTo(0.7,0.7);
       spriteStorage[id].body.setSize(160,20,40,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('radiateurON', [1,2,3,4,5], 5, true);
@@ -496,7 +509,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'radio');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'radio';
       spriteStorage[id].scale.setTo(0.8,0.8);
       spriteStorage[id].body.setSize(100,5,50,0); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('radioON', [0,1,2], 5, true);
@@ -530,7 +544,8 @@ var Appliances = {
         spriteStorage[id]=game.add.sprite(posx,posy,'tv');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
-        spriteStorage[id].id = id;
+        spriteStorage[id].custId = id;
+        spriteStorage[id].custType= 'tv';
         spriteStorage[id].body.setSize(96,20,1,0); //largeur,hauteur,decalage largeur,décalage hauteur
         spriteStorage[id].animations.add('tvON', [0, 1, 2, 3, 4, 5, 6], 5, true);
         spriteStorage[id].animations.add('tvOFF', [7], 5, true);
@@ -539,7 +554,7 @@ var Appliances = {
         spriteStorage[id]=game.add.sprite(posx,posy,'tv2');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
-        spriteStorage[id].id = id;
+        spriteStorage[id].custId = id;
         spriteStorage[id].body.setSize(96,20,1,0); //largeur,hauteur,decalage largeur,décalage hauteur
         spriteStorage[id].animations.add('tvON', [0, 1, 2], 5, true);
         spriteStorage[id].animations.add('tvOFF', [3], 5, true);
@@ -574,7 +589,8 @@ var Appliances = {
       spriteStorage[id]=game.add.sprite(posx,posy,'ventilateur');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
-      spriteStorage[id].id = id;
+      spriteStorage[id].custId = id;
+      spriteStorage[id].custType= 'ventilateur';
       spriteStorage[id].scale.setTo(0.45, 0.45);
       spriteStorage[id].body.setSize(90,70,55,180); //largeur,hauteur,decalage largeur,décalage hauteur
       spriteStorage[id].animations.add('ventilateurON', [0,1], 5, true);
