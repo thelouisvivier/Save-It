@@ -107,6 +107,15 @@ var gamerule = {
           }
         });
       };
+      if(i.custType=='applique' && stateStorage[i.custId]){
+        console.log("applique");
+        objectcost.forEach(function(element) {
+          index = objectcost.indexOf(element);
+          if (objectcost[index].name == 'appliques'){
+            total -= objectcost[index].cost;
+          }
+        });
+      };
     }
   },
 
