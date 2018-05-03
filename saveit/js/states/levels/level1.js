@@ -17,6 +17,9 @@ var Level1 = {
   },
 
   create : function() {
+    total=100;
+    tempsrestant=120;
+    nbobj=0;
     //Definition du monde
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.world.setBounds(0, 0, 2000, 1500);
@@ -49,6 +52,7 @@ var Level1 = {
     //Debug
     //game.debug.cameraInfo(game.camera, 32, 32);
     //game.debug.body(spriteStorage[23]);
-
+    game.debug.text('Argent restant: ' + total.toFixed(2) + '€', 1000 , 64);
+    game.debug.text('Temps restant: ' + tempsrestant + ' s', 100 , 64);
   }
 }
