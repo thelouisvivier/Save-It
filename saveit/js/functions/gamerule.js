@@ -125,7 +125,7 @@ if(i.key=='tv' && stateStorage[i.z-1]){
 
 allumeobj :function()
 {
-  if(coutobjprecedent <= 1.75)
+  if(coutobjprecedent <= 1)
   {
     turnon = Math.random() * (nbobj);
     turnon=Math.trunc(turnon);
@@ -136,7 +136,7 @@ allumeobj :function()
         if (objectcost[index].name == spriteStorage[turnon].key)
         {
           coutobjprecedent= objectcost[index].cost;
-          console.log(coutobjprecedent);
+          console.log(index);
         }
       });
 }

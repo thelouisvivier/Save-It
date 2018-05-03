@@ -23,7 +23,7 @@ var Level1 = {
     //Definition du monde
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.world.setBounds(0, 0, 2000, 1500);
-
+    timers.create();
     //Creation de la map
     MapGen.couloir.create();
     MapGen.bureau.create();

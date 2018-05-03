@@ -15,7 +15,7 @@ create : function() {
   timer.loop(1000, timers.updateCounter, this);
   timer.loop(1000, timers.whattimeisit, this);
   timer.loop(1000, gamerule.countobjon,this);
-  timer.loop(2000, gamerule.allumeobj,this);
+  timer.loop(3000, gamerule.allumeobj,this);
 },
 
 
