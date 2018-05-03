@@ -5,6 +5,7 @@ var Decorations = {
       spriteStorage[id]=game.add.sprite(posx,posy,'cadre');
       game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
       spriteStorage[id].body.immovable = true;
+      spriteStorage[id].id = id;
       spriteStorage[id].scale.setTo(0.2,0.2);
     },
     update:function(id){
@@ -18,23 +19,27 @@ var Decorations = {
         spriteStorage[id]=game.add.sprite(posx,posy,'plante1');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
+        spriteStorage[id].id = id;
       }
       else if (model == 2){
         spriteStorage[id]=game.add.sprite(posx,posy,'plante2');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
+        spriteStorage[id].id = id;
         spriteStorage[id].scale.setTo(0.2,0.2);
       }
       else if (model == 3){
         spriteStorage[id]=game.add.sprite(posx,posy,'plante3');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
+        spriteStorage[id].id = id;
         spriteStorage[id].scale.setTo(0.2,0.2);
       }
       else if (model == 4){
         spriteStorage[id]=game.add.sprite(posx,posy,'plante4');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
+        spriteStorage[id].id = id;
         spriteStorage[id].scale.setTo(0.15,0.15);
       }
     },
@@ -49,18 +54,21 @@ var Decorations = {
         spriteStorage[id]=game.add.sprite(posx,posy,'tapisbleu');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
+        spriteStorage[id].id = id;
         spriteStorage[id].scale.setTo(l/500,h/375);
       }
       else if (model =='vert'){
         spriteStorage[id]=game.add.sprite(posx,posy,'tapisvert');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
+        spriteStorage[id].id = id;
         spriteStorage[id].scale.setTo(l/500,h/375);
       }
       else if (model =='beige'){
         spriteStorage[id]=game.add.sprite(posx,posy,'tapisbeige');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
+        spriteStorage[id].id = id;
         spriteStorage[id].scale.setTo(l/1242,h/810);
       }
     },
