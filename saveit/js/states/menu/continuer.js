@@ -22,10 +22,10 @@ var Continuer = {
   },
 
   accesNiveau1 : function(){
-    game.state.start('GameState');
+    game.state.start('Level1State');
   },
 
   accesNiveau2 : function(){
-    game.state.start('GameState2');
+    game.state.start('Level2State');
   }
 }
