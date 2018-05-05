@@ -6,6 +6,7 @@ var cursors;
 var spriteStorage = [];
 var stateStorage = [];
 var flipFlop = [];
+var spriteOnMap = [];
 
 //Pour les murs
 var wallStorage = [];
@@ -19,32 +20,41 @@ var Level1 = {
   create : function() {
     total=100;
     tempsrestant=120;
-    nbobj=60;
+
     //Definition du monde
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.world.setBounds(0, 0, 2000, 1500);
+
     timers.create();
+
     //Creation de la map
     MapGen.couloir.create();
-    MapGen.bureau.create();
-    MapGen.salledebain.create();
-    MapGen.cuisine.create();
-    MapGen.chambre.create();
+    //MapGen.bureau.create();
+    //MapGen.salledebain.create();
+    //MapGen.cuisine.create();
+    //MapGen.chambre.create();
     MapGen.salon.create();
+
     //Ajout du perso
     Perso.louis.create();
 
-
+    for (let i of spriteStorage){
+      if (typeof i !== 'undefined'){
+        spriteOnMap.push(i.custId);
+        console.log(spriteOnMap);
+      }
+      else{}
+    };
   },
   update : function (){
     //Update du perso
     Perso.louis.update();
 
     MapGen.couloir.update();
-    MapGen.bureau.update();
-    MapGen.salledebain.update();
-    MapGen.cuisine.update();
-    MapGen.chambre.update();
+    //MapGen.bureau.update();
+    //MapGen.salledebain.update();
+    //MapGen.cuisine.update();
+    //MapGen.chambre.update();
     MapGen.salon.update();
 
   },
