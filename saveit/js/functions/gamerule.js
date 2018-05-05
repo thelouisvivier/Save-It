@@ -1,125 +1,110 @@
 var gamerule = {
   countobjon :function (){
-    for(var i of spriteStorage){
+    for(let i of spriteStorage){
       if(i.custType=='tv' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'tv'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'tv'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='radio' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'radio'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'radio'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='lampe' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'lampe'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'lampe'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='ventilateur' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'ventilateur'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'ventilateur'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='baignoire' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'baignoire'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'baignoire'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='evier' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'evier'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'evier'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='fenetre' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'fenetre'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'fenetre'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='frigo' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'frigo'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'frigo'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='lavabo' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'lavabo'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'lavabo'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='machinealaver' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'machinealaver'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'machinealaver'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='microonde' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'microonde'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'microonde'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='ordinateur' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'ordinateur'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'ordinateur'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='radiateur' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'radiateur'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'radiateur'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='interrupteur' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'interrupteur'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'interrupteur'){
+            total -= r.cost;
           }
-        });
+        }
       };
       if(i.custType=='miroir' && stateStorage[i.custId]){
-        objectcost.forEach(function(element) {
-          index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'miroir'){
-            total -= objectcost[index].cost;
+        for(let r of objectcost){
+          if (r.name == 'miroir'){
+            total -= r.cost;
           }
-        });
+        }
       };
     }
   },
@@ -130,7 +115,7 @@ var gamerule = {
       turnon = Math.random() * (nbobj);
       turnon=Math.trunc(turnon);
       stateStorage[turnon]=true;
-      for(var j of objectcost){
+      for(let j of objectcost){
         if (j.name == spriteStorage[turnon].custType){
           console.log(j.name);
           coutobjprecedent= j.cost;

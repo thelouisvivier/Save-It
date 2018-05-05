@@ -19,7 +19,7 @@ var Level1 = {
   create : function() {
     total=100;
     tempsrestant=120;
-    nbobj=19;
+    nbobj=30;
     //Definition du monde
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.world.setBounds(0, 0, 2000, 1500);

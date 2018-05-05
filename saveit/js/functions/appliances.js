@@ -275,7 +275,7 @@ lavabo : {
 lumiere : {
   create:function(posxApp,posyApp,posxInt,posyInt,color,forme,idApp,idInt) {
     if (typeof idApp == 'object'){
-      for (var icr of idApp){
+      for (let icr of idApp){
         stateStorage[icr]=false;
         spriteStorage[icr]=game.add.sprite(posxApp[idApp.indexOf(icr)],posyApp[idApp.indexOf(icr)],'appliques');
         game.physics.enable(spriteStorage[icr], Phaser.Physics.ARCADE);
@@ -364,7 +364,7 @@ lumiere : {
     }
     if (stateStorage[idInt]==true){
       if (typeof idApp  == 'object'){
-        for (var itr of idApp){
+        for (let itr of idApp){
           spriteStorage[itr].animations.play('lumièreON');
         }
       }
@@ -374,7 +374,7 @@ lumiere : {
     }
     else if (stateStorage[idInt]==false) {
       if (typeof idApp  == 'object'){
-        for (var ifa of idApp){
+        for (let ifa of idApp){
           spriteStorage[ifa].animations.play('lumièreOFF');
         }
       }
