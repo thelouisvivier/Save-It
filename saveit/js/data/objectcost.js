@@ -13,5 +13,6 @@ var objectcost = [
     {name:'radiateur', cost:1},
     {name:'tv', cost:2},
     {name:'interrupteur', cost:2},
-    {name:'miroir', cost:0.5}
+    {name:'miroir', cost:0.5},
+    {name:'gaz', cost:2}
 ];

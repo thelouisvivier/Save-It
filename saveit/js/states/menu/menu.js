@@ -25,7 +25,7 @@ var Menu = {
   },
 
   startStart : function(){
-    game.state.start('GameState');
+    game.state.start('Level1State');
   },
 
   startContinuer : function(){

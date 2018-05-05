@@ -106,6 +106,13 @@ var gamerule = {
           }
         }
       };
+      if(i.custType=='gaz' && stateStorage[i.custId]){
+        for(let r of objectcost){
+          if (r.name == 'gaz'){
+            total -= r.cost;
+          }
+        }
+      };
     }
   },
 
