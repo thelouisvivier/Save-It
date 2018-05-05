@@ -32,11 +32,11 @@ var Level5 = {
     game.world.setBounds(0, 0, 2000, 1500);
 
     //Creation de la map
-    MapGen.salledebain.create();
-    MapGen.bureau.create();
-    MapGen.chambre.create();
-    MapGen.cuisine.create();
     MapGen.couloir.create();
+    MapGen.bureau.create();
+    MapGen.salledebain.create();
+    MapGen.cuisine.create();
+    MapGen.chambre.create();
     MapGen.salon.create();
 
     //Ajout du perso

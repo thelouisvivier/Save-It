@@ -32,8 +32,8 @@ var Level2 = {
     game.world.setBounds(0, 0, 2000, 1500);
 
     //Creation de la map
-    MapGen.cuisine.create();
     MapGen.couloir.create();
+    MapGen.cuisine.create();
     MapGen.salon.create();
 
     //Ajout du perso
