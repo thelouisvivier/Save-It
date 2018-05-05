@@ -17,9 +17,7 @@ var MapGen = {
       Appliances.lampe.create(800,350,'jaune',5);
       Furnitures.armoire.create(650,-20,'facelivre',6);
       Decorations.plante.create(50,400,'4',7);
-      Appliances.lumiere.create(190,-30,825,50,'marron','rectangulaire',8,9);
-      Appliances.lumiere.create(390,-30,825,50,'marron','rectangulaire',10,11);
-      Appliances.lumiere.create(590,-30,825,50,'marron','rectangulaire',12,13);
+      Appliances.lumiere.create([190,390,590],[-30,-30,-30],825,50,'marron','rectangulaire',[8,9,10],11);
     },
     update : function(){
       Walls.horizontal.update(0);
@@ -36,9 +34,7 @@ var MapGen = {
       Appliances.lampe.update(Keys.L(),5);
       Furnitures.armoire.update(6);
       //Decorations.plante.update(7);
-      Appliances.lumiere.update(Keys.L(),8,9);
-      Appliances.lumiere.update(Keys.L(),10,11);
-      Appliances.lumiere.update(Keys.L(),12,13);
+      Appliances.lumiere.update(Keys.L(),[8,9,10],11);
     }
   },
   salledebain : {
@@ -51,18 +47,17 @@ var MapGen = {
       Walls.vertical.create(1100,0,'noir',10,185,8);//SDB part1
       Walls.vertical.create(1100,315,'noir',10,185,9);//SDB part2
 
-      Appliances.fenetre.create(1200,0,1,14);
-      Appliances.fenetre.create(1750,0,3,15);
-      Appliances.radiateur.create(1175,70,16);
-      Appliances.radiateur.create(1725,70,17);
-      Appliances.miroir.create(1482,-5,18);
-      Appliances.lavabo.create(1475,30,19);
-      Appliances.baignoire.create(1800,200,20);
-      Appliances.machinealaver.create(1050,300,21);
-      Decorations.plante.create(1910,310,'1',22);
-      Decorations.tapis.create(1400,200,'beige',300,200,23);
-      Appliances.lumiere.create(1300,-30,1125,50,'blanc','rond',24,25);
-      Appliances.lumiere.create(1620,-30,1125,50,'blanc','rond',26,27);
+      Appliances.fenetre.create(1200,0,1,12);
+      Appliances.fenetre.create(1750,0,3,13);
+      Appliances.radiateur.create(1175,70,14);
+      Appliances.radiateur.create(1725,70,15);
+      Appliances.miroir.create(1482,-5,16);
+      Appliances.lavabo.create(1475,30,17);
+      Appliances.baignoire.create(1800,200,18);
+      Appliances.machinealaver.create(1050,300,19);
+      Decorations.plante.create(1910,310,'1',20);
+      Decorations.tapis.create(1400,200,'beige',300,200,21);
+      Appliances.lumiere.create([1300,1620],[-30,-30],1125,50,'blanc','rond',[22,23],24);
     },
     update : function(){
       Walls.horizontal.update(5);
@@ -71,18 +66,17 @@ var MapGen = {
       Walls.vertical.update(8);
       Walls.vertical.update(9);
 
-      Appliances.fenetre.update(Keys.F(),14);
-      Appliances.fenetre.update(Keys.F(),15);
-      Appliances.radiateur.update(Keys.R(),16);
-      Appliances.radiateur.update(Keys.R(),17);
-      Appliances.miroir.update(Keys.M(),18);
-      Appliances.lavabo.update(Keys.L(),19);
-      Appliances.baignoire.update(Keys.B(),20);
-      Appliances.machinealaver.update(Keys.M(),21);
-      //Decorations.plante.update(22);
-      Decorations.tapis.update(23);
-      Appliances.lumiere.update(Keys.L(),24,25);
-      Appliances.lumiere.update(Keys.L(),26,27);
+      Appliances.fenetre.update(Keys.F(),12);
+      Appliances.fenetre.update(Keys.F(),13);
+      Appliances.radiateur.update(Keys.R(),14);
+      Appliances.radiateur.update(Keys.R(),15);
+      Appliances.miroir.update(Keys.M(),16);
+      Appliances.lavabo.update(Keys.L(),17);
+      Appliances.baignoire.update(Keys.B(),18);
+      Appliances.machinealaver.update(Keys.M(),19);
+      //Decorations.plante.update(20);
+      Decorations.tapis.update(21);
+      Appliances.lumiere.update(Keys.L(),[22,23],24);
     }
   },
   cuisine : {
@@ -95,16 +89,15 @@ var MapGen = {
       Walls.vertical.create(900,500,'noir',10,185,13);//Cuisine part1
       Walls.vertical.create(900,815,'noir',10,185,14);//Cuisine part2
 
-      Appliances.evier.create(300,490,'beige',28);
-      Appliances.frigo.create(80,470,29);
-      Furnitures.cuisine.create(175,503,'armoire','beige',30);
-      Furnitures.cuisine.create(448,490,'meuble','beige',31);
-      Appliances.gaz.create(645,584,32);
-      Appliances.microonde.create(480,555,33);
-      Furnitures.tables_chaises.create(350,770,'table+chaises','gris','face',34);
-      Appliances.lumiere.create(20,470,797,550,'noir','rectangulaire',35,36);
-      Appliances.lumiere.create(615,470,675,533,'noir','rond',37,38);
-      Appliances.lumiere.create(760,470,797,550,'noir','rectangulaire',39,40);
+      Appliances.evier.create(300,490,'beige',25);
+      Appliances.frigo.create(80,470,26);
+      Furnitures.cuisine.create(175,503,'armoire','beige',27);
+      Furnitures.cuisine.create(448,490,'meuble','beige',28);
+      Appliances.gaz.create(645,584,29);
+      Appliances.microonde.create(480,555,30);
+      Furnitures.tables_chaises.create(350,770,'table+chaises','gris','face',31);
+      Appliances.lumiere.create([20,760],[470,470],797,550,'noir','rectangulaire',[32,33],34);
+      Appliances.lumiere.create(615,470,675,533,'noir','rond',35,36);
     },
     update : function(){
       Walls.horizontal.update(10);
@@ -113,16 +106,15 @@ var MapGen = {
       Walls.vertical.update(13);
       Walls.vertical.update(14);
 
-      Appliances.evier.update(Keys.E(),28);
-      Appliances.frigo.update(Keys.F(),29);
-      Furnitures.cuisine.update(30);
-      Furnitures.cuisine.update(31);
-      Appliances.gaz.update(Keys.G(),'gaz',32);
-      Appliances.microonde.update(Keys.M(),33);
-      Furnitures.tables_chaises.update(34);
+      Appliances.evier.update(Keys.E(),25);
+      Appliances.frigo.update(Keys.F(),26);
+      Furnitures.cuisine.update(27);
+      Furnitures.cuisine.update(28);
+      Appliances.gaz.update(Keys.G(),'gaz',29);
+      Appliances.microonde.update(Keys.M(),30);
+      Furnitures.tables_chaises.update(31);
+      Appliances.lumiere.update(Keys.L(),[32,33],34);
       Appliances.lumiere.update(Keys.L(),35,36);
-      Appliances.lumiere.update(Keys.L(),37,38);
-      Appliances.lumiere.update(Keys.L(),39,40);
     }
   },
   chambre : {
@@ -135,14 +127,14 @@ var MapGen = {
       Walls.vertical.create(1100,500,'noir',10,185,18);//Chambre part1
       Walls.vertical.create(1100,815,'noir',10,185,19);//Chambre part2
 
-      Appliances.radiateur.create(1250,550,41);
-      Appliances.lampe.create(1150,540,'bleu',42);
-      Appliances.tv.create(1780,850,'noir',43);
-      Furnitures.lit.create(1750,565,'face',44);
-      Furnitures.armoire.create(1450,460,'facecommode',45);
-      Appliances.radio.create(1490,530,46);
-      Appliances.lumiere.create(1670,470,1707,550,'noir','rectangulaire',47,48);
-      Appliances.lumiere.create(1830,470,1867,550,'noir','rectangulaire',49,50);
+      Appliances.radiateur.create(1250,550,37);
+      Appliances.lampe.create(1150,540,'bleu',38);
+      Appliances.tv.create(1780,850,'noir',39);
+      Furnitures.lit.create(1750,565,'face',40);
+      Furnitures.armoire.create(1450,460,'facecommode',41);
+      Appliances.radio.create(1490,530,42);
+      Appliances.lumiere.create(1670,470,1707,550,'noir','rectangulaire',43,44);
+      Appliances.lumiere.create(1830,470,1867,550,'noir','rectangulaire',45,46);
     },
     update : function(){
       Walls.horizontal.update(15);
@@ -151,14 +143,14 @@ var MapGen = {
       Walls.vertical.update(18);
       Walls.vertical.update(19);
 
-      Appliances.radiateur.update(Keys.R(),41);
-      Appliances.lampe.update(Keys.L(),42);
-      Appliances.tv.update(Keys.T(),43);
-      Furnitures.lit.update(44);
-      Furnitures.armoire.update(45);
-      Appliances.radio.update(Keys.R(),46);
-      Appliances.lumiere.update(Keys.L(),47,48);
-      Appliances.lumiere.update(Keys.L(),49,50);
+      Appliances.radiateur.update(Keys.R(),37);
+      Appliances.lampe.update(Keys.L(),38);
+      Appliances.tv.update(Keys.T(),39);
+      Furnitures.lit.update(40);
+      Furnitures.armoire.update(41);
+      Appliances.radio.update(Keys.R(),42);
+      Appliances.lumiere.update(Keys.L(),43,44);
+      Appliances.lumiere.update(Keys.L(),45,46);
     }
   },
   salon : {
@@ -192,14 +184,14 @@ var MapGen = {
 
       Walls.horizontal.create(910,0,'marron',190,125,27);//couloir fond
       Walls.horizontal.create(910,0,'noir',190,10,28);//couloir fond
-      Walls.vertical.create(900,1000,'noir',10,125,29);//Couloir bas gauche
-      Walls.vertical.create(1100,1000,'noir',10,125,30);//Couloir bas droite
+      //Walls.vertical.create(900,1000,'noir',10,125,29);//Couloir bas gauche
+      //Walls.vertical.create(1100,1000,'noir',10,125,30);//Couloir bas droite
     },
     update : function(){
       Walls.horizontal.update(27);
       Walls.horizontal.update(28);
-      Walls.vertical.update(29);
-      Walls.vertical.update(30);
+      //Walls.vertical.update(29);
+      //Walls.vertical.update(30);
     }
   }
 };
