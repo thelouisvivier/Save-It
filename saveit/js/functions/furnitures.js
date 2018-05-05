@@ -47,7 +47,7 @@ var Furnitures = {
         spriteStorage[id].body.setSize(1273,200,0,100); //largeur,hauteur,decalage largeur,décalage hauteur
       }
       else if (version == 'dos'){
-        spriteStorage[id].body.setSize(1273,50,0,100); //largeur,hauteur,decalage largeur,décalage hauteur
+        spriteStorage[id].body.setSize(1273,50,0,200); //largeur,hauteur,decalage largeur,décalage hauteur
       }
       else if (version == 'droite'){
         spriteStorage[id].body.setSize(505,400,400,0); //largeur,hauteur,decalage largeur,décalage hauteur

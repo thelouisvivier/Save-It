@@ -165,6 +165,24 @@ var MapGen = {
       Walls.vertical.create(1970,1000,'noir',30,500,25);//Salon droite
       Walls.horizontal.create(0,1470,'noir',2000,30,26);//Salon bas
 
+      Appliances.radiateur.create(175,1050,47);
+      Appliances.radiateur.create(575,1050,48);
+      Appliances.radiateur.create(1275,1050,49);
+      Appliances.radiateur.create(1675,1050,50);
+      Decorations.tapis.create(1400,1270,'beige',370,200,51);
+      Appliances.lumiere.create([1150,1490,1810],[980,980,980],1100,1030,'noir','rectangulaire',[52,53,54],55);
+      Appliances.lumiere.create([50,390,710],[980,980,980],830,1030,'noir','rectangulaire',[56,57,58],59);
+      Furnitures.canape.create(1490,1360,'dos',60);
+      Appliances.tv.create(1530,1250,'beige',61);
+      Furnitures.tables_chaises.create(360,1230,'table+chaises','taupe','cote',62);
+      Decorations.plante.create(420,1250,2,63);
+      Appliances.lampe.create(1440,1340,'bleu',64);
+      Decorations.tapis.create(800,1200,'bleu',400,200,65);
+      Furnitures.fauteuil.create(1730,1320,'droite',66);
+      Furnitures.armoire.create(-60,1200,'cotelivre',67);
+      Furnitures.armoire.create(345,980,'facecommode',68);
+      Appliances.ventilateur.create(200,1250,69);
+
     },
     update : function(){
       Walls.horizontal.update(20);
@@ -175,6 +193,23 @@ var MapGen = {
       Walls.vertical.update(25);
       Walls.horizontal.update(26);
 
+      Appliances.radiateur.update(Keys.R(),47);
+      Appliances.radiateur.update(Keys.R(),48);
+      Appliances.radiateur.update(Keys.R(),49);
+      Appliances.radiateur.update(Keys.R(),50);
+      Decorations.tapis.update(51);
+      Appliances.lumiere.update(Keys.L(),[52,53,54],55);
+      Appliances.lumiere.update(Keys.L(),[56,57,58],59);
+      Furnitures.canape.update(60);
+      Appliances.tv.update(Keys.T(),61);
+      Furnitures.tables_chaises.update(62);
+      Decorations.plante.update(63);
+      Appliances.lampe.update(Keys.L(),64);
+      Decorations.tapis.update(65);
+      Furnitures.fauteuil.update(66);
+      Furnitures.armoire.update(67);
+      Furnitures.armoire.update(68);
+      Appliances.ventilateur.update(Keys.V(),69);
 
     }
   },

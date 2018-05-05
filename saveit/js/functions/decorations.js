@@ -7,7 +7,7 @@ var Decorations = {
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].custId = id;
       spriteStorage[id].custType= 'cadre';
-      spriteStorage[id].scale.setTo(0.2,0.2);
+      spriteStorage[id].scale.setTo(0.3,0.3);
     },
     update:function(id){
       game.physics.arcade.collide(louis, spriteStorage[id]);
@@ -21,12 +21,14 @@ var Decorations = {
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
         spriteStorage[id].custId = id;
+        spriteStorage[id].custType= 'plante';
       }
       else if (model == 2){
         spriteStorage[id]=game.add.sprite(posx,posy,'plante2');
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
         spriteStorage[id].custId = id;
+        spriteStorage[id].custType= 'plante';
         spriteStorage[id].scale.setTo(0.2,0.2);
       }
       else if (model == 3){
@@ -34,6 +36,7 @@ var Decorations = {
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
         spriteStorage[id].custId = id;
+        spriteStorage[id].custType= 'plante';
         spriteStorage[id].scale.setTo(0.2,0.2);
       }
       else if (model == 4){
@@ -41,9 +44,9 @@ var Decorations = {
         game.physics.enable(spriteStorage[id], Phaser.Physics.ARCADE);
         spriteStorage[id].body.immovable = true;
         spriteStorage[id].custId = id;
+        spriteStorage[id].custType= 'plante';
         spriteStorage[id].scale.setTo(0.15,0.15);
       }
-      spriteStorage[id].custType= 'plante';
     },
     update:function(id){
       game.physics.arcade.collide(louis, spriteStorage[id]);
