@@ -6,8 +6,8 @@ var MapGen = {
       Walls.horizontal.create(0,0,'beigeclair',900,125,0);//Bureau fond
       Walls.horizontal.create(0,0,'noir',900,10,1);//Bureau fond
       Walls.vertical.create(0,0,'noir',30,500,2);//Bureau gauche
-      Walls.vertical.create(900,0,'noir',10,185,3);//Bureau part1
-      Walls.vertical.create(900,315,'noir',10,185,4);//Bureau part2 --- Attention, laisser 130 d'ouverture pour louis
+      Walls.vertical.create(900,0,'noir',10,175,3);//Bureau part1
+      Walls.vertical.create(900,325,'noir',10,175,4);//Bureau part2 --- Attention, laisser 150 d'ouverture pour louis
 
       Appliances.fenetre.create(100,0,2,0);
       Appliances.fenetre.create(500,0,4,1);
@@ -44,8 +44,8 @@ var MapGen = {
       Walls.horizontal.create(1100,0,'vert',900,125,5);//SDB fond
       Walls.horizontal.create(1100,0,'noir',900,10,6);//SDB fond
       Walls.vertical.create(1970,0,'noir',30,975,7);//SDB droite
-      Walls.vertical.create(1100,0,'noir',10,185,8);//SDB part1
-      Walls.vertical.create(1100,315,'noir',10,185,9);//SDB part2
+      Walls.vertical.create(1100,0,'noir',10,175,8);//SDB part1
+      Walls.vertical.create(1100,325,'noir',10,175,9);//SDB part2
 
       Appliances.fenetre.create(1200,0,1,12);
       Appliances.fenetre.create(1750,0,3,13);
@@ -86,8 +86,8 @@ var MapGen = {
       Walls.horizontal.create(0,500,'cacadoie',900,125,10);//Cuisine fond
       Walls.horizontal.create(0,500,'noir',900,10,11);//Cuisine fond
       Walls.vertical.create(0,500,'noir',30,500,12);//Cusine gauche
-      Walls.vertical.create(900,500,'noir',10,185,13);//Cuisine part1
-      Walls.vertical.create(900,815,'noir',10,185,14);//Cuisine part2
+      Walls.vertical.create(900,500,'noir',10,175,13);//Cuisine part1
+      Walls.vertical.create(900,825,'noir',10,175,14);//Cuisine part2
 
       Appliances.evier.create(300,490,'beige',25);
       Appliances.frigo.create(80,470,26);
@@ -124,8 +124,8 @@ var MapGen = {
       Walls.horizontal.create(1100,500,'orange',900,125,15);//Chambre fond
       Walls.horizontal.create(1100,500,'noir',900,10,16);//Chambre fond
       Walls.vertical.create(1970,500,'noir',30,975,17);//Chambre gauche
-      Walls.vertical.create(1100,500,'noir',10,185,18);//Chambre part1
-      Walls.vertical.create(1100,815,'noir',10,185,19);//Chambre part2
+      Walls.vertical.create(1100,500,'noir',10,175,18);//Chambre part1
+      Walls.vertical.create(1100,825,'noir',10,175,19);//Chambre part2
 
       Appliances.radiateur.create(1250,550,37);
       Appliances.lampe.create(1150,540,'bleu',38);
