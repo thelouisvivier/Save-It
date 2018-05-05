@@ -1,6 +1,6 @@
 var Menu = {
   preload : function(){
-    game.load.image('menu','./assets/textures/menu.jpg', 4000, 3000);
+    game.load.image('menu','./assets/textures/menu.jpg', window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio);
     game.load.spritesheet('b_intro','./assets/buttons/intro.png', 0 , 357);
     game.load.spritesheet('b_demarrer','./assets/buttons/demarrer.png', 0, 357);
     game.load.spritesheet('b_continuer','./assets/buttons/continuer.png', 0, 357);
@@ -8,7 +8,7 @@ var Menu = {
   },
 
   create : function(){
-    var fond = game.add.tileSprite(0, 0, 4000, 3000, 'menu');
+    var fond = game.add.tileSprite(0, 0, 3456, 2304, 'menu');
     fond.scale.setTo(0.40 ,0.40);
     //Full screen mode
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
