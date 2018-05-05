@@ -11,6 +11,12 @@ var spriteOnMap = [];
 //Pour les murs
 var wallStorage = [];
 
+//Pour Timer
+var turnon;
+var coutobjprecedent;
+coutobjprecedent=0;
+var total;
+
 var Level1 = {
 
   preload: function (){
@@ -21,16 +27,13 @@ var Level1 = {
     total=100;
     tempsrestant=120;
 
+
     //Definition du monde
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.world.setBounds(0, 0, 2000, 1500);
 
     //Creation de la map
     MapGen.couloir.create();
-    //MapGen.bureau.create();
-    //MapGen.salledebain.create();
-    //MapGen.cuisine.create();
-    //MapGen.chambre.create();
     MapGen.salon.create();
 
     //Ajout du perso
@@ -54,10 +57,6 @@ var Level1 = {
     Perso.louis.update();
 
     MapGen.couloir.update();
-    //MapGen.bureau.update();
-    //MapGen.salledebain.update();
-    //MapGen.cuisine.update();
-    //MapGen.chambre.update();
     MapGen.salon.update();
   },
 

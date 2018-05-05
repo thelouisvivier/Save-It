@@ -8,4 +8,4 @@ game.state.add('Level2State', Level2);
 game.state.add('Level3State', Level3);
 game.state.add('Level4State', Level4);
 game.state.add('Level5State', Level5);
-game.state.start('MenuState');
+game.state.start('Level5State');
