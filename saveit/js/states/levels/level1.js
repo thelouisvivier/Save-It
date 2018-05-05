@@ -25,8 +25,6 @@ var Level1 = {
     game.physics.startSystem(Phaser.Physics.ARCADE);
     game.world.setBounds(0, 0, 2000, 1500);
 
-    timers.create();
-
     //Creation de la map
     MapGen.couloir.create();
     //MapGen.bureau.create();
@@ -45,8 +43,13 @@ var Level1 = {
       }
       else{}
     };
+
+    //Debut du jeu
+    timers.create();
   },
   update : function (){
+    timers.updateText();
+
     //Update du perso
     Perso.louis.update();
 
@@ -56,13 +59,13 @@ var Level1 = {
     //MapGen.cuisine.update();
     //MapGen.chambre.update();
     MapGen.salon.update();
-
   },
+
   render :function() {
     //Debug
     //game.debug.cameraInfo(game.camera, 32, 32);
     //game.debug.body(spriteStorage[23]);
-    game.debug.text('Argent restant: ' + total.toFixed(2) + '€', 1000 , 64);
-    game.debug.text('Temps restant: ' + tempsrestant + ' s', 100 , 64);
+    //game.debug.text('Argent restant: ' + total.toFixed(2) + '€', 1000 , 64);
+    //game.debug.text('Temps restant: ' + tempsrestant + ' s', 100 , 64);
   }
 }
