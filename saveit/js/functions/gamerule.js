@@ -1,8 +1,6 @@
 var gamerule = {
   countobjon :function (){
     for(var i of spriteStorage){
-
-
       if(i.custType=='tv' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
@@ -107,11 +105,18 @@ var gamerule = {
           }
         });
       };
-      if(i.custType=='applique' && stateStorage[i.custId]){
-        console.log("applique");
+      if(i.custType=='interrupteur' && stateStorage[i.custId]){
         objectcost.forEach(function(element) {
           index = objectcost.indexOf(element);
-          if (objectcost[index].name == 'appliques'){
+          if (objectcost[index].name == 'interrupteur'){
+            total -= objectcost[index].cost;
+          }
+        });
+      };
+      if(i.custType=='miroir' && stateStorage[i.custId]){
+        objectcost.forEach(function(element) {
+          index = objectcost.indexOf(element);
+          if (objectcost[index].name == 'miroir'){
             total -= objectcost[index].cost;
           }
         });
@@ -125,13 +130,12 @@ var gamerule = {
       turnon = Math.random() * (nbobj);
       turnon=Math.trunc(turnon);
       stateStorage[turnon]=true;
-      objectcost.forEach(function(element){
-        index = objectcost.indexOf(element);
-        if (objectcost[index].name == spriteStorage[turnon].custType){
-          coutobjprecedent= objectcost[index].cost;
-          console.log(index);
+      for(var j of objectcost){
+        if (j.name == spriteStorage[turnon].custType){
+          console.log(j.name);
+          coutobjprecedent= j.cost;
         }
-      });
+      }
     }
     else {
       coutobjprecedent=coutobjprecedent-1;
