@@ -8,16 +8,16 @@ var Menu = {
   },
 
   create : function(){
-    var fond = game.add.tileSprite(0, 0, 3456, 2304, 'menu');
+    var fond = game.add.tileSprite(0, 0, 1000000, 1000000, 'menu');
     fond.scale.setTo(0.40 ,0.40);
     //Full screen mode
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.setShowAll();
 
-    var buttonIntroduction = game.add.button(600, 300, 'b_intro', this.startIntroduction, this, 1, 0, 2).scale.setTo(0.25,0.25);
-    var buttonDemarrer = game.add.button(600,400, 'b_demarrer', this.startStart, this, 1, 0, 2).scale.setTo(0.25,0.25);
-    var buttonContinuer = game.add.button(600, 500, 'b_continuer', this.startContinuer, this, 1, 0, 2).scale.setTo(0.25,0.25);
-    var buttonCredits = game.add.button(600, 600, 'b_credits', this.startCredit, this, 1, 0, 2).scale.setTo(0.25,0.25);
+    var buttonIntroduction = game.add.button((game.width/2) + 100, 300, 'b_intro', this.startIntroduction, this, 1, 0, 2).scale.setTo(0.25,0.25);
+    var buttonDemarrer = game.add.button((game.width/2) + 100, 400, 'b_demarrer', this.startStart, this, 1, 0, 2).scale.setTo(0.25,0.25);
+    var buttonContinuer = game.add.button((game.width/2) + 100, 500, 'b_continuer', this.startContinuer, this, 1, 0, 2).scale.setTo(0.25,0.25);
+    var buttonCredits = game.add.button((game.width/2) + 100, 600, 'b_credits', this.startCredit, this, 1, 0, 2).scale.setTo(0.25,0.25);
   },
 
   startIntroduction : function(){
