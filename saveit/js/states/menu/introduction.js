@@ -11,7 +11,7 @@ var Introduction = {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.setShowAll();
 
-    var contenu = "Samedi 5 mai 2018 : la France vit à crédit par rapport aux ressources naturelles produite par la Terre. Dans cette aire de surconsommation, notre planète à décidé qu'elle en avait assez. Dans Save-it votre but sera de mettre fin à la surconsommation en économisant les ressources que vous consommez chez vous.";
+    var contenu = "Samedi 5 mai 2018 : la France vit à crédit par rapport aux ressources naturelles produite par la Terre. Dans cette aire de surconsommation, notre planète a décidé qu'elle en avait assez. Dans Save-it votre but sera de mettre fin à la surconsommation en économisant les ressources que vous consommez chez vous.";
     var style = { font: "55px Arial", fill: "#ff0000", align: "center" };
     var text = game.add.text(game.world.centerX, game.world.centerY, contenu, style);
     var boutonRetour = game.add.button(1000, 500, 'retour', this.retourMenu, this, 1, 0);
