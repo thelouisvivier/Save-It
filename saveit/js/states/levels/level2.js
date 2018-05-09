@@ -59,6 +59,8 @@ var Level2 = {
     MapGen.cuisine.update();
     MapGen.couloir.update();
     MapGen.salon.update();
+
+    gameOver('Level2State', tempsrestant, total);
   },
 
   render :function() {

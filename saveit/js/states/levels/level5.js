@@ -65,6 +65,8 @@ var Level5 = {
     MapGen.cuisine.update();
     MapGen.couloir.update();
     MapGen.salon.update();
+
+    gameOver('Level4State', tempsrestant, total);
   },
 
   render :function() {
