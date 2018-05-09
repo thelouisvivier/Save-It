@@ -63,7 +63,7 @@ var Level1 = {
   render :function() {
     //Debug
     //game.debug.cameraInfo(game.camera, 32, 32);
-    //game.debug.body(spriteStorage[23]);
+    //game.debug.body(spriteStorage[62]);
     //game.debug.text('Argent restant: ' + total.toFixed(2) + '€', 1000 , 64);
     //game.debug.text('Temps restant: ' + tempsrestant + ' s', 100 , 64);
   }

@@ -177,7 +177,7 @@ var Furnitures = {
         spriteStorage[id].body.setSize(110,70,50,30); //largeur,hauteur,decalage largeur,décalage hauteur
       }
       else if (version == 'table+chaises' && orientation == 'cote'){
-        spriteStorage[id].body.setSize(150,70,30,30); //largeur,hauteur,decalage largeur,décalage hauteur
+        spriteStorage[id].body.setSize(150,65,30,35); //largeur,hauteur,decalage largeur,décalage hauteur
       }
       spriteStorage[id].animations.play(version+color+orientation);
     },

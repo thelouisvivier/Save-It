@@ -176,7 +176,7 @@ var MapGen = {
       Appliances.tv.create(1530,1250,'beige',61);
       Furnitures.tables_chaises.create(360,1230,'table+chaises','taupe','cote',62);
       Decorations.plante.create(420,1250,2,63);
-      Appliances.lampe.create(1440,1340,'bleu',64);
+      Appliances.lampe.create(1420,1340,'bleu',64);
       Decorations.tapis.create(800,1200,'bleu',400,200,65);
       Furnitures.fauteuil.create(1730,1320,'droite',66);
       Furnitures.armoire.create(-60,1200,'cotelivre',67);
@@ -203,7 +203,7 @@ var MapGen = {
       Furnitures.canape.update(60);
       Appliances.tv.update(Keys.T(),61);
       Furnitures.tables_chaises.update(62);
-      Decorations.plante.update(63);
+      //Decorations.plante.update(63);
       Appliances.lampe.update(Keys.L(),64);
       Decorations.tapis.update(65);
       Furnitures.fauteuil.update(66);
