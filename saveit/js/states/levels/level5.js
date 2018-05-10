@@ -50,6 +50,8 @@ var Level5 = {
       else{}
     };
 
+    menuPause('Level5State');
+
     //Debut du jeu
     timers.create();
   },

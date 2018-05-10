@@ -46,7 +46,7 @@ var Level1 = {
       }
       else{}
     };
-
+    menuPause('Level1State');
     //Debut du jeu
     timers.create();
   },

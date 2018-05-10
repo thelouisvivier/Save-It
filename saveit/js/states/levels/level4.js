@@ -49,6 +49,8 @@ var Level4 = {
       else{}
     };
 
+    menuPause('Level4State');
+
     //Debut du jeu
     timers.create();
   },

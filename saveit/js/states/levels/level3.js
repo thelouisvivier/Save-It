@@ -48,6 +48,8 @@ var Level3 = {
       else{}
     };
 
+    menuPause('Level3State');
+
     //Debut du jeu
     timers.create();
   },
