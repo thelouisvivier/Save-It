@@ -12,22 +12,22 @@ var gameOver = function(nameState, temps, argent) {
     groupPerdu.add(spritePerdu);
     game.paused = true;
     //Bouton recommencer
-    var recommencerPerdu = game.add.button(posMenuPerduX + 20, posMenuPerduY + 310, 'b_recommencer', ()=>{
+    var recommencerPerdu = game.add.button(posMenuPerduX + 20, posMenuPerduY + 360, 'b_recommencer', ()=>{
       console.log("Restart Level");
       groupPerdu.removeAll(true, true);
       game.paused = false;
       game.state.start(nameState);
-    }, this, 0, 0, 1);
+    }, this, 1, 0, 0);
     recommencerPerdu.scale.setTo(scaleBoutonX, scaleBoutonY);
     groupPerdu.add(recommencerPerdu);
 
     //Bouton sortie
-    var sortiePerdu = game.add.button(posMenuPerduX + 470, posMenuPerduY + 310, 'b_ecranTitre', ()=>{
+    var sortiePerdu = game.add.button(posMenuPerduX + 470, posMenuPerduY + 360, 'b_ecranTitre', ()=>{
       console.log("Start Menu");
       groupPerdu.removeAll(true, true);
       game.paused = false;
       game.state.start('MenuState');
-    }, this, 0, 0, 1);
+    }, this, 1, 0, 0);
     sortiePerdu.scale.setTo(scaleBoutonX, scaleBoutonY);
     groupPerdu.add(sortiePerdu);
   }
