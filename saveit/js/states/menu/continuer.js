@@ -8,7 +8,7 @@ var Continuer = {
 
   create : function(){
     var fond = game.add.tileSprite(0, 0, 3456, 2304, 'menu');
-    fond.scale.setTo(0.40 ,0.40);
+    fond.scale.setTo(game.width/3500);
     //Full screen mode
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.setShowAll();
