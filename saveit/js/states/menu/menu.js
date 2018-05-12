@@ -12,6 +12,7 @@ var Menu = {
     var fond = game.add.sprite(0, 0, 'menu');
     fond.scale.setTo(0.40 ,0.40);
     //Full screen mode
+    //essaye avec : .EXACT_FIT ou .RESIZE ou .USER_SCALE
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.setShowAll();
 
