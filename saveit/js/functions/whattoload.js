@@ -70,8 +70,10 @@ var Whattoload = function() {
   //pause et game over
   game.load.spritesheet('fondPause', 'assets/textures/pause.png');
   game.load.spritesheet('fondPerdu', 'assets/textures/perdu.jpg');
+  game.load.spritesheet('fondGameSucces', 'assets/textures/jeugagne.png');
+  game.load.spritesheet('fondLevelSucces', 'assets/textures/niveaugagne.png');
   game.load.spritesheet('b_reprendre','./assets/buttons/reprendresprite.png', 0, 125);
   game.load.spritesheet('b_recommencer','./assets/buttons/recommencersprite.png', 0, 125);
   game.load.spritesheet('b_ecranTitre','./assets/buttons/ecrantitresprite.png', 0, 123);
-  game.load.spritesheet('b_suivant','./assets/buttons/niveausuivant.png', 0, 125);
+  game.load.spritesheet('b_suivant','./assets/buttons/niveausuivant.png', 0, 335);
 };

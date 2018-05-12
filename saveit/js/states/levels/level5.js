@@ -68,7 +68,7 @@ var Level5 = {
     MapGen.couloir.update();
     MapGen.salon.update();
 
-    gameOver('Level4State', tempsrestant, total);
+    gameOver('Level5State', tempsrestant, total);
   },
 
   render :function() {
