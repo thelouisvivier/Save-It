@@ -24,8 +24,8 @@ var Level1 = {
   },
 
   create : function() {
-    total=100;
-    tempsrestant=120;
+    total=20;
+    tempsrestant=50;
 
 
     //Definition du monde
@@ -42,7 +42,7 @@ var Level1 = {
     for (let i of spriteStorage){
       if (typeof i !== 'undefined'){
         spriteOnMap.push(i.custId);
-        console.log(spriteOnMap);
+        
       }
       else{}
     };
