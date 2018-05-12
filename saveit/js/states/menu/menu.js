@@ -9,8 +9,8 @@ var Menu = {
 
   create : function(){
     this.stage.backgroundColor = '#000000';
-    var fond = game.add.sprite(game.width/8, game.height/12, 'menu');
-    fond.scale.setTo(game.width/5000);
+    var fond = game.add.sprite(0,0, 'menu');
+    fond.scale.setTo(game.width/3500);
     //Full screen mode
     //essaye avec : .EXACT_FIT ou .RESIZE ou .USER_SCALE
     game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;

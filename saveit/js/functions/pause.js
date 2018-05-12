@@ -7,8 +7,8 @@ var menuPause = function(nameState){
   var scaleBoutonY = 0.55;
   touchePause.onDown.add(()=>{
     console.log("Start Pause");
-    var posMenuPauseX = game.width/3;
-    var posMenuPauseY = game.height/2.5;
+    var posMenuPauseX = game.camera.x + 270;
+    var posMenuPauseY = game.camera.y + 145;
     if(game.paused){
       groupePause.removeAll(true, true);
       game.paused = false;
