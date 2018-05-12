@@ -16,10 +16,10 @@ var Menu = {
     game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
     game.scale.setShowAll();
 
-    var buttonIntroduction = game.add.button((game.width/2.38), game.height/2.75, 'b_intro', this.startIntroduction, this, 1, 0, 2).scale.setTo(0.25,0.25);
-    var buttonDemarrer = game.add.button((game.width/2.38) , game.height/2.18, 'b_demarrer', this.startStart, this, 1, 0, 2).scale.setTo(0.25,0.25);
-    var buttonContinuer = game.add.button((game.width/2.38) , game.height/1.80, 'b_continuer', this.startContinuer, this, 1, 0, 2).scale.setTo(0.25,0.25);
-    var buttonCredits = game.add.button((game.width/2.38) , game.height/1.52, 'b_credits', this.startCredit, this, 1, 0, 2).scale.setTo(0.25,0.25);
+    var buttonIntroduction = game.add.button((game.width/2.38), game.height/2.75, 'b_intro', this.startIntroduction, this, 1, 0, 2).scale.setTo(game.height/3850);
+    var buttonDemarrer = game.add.button((game.width/2.38) , game.height/2.18, 'b_demarrer', this.startStart, this, 1, 0, 2).scale.setTo(game.height/3850);
+    var buttonContinuer = game.add.button((game.width/2.38) , game.height/1.80, 'b_continuer', this.startContinuer, this, 1, 0, 2).scale.setTo(game.height/3850);
+    var buttonCredits = game.add.button((game.width/2.38) , game.height/1.52, 'b_credits', this.startCredit, this, 1, 0, 2).scale.setTo(game.height/3850);
   },
 
   startIntroduction : function(){
