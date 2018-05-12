@@ -1,8 +1,6 @@
 var Introduction = {
   preload : function(){
-    game.load.image('menu','./assets/textures/menu.jpg', window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio);
-    game.load.spritesheet('retour','./assets/buttons/retour.png', 0, 74);
-    game.load.image('text','./assets/fonts/text.png',0,0);
+    Whattoload();
   },
 
   create : function(){
@@ -16,7 +14,7 @@ var Introduction = {
     var contenu = "";
     var style = { font: "55px Arial", fill: "#ff0000", align: "center" };
     var text = game.add.text(game.world.centerX, game.world.centerY, contenu, style);
-    var boutonRetour = game.add.button(game.width/2.2, game.height/1.2, 'retour', this.retourMenu, this, 1, 0);
+    var boutonRetour = game.add.button(game.width/2.20, game.height/1.15, 'retour', this.retourMenu, this, 1, 0);
   },
 
   retourMenu : function(){

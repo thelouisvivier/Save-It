@@ -1,8 +1,6 @@
 var Credit = {
   preload : function(){
-    game.load.image('menu','./assets/textures/menu.jpg',window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio);
-    game.load.spritesheet('retour','./assets/buttons/retour.png', 0, 74);
-    game.load.image('credits','./assets/fonts/Credits.png',0,0);
+    Whattoload();
   },
 
   create : function(){
@@ -21,7 +19,7 @@ var Credit = {
     var text = game.add.text(game.world.centerX, 425, contenu, style);
     text.anchor.set(0.5);
     lesCredits.anchor.set(0.5);
-    var boutonRetour = game.add.button(game.width/2.15,game.height/1.3, 'retour', this.retourMenu, this, 1, 0);
+    var boutonRetour = game.add.button(game.width/2.15, game.height/1.15, 'retour', this.retourMenu, this, 1, 0);
   },
 
   retourMenu : function(){
