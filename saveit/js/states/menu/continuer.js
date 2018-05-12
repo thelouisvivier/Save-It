@@ -1,9 +1,6 @@
 var Continuer = {
   preload : function(){
-    game.load.image('menu','./assets/textures/menu.jpg',window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio);
-    game.load.spritesheet('retour','./assets/buttons/retour.png', 0, 74);
-    game.load.spritesheet('niveau1','./assets/buttons/niveau1.png', 0, 87);
-    game.load.spritesheet('niveau2','./assets/buttons/niveau2.png', 0, 87);
+    Whattoload();
   },
 
   create : function(){
@@ -12,9 +9,12 @@ var Continuer = {
     //Full screen mode
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.setShowAll();
-    var boutonRetour = game.add.button(1000, 500, 'retour', this.retourMenu, this, 1, 0);
-    var boutonNiveau1 = game.add.button(400, game.world.centerY, 'niveau1', this.accesNiveau1, this, 1, 0);
-    var boutonNiveau2 = game.add.button(700, game.world.centerY, 'niveau2', this.accesNiveau2, this, 1, 0);
+    var boutonRetour = game.add.button(game.width/1.20, game.height/1.20, 'retour', this.retourMenu, this, 1, 0);
+    var boutonNiveau1 = game.add.button(game.width/2.90, game.height/2.50, 'niveau1', this.accesNiveau1, this, 1, 0).scale.setTo(game.height/750);
+    var boutonNiveau2 = game.add.button(game.width/1.80, game.height/2.50, 'niveau2', this.accesNiveau2, this, 1, 0).scale.setTo(game.height/750);
+    var boutonNiveau3 = game.add.button(game.width/2.90, game.height/1.90, 'niveau3', this.accesNiveau3, this, 1, 0).scale.setTo(game.height/750);
+    var boutonNiveau4 = game.add.button(game.width/1.80, game.height/1.90, 'niveau4', this.accesNiveau4, this, 1, 0).scale.setTo(game.height/750);
+    var boutonNiveau5 = game.add.button(game.width/2.20, game.height/1.53, 'niveau5', this.accesNiveau5, this, 1, 0).scale.setTo(game.height/750);
   },
 
   retourMenu : function(){
@@ -27,5 +27,17 @@ var Continuer = {
 
   accesNiveau2 : function(){
     game.state.start('Level2State');
+  },
+
+  accesNiveau3 : function(){
+    game.state.start('Level3State');
+  },
+
+  accesNiveau4 : function(){
+    game.state.start('Level4State');
+  },
+
+  accesNiveau5 : function(){
+    game.state.start('Level5State');
   }
 }
