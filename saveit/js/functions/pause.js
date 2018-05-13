@@ -5,7 +5,6 @@ var menuPause = function(nameState){
   var touchePause = game.input.keyboard.addKey(Phaser.Keyboard.ESC);
   var scaleBouton = game.width/2450;
   touchePause.onDown.add(()=>{
-    console.log("Start Pause");
     var posMenuPauseX = game.camera.x + 270;
     var posMenuPauseY = game.camera.y + 145;
     if(game.paused){
@@ -20,7 +19,6 @@ var menuPause = function(nameState){
 
       //Bouton continuer
       var continuerPause = game.add.button(game.camera.x + (game.width/4.20), game.camera.y + (game.height/1.40), 'b_reprendre', ()=>{
-        console.log("Stop Pause");
         groupePause.removeAll(true, true);
         game.paused = false;
       }, this, 0, 0, 1);
@@ -29,7 +27,6 @@ var menuPause = function(nameState){
 
       //Bouton recommencer
       var recommencerPause = game.add.button(game.camera.x + (game.width/2.35), game.camera.y + (game.height/1.40), 'b_recommencer', ()=>{
-        console.log("Restart Level");
         groupePause.removeAll(true, true);
         game.paused = false;
         game.state.start(nameState);
@@ -39,7 +36,6 @@ var menuPause = function(nameState){
 
       //Bouton sortie
       var sortiePause = game.add.button(game.camera.x + (game.width/1.63), game.camera.y + (game.height/1.40), 'b_ecranTitre', ()=>{
-        console.log("Start Menu");
         groupePause.removeAll(true, true);
         game.paused = false;
         game.state.start('MenuState');

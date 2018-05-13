@@ -42,13 +42,17 @@ var Level3 = {
     //Ajout du perso
     Perso.louis.create(1170,550);
 
+    //Recherche Objets Actifs
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
         spriteOnMap.push(i.custId);
       }
       else{}
     };
+
+    //Popup
     setTimeout(function () {Popup.create('lampeinfo',1150,350);}, 3000);
+
     menuPause('Level3State');
 
     //Debut du jeu
@@ -60,6 +64,7 @@ var Level3 = {
     //Update du perso
     Perso.louis.update();
 
+    //Update de la Map
     MapGen.chambre.update();
     MapGen.cuisine.update();
     MapGen.couloir.update();

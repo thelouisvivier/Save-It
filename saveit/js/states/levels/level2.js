@@ -41,13 +41,17 @@ var Level2 = {
     //Ajout du perso
     Perso.louis.create(300,600);
 
+    //Recherche Objets Actifs
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
         spriteOnMap.push(i.custId);
       }
       else{}
     };
+
+    //Popup
     setTimeout(function () {Popup.create('evierinfo',300,400);}, 3000);
+
     menuPause('Level2State');
 
     //Debut du jeu
@@ -59,6 +63,7 @@ var Level2 = {
     //Update du perso
     Perso.louis.update();
 
+    //Update de la Map
     MapGen.cuisine.update();
     MapGen.couloir.update();
     MapGen.salon.update();

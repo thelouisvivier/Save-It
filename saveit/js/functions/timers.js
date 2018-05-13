@@ -31,11 +31,11 @@ var timers = {
   },
   updateText : function () {
     if(total>0){
-    textmonney.setText('Argent restant: ' + total.toFixed(2) + '€');
-  }
-  else{
-    textmonney.setText('Argent restant: 0 €');
-  }
+      textmonney.setText('Argent restant: ' + total.toFixed(2) + '€');
+    }
+    else{
+      textmonney.setText('Argent restant: 0 €');
+    }
     texttime.setText('Temps restant: ' + tempsrestant + ' s');
   },
 

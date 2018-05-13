@@ -128,7 +128,6 @@ var gamerule = {
       stateStorage[turnon]=true;
       for(let j of objectcost){
         if (j.name == spriteStorage[turnon].custType){
-          console.log(j.name);
           coutobjprecedent= j.cost;
         }
       }

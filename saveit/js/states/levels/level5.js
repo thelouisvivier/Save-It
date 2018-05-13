@@ -42,13 +42,17 @@ var Level5 = {
     //Ajout du perso
     Perso.louis.create(1800,300);
 
+    //Recherche Objets Actifs
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
         spriteOnMap.push(i.custId);
       }
       else{}
     };
+
+    //Popup
     setTimeout(function () {Popup.create('baignoireinfo',1600,100);}, 5000);
+
     menuPause('Level5State');
 
     //Debut du jeu
@@ -60,6 +64,7 @@ var Level5 = {
     //Update du perso
     Perso.louis.update();
 
+    //Update de la Map
     MapGen.salledebain.update();
     MapGen.bureau.update();
     MapGen.chambre.update();
@@ -68,13 +73,5 @@ var Level5 = {
     MapGen.salon.update();
 
     gameOver('Level5State', tempsrestant, total);
-  },
-
-  render :function() {
-    //Debug
-    //game.debug.cameraInfo(game.camera, 32, 32);
-    //game.debug.body(spriteStorage[23]);
-    //game.debug.text('Argent restant: ' + total.toFixed(2) + '€', 1000 , 64);
-    //game.debug.text('Temps restant: ' + tempsrestant + ' s', 100 , 64);
   }
 }

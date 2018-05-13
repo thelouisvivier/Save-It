@@ -41,14 +41,19 @@ var Level1 = {
     //Ajout du perso
     Perso.louis.create(1400,1200);
 
+    //Recherche Objets Actifs
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
         spriteOnMap.push(i.custId);
       }
       else{}
     };
+
+    //Popup
     setTimeout(function () {Popup.create('tvinfo',1600,1100);}, 1000);
+
     menuPause('Level1State');
+
     //Debut du jeu
     timers.create();
   },
@@ -58,6 +63,7 @@ var Level1 = {
     //Update du perso
     Perso.louis.update();
 
+    //Update de la Map
     MapGen.couloir.update();
     MapGen.salon.update();
     Walls.vertical.update(31);

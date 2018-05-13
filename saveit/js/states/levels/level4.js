@@ -42,6 +42,7 @@ var Level4 = {
     //Ajout du perso
     Perso.louis.create(130,100);
 
+    //Recherche Objets Actifs
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
         spriteOnMap.push(i.custId);
@@ -49,7 +50,9 @@ var Level4 = {
       else{}
     };
 
+    //Popup
     setTimeout(function () {Popup.create('fenetreinfo',220,0);}, 3000);
+
     menuPause('Level4State');
 
     //Debut du jeu
@@ -61,6 +64,7 @@ var Level4 = {
     //Update du perso
     Perso.louis.update();
 
+    //Update de la Map
     MapGen.bureau.update();
     MapGen.chambre.update();
     MapGen.cuisine.update();
