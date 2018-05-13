@@ -40,7 +40,7 @@ var Level5 = {
     MapGen.salon.create();
 
     //Ajout du perso
-    Perso.louis.create();
+    Perso.louis.create(1800,300);
 
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
@@ -48,7 +48,7 @@ var Level5 = {
       }
       else{}
     };
-
+    setTimeout(function () {Popup.create('baignoireinfo',1600,100);}, 5000);
     menuPause('Level5State');
 
     //Debut du jeu
