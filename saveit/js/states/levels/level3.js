@@ -36,6 +36,8 @@ var Level3 = {
     MapGen.cuisine.create();
     MapGen.chambre.create();
     MapGen.salon.create();
+    Walls.vertical.create(0,0,'noir',910,500,31);//gauche
+    Walls.vertical.create(1100,0,'noir',910,500,32);//droite
 
     //Ajout du perso
     Perso.louis.create(1170,550);
@@ -62,15 +64,9 @@ var Level3 = {
     MapGen.cuisine.update();
     MapGen.couloir.update();
     MapGen.salon.update();
+    Walls.vertical.update(31);
+    Walls.vertical.update(32);
 
     gameOver('Level3State', tempsrestant, total);
-  },
-
-  render :function() {
-    //Debug
-    //game.debug.cameraInfo(game.camera, 32, 32);
-    //game.debug.body(spriteStorage[23]);
-    //game.debug.text('Argent restant: ' + total.toFixed(2) + '€', 1000 , 64);
-    //game.debug.text('Temps restant: ' + tempsrestant + ' s', 100 , 64);
   }
 }
