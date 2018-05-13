@@ -45,7 +45,7 @@ var Level2 = {
       }
       else{}
     };
-    setTimeout(function () {Popup.create('evierinfo',300,400);}, 2000);
+    setTimeout(function () {Popup.create('evierinfo',300,400);}, 3000);
     menuPause('Level2State');
 
     //Debut du jeu

@@ -38,7 +38,7 @@ var Level3 = {
     MapGen.salon.create();
 
     //Ajout du perso
-    Perso.louis.create();
+    Perso.louis.create(1170,550);
 
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
@@ -46,7 +46,7 @@ var Level3 = {
       }
       else{}
     };
-
+    setTimeout(function () {Popup.create('lampeinfo',1150,350);}, 3000);
     menuPause('Level3State');
 
     //Debut du jeu

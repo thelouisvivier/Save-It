@@ -1,6 +1,6 @@
 var datamessages = [
     {name:'tvinfo', text:'Voici la télévision. Evitez de\nla laisser en veille inutilement.\nPour info, la télévision\nvous coûtera environ 16€/an\nd\'électricité alors\néteignez-la avec la touche "t".'},
-    {name:'lampeinfo', text:'Voici la lampe. Malgré son utilité indiscutable, une lampe reste encore trop souvent allumée inutilement. En évitant de la laisser allumée 2h de trop par jour, vous économiserez 10€/an. Privilégiez donc la lumière naturelle en éteignant la lampe grace à la touche "l".'},
+    {name:'lampeinfo', text:'Voici la lampe. Malgré son utilité\nindiscutable, une lampe reste\nencore trop souvent allumée\ninutilement. Privilégiez donc la\nlumière naturelle en éteignant\nla lampe grace à la touche "l".'},
     {name:'evierinfo', text:'Voici l\'évier. En moyenne, 40 litres\nd\'eau sont consommés pour une\nvaisselle à la main.\nAttention coupez donc l\'eau\nlorsqu\'elle coule inutilement\ngrace à la touche "e".'},
     {name:'fenetreinfo', text:'Voici la fenêtre. C\' élément ne consomme rien à proprement parlé mais si vous mettez du chauffage dans votre maison, il est préférable des la fermer. Faites le grace à la touche "f"'},
     {name:'appliquesinfo', text:'Voici l\'applique murale. Bon concrétement qui appelle ça comme ça ? Personne ? Ok donc ce sera des lumières. Il faut bien évidemment les éteindre lorsque nous ne sommes pas dans une pièce pour éviter de consommé inutilement. Une ampoule à consommation normale vous coutera environ 20€/an, alors eteignez la avec "l".'},
