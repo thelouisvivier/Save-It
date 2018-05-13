@@ -10,6 +10,7 @@ var Whattoload = function() {
 
   //Popup
   game.load.image('popupportrait', 'assets/popup/popupportrait.png');
+    game.load.image('popuppaysage', 'assets/popup/popuppaysage.png');
 
   //Perso
   game.load.spritesheet('louis', 'assets/sprites/perso/louis.png', 100, 95);

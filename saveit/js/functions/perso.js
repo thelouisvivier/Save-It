@@ -1,7 +1,7 @@
 var Perso = {
   louis : {
-    create:function() {
-      louis = game.add.sprite(game.world.centerX, game.world.centerY, 'louis');
+    create:function(posx,posy) {//game.paused = true; et game.world.centerY pour le milieu du jeu
+      louis = game.add.sprite(posx, posy, 'louis');
       //louis.body.collideWorldBounds = true;
       game.physics.enable(louis, Phaser.Physics.ARCADE);
       louis.body.setSize(60,95,20,0); //largeur,hauteur,decalage largeur,décalage hauteur

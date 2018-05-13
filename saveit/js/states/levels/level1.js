@@ -37,7 +37,7 @@ var Level1 = {
     MapGen.salon.create();
 
     //Ajout du perso
-    Perso.louis.create();
+    Perso.louis.create(1400,1200);
 
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
@@ -45,6 +45,7 @@ var Level1 = {
       }
       else{}
     };
+    setTimeout(function () {Popup.create('tvinfo',1600,1100);}, 1000);
     menuPause('Level1State');
     //Debut du jeu
     timers.create();

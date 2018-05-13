@@ -13,12 +13,11 @@ var textpopup;
 var returntext;
 
 function selectMessages (name){
-  datamessages.forEach(function(element) {
-    index = datamessages.indexOf(element);
-    if (datamessages[index].name == name){
-      returntext = datamessages[index].text;
+  for (let i of datamessages){
+    if (i.name == name){
+      returntext = i.text;
     }
-  });
+  }
 };
 
 var Popup = {
@@ -29,11 +28,13 @@ var Popup = {
     popupsprite.input.useHandCursor = true;
     popupsprite.events.onInputDown.add(removePopup, this);
     selectMessages(selmsg);
-    textpopup = game.add.text(400,300, returntext, { font: "32px Arial", fill: "#000000", align: "left" });
+    textpopup = game.add.text(25,75, returntext, { font: "40px Exo2", fill: "#000000", align: "left" });
     popupsprite.addChild(textpopup);
+    game.paused = true;
   }
 };
 
 function removePopup() {
   popupsprite.destroy();
+  game.paused = false;
 };
