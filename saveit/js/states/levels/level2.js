@@ -37,7 +37,7 @@ var Level2 = {
     MapGen.salon.create();
 
     //Ajout du perso
-    Perso.louis.create();
+    Perso.louis.create(300,600);
 
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
@@ -45,7 +45,7 @@ var Level2 = {
       }
       else{}
     };
-
+    setTimeout(function () {Popup.create('evierinfo',300,400);}, 2000);
     menuPause('Level2State');
 
     //Debut du jeu
