@@ -40,9 +40,8 @@ var Level1 = {
     Perso.louis.create();
 
     for (let i of spriteStorage){
-      if (typeof i !== 'undefined'){
+      if (typeof i !== 'undefined' && i.custCtrl == true){
         spriteOnMap.push(i.custId);
-        
       }
       else{}
     };

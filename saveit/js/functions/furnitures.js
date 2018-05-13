@@ -7,6 +7,7 @@ var Furnitures = {
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].custId = id;
       spriteStorage[id].custType= 'armoire';
+      spriteStorage[id].custCtrl= false;
       spriteStorage[id].scale.setTo(0.6, 0.6);
       spriteStorage[id].animations.add('facelivre', [0], 1, true);
       spriteStorage[id].animations.add('facecommode', [1], 1, true);
@@ -38,6 +39,7 @@ var Furnitures = {
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].custId = id;
       spriteStorage[id].custType= 'canape';
+      spriteStorage[id].custCtrl= false;
       spriteStorage[id].scale.setTo(0.15, 0.15);
       spriteStorage[id].animations.add('face', [0], 1, true);
       spriteStorage[id].animations.add('dos', [1], 1, true);
@@ -69,6 +71,7 @@ var Furnitures = {
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].custId = id;
       spriteStorage[id].custType= 'furniturescuisine';
+      spriteStorage[id].custCtrl= false;
       spriteStorage[id].scale.setTo(0.1, 0.1);
       spriteStorage[id].animations.add('meubleblanc', [0], 1, true);
       spriteStorage[id].animations.add('meublemarron', [1], 1, true);
@@ -96,6 +99,7 @@ var Furnitures = {
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].custId = id;
       spriteStorage[id].custType= 'fauteuil';
+      spriteStorage[id].custCtrl= false;
       spriteStorage[id].scale.setTo(1.1,1.1);
       spriteStorage[id].animations.add('face', [0], 1, true);
       spriteStorage[id].animations.add('droite', [2], 1, true);
@@ -123,6 +127,7 @@ var Furnitures = {
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].custId = id;
       spriteStorage[id].custType= 'lit';
+      spriteStorage[id].custCtrl= false;
       spriteStorage[id].scale.setTo(0.7, 0.8);
       spriteStorage[id].animations.add('gauche', [0], 1, true);
       spriteStorage[id].animations.add('droite', [1], 1, true);
@@ -150,6 +155,7 @@ var Furnitures = {
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].custId = id;
       spriteStorage[id].custType= 'tables/chaises';
+      spriteStorage[id].custCtrl= false;
       //spriteStorage[id].scale.setTo(0.6, 0.6);
       spriteStorage[id].animations.add('tablemarronface', [0], 1, true);
       spriteStorage[id].animations.add('tablegrisface', [1], 1, true);
@@ -193,6 +199,7 @@ var Furnitures = {
       spriteStorage[id].body.immovable = true;
       spriteStorage[id].custId = id;
       spriteStorage[id].custType= 'tablebasse';
+      spriteStorage[id].custCtrl= false;
       spriteStorage[id].scale.setTo(0.2,0.2);
       //spriteStorage[id].body.setSize(640,237,0,0); //largeur,hauteur,decalage largeur,décalage hauteur
     },
