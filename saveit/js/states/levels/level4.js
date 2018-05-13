@@ -39,7 +39,7 @@ var Level4 = {
     MapGen.salon.create();
 
     //Ajout du perso
-    Perso.louis.create();
+    Perso.louis.create(130,100);
 
     for (let i of spriteStorage){
       if (typeof i !== 'undefined' && i.custCtrl == true){
@@ -48,6 +48,7 @@ var Level4 = {
       else{}
     };
 
+    setTimeout(function () {Popup.create('fenetreinfo',220,0);}, 3000);
     menuPause('Level4State');
 
     //Debut du jeu
