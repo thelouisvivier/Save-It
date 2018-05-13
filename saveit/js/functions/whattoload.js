@@ -2,7 +2,6 @@
 
 var Whattoload = function() {
   //Textures
-  game.load.image('sol','assets/textures/sol.png');
   game.load.image('parquet','assets/textures/parquet.png');
   game.load.image('parquet2','assets/textures/parquet2.png');
   game.load.image('carrelage','assets/textures/carrelage.png');
