@@ -355,7 +355,7 @@ var Appliances = {
       spriteStorage[idInt].body.immovable = true;
       spriteStorage[idInt].custId = idInt;
       spriteStorage[idInt].custType= 'interrupteur';
-      spriteStorage[idInt].custCtrl= true;
+      spriteStorage[idInt].custCrtl= true;
       spriteStorage[idInt].scale.setTo(0.5, 0.5);
     },
     update:function(key,idApp,idInt){
