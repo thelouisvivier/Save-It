@@ -86,8 +86,8 @@ var MapGen = {
       Walls.horizontal.create(0,500,'cacadoie',900,125,10);//Cuisine fond
       Walls.horizontal.create(0,500,'noir',900,10,11);//Cuisine fond
       Walls.vertical.create(0,500,'noir',30,500,12);//Cusine gauche
-      Walls.vertical.create(900,500,'noir',10,175,13);//Cuisine part1
-      Walls.vertical.create(900,825,'noir',10,175,14);//Cuisine part2
+      Walls.vertical.create(900,500,'noir',10,170,13);//Cuisine part1
+      Walls.vertical.create(900,830,'noir',10,170,14);//Cuisine part2
 
       Appliances.evier.create(300,490,'beige',25);
       Appliances.frigo.create(80,470,26);
@@ -124,8 +124,8 @@ var MapGen = {
       Walls.horizontal.create(1100,500,'orange',900,125,15);//Chambre fond
       Walls.horizontal.create(1100,500,'noir',900,10,16);//Chambre fond
       Walls.vertical.create(1970,500,'noir',30,975,17);//Chambre gauche
-      Walls.vertical.create(1100,500,'noir',10,175,18);//Chambre part1
-      Walls.vertical.create(1100,825,'noir',10,175,19);//Chambre part2
+      Walls.vertical.create(1100,500,'noir',10,170,18);//Chambre part1
+      Walls.vertical.create(1100,830,'noir',10,170,19);//Chambre part2
 
       Appliances.radiateur.create(1250,550,37);
       Appliances.lampe.create(1150,540,'bleu',38);
