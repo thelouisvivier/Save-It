@@ -25,7 +25,7 @@ var Level5 = {
 
   create : function() {
     total=150;
-    tempsrestant=5;
+    tempsrestant=120;
 
     //Definition du monde
     game.physics.startSystem(Phaser.Physics.ARCADE);

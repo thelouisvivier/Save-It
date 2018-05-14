@@ -24,7 +24,7 @@ var Level4 = {
   },
 
   create : function() {
-    total=100;
+    total=90;
     tempsrestant=90;
 
     //Definition du monde
