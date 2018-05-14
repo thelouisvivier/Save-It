@@ -6,8 +6,8 @@ var MapGen = {
       Walls.horizontal.create(0,0,'beigeclair',900,125,0);//Bureau fond
       Walls.horizontal.create(0,0,'noir',900,10,1);//Bureau fond
       Walls.vertical.create(0,0,'noir',30,500,2);//Bureau gauche
-      Walls.vertical.create(900,0,'noir',10,175,3);//Bureau part1
-      Walls.vertical.create(900,325,'noir',10,175,4);//Bureau part2 --- Attention, laisser 150 d'ouverture pour louis
+      Walls.vertical.create(900,0,'noir',10,170,3);//Bureau part1
+      Walls.vertical.create(900,330,'noir',10,170,4);//Bureau part2 --- Attention, laisser 150 d'ouverture pour louis
 
       Appliances.fenetre.create(100,0,2,0);
       Appliances.fenetre.create(500,0,4,1);
@@ -44,8 +44,8 @@ var MapGen = {
       Walls.horizontal.create(1100,0,'vert',900,125,5);//SDB fond
       Walls.horizontal.create(1100,0,'noir',900,10,6);//SDB fond
       Walls.vertical.create(1970,0,'noir',30,975,7);//SDB droite
-      Walls.vertical.create(1100,0,'noir',10,175,8);//SDB part1
-      Walls.vertical.create(1100,325,'noir',10,175,9);//SDB part2
+      Walls.vertical.create(1100,0,'noir',10,170,8);//SDB part1
+      Walls.vertical.create(1100,330,'noir',10,170,9);//SDB part2
 
       Appliances.fenetre.create(1200,0,1,12);
       Appliances.fenetre.create(1750,0,3,13);
