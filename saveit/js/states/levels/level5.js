@@ -51,7 +51,7 @@ var Level5 = {
     };
 
     //Popup
-    setTimeout(function () {Popup.create('baignoireinfo',1600,100);}, 5000);
+    setTimeout(function () {Popup.create('baignoireinfo',1600,100);}, 3000);
 
     menuPause('Level5State');
 
