@@ -25,7 +25,7 @@ var Level1 = {
 
   create : function() {
     total=20;
-    tempsrestant=50;
+    tempsrestant=30;
 
 
     //Definition du monde
