@@ -9,7 +9,7 @@ var Introduction = {
     //Full screen mode
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     game.scale.setShowAll();
-    var text =game.add.image(game.width/4.1,game.height/2.5,'text');
+    var text =game.add.image(game.width/4.8,game.height/2.5,'text');
     text.scale.setTo(game.width/2000);
     var contenu = "";
     var style = { font: "55px Arial", fill: "#ff0000", align: "center" };
