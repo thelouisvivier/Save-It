@@ -6,7 +6,7 @@ var gameOver = function(nameState, temps, argent) {
   var scaleBouton1 = game.width/2450;  //Pour le menu avec 3 boutons
 
   if(temps == 0 && argent >= 0){
-    if(nameState == 'Level5State'){
+  /*  if(nameState == 'Level5State'){
       //On a Gagné le jeu
       var groupGameSucces = game.add.group();
       var spriteGameSucces = game.add.sprite(game.camera.x + (game.width/4.50), game.camera.y + (game.height/4.20), 'fondGameSucces');
@@ -30,7 +30,7 @@ var gameOver = function(nameState, temps, argent) {
       }, this, 1, 0, 0);
       sortieNiveau.scale.setTo(scaleBoutonX);
       groupGameSucces.add(sortieNiveau);
-    }else{
+    }*/
       //On a Gagné le niveau
       var groupLevelSucces = game.add.group();
       var spriteLevelSucces = game.add.sprite(game.camera.x + (game.width/4.50), game.camera.y + (game.height/4.20), 'fondLevelSucces');
@@ -64,7 +64,7 @@ var gameOver = function(nameState, temps, argent) {
       }, this, 1, 0, 0);
       sortieNiveau1.scale.setTo(scaleBouton1);
       groupLevelSucces.add(sortieNiveau1);
-    }
+  
   }else if(argent <= 0){
     //On a perdu
     var groupPerdu = game.add.group();
