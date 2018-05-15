@@ -28,7 +28,8 @@ var Popup = {
     popupsprite.input.useHandCursor = true;
     popupsprite.events.onInputDown.add(removePopup, this);
     selectMessages(selmsg);
-    textpopup = game.add.text(25,75, returntext, { font: "40px Exo2", fill: "#000000", align: "left" });
+    textpopup = game.add.bitmapText(25, 75, 'Exo2',returntext, 40);
+    textpopup.tint = 0x000000;
     popupsprite.addChild(textpopup);
     game.paused = true;
   }

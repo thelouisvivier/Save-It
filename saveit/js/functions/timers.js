@@ -15,18 +15,12 @@ var timers = {
     timer.loop(1500, gamerule.countobjon,this);
     timer.loop(3000, gamerule.allumeobj,this);
     window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio
-    texttime = game.add.text( window.innerWidth * window.devicePixelRatio*0.01 , 20, 'Temps restant: ' + tempsrestant + ' s', {
-      font: "25px ObelixPro",
-      fill: "#ffffff",
-      align: "left"
-    });
+    texttime = game.add.bitmapText( 20, 20, 'ObelixPro', 'Temps restant: ' + tempsrestant + ' s', 25);
+    texttime.anchor.x = 0;
     texttime.fixedToCamera = true;
     //textime.cameraOffset.setTo(200, 500);
-    textmonney = game.add.text((window.innerWidth * window.devicePixelRatio- 60) *0.7, 20, 'Argent restant: ' + total.toFixed(2) + '€', {
-      font: "25px ObelixPro",
-      fill: "#ffffff",
-      align: "right"
-    });
+    textmonney = game.add.bitmapText( window.innerWidth * window.devicePixelRatio - 20, 20, 'ObelixPro', 'Argent restant: ' + total.toFixed(2) + '€', 25);
+    textmonney.anchor.x = 1;
     textmonney.fixedToCamera = true;
   },
   updateText : function () {
