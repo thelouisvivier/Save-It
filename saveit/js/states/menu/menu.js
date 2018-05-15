@@ -26,6 +26,12 @@ var Menu = {
     buttonCommandes.scale.setTo(game.height/3000);
     buttonActus.scale.setTo(game.height/3000);
     buttonCredits.scale.setTo(game.height/3000);
+    var version = game.add.bitmapText(game.width-20,game.height-10, 'Exo2','V1.0.1', 20);
+    version.align = 'right';
+    version.tint = 0x000000;
+    version.anchor.x = 1;
+    version.anchor.y = 1;
+    version.scale.setTo(game.width/1500);
   },
 
   startIntroduction : function(){

@@ -9,12 +9,12 @@ var Credit = {
     game.scale.setShowAll();
 
     var contenu = "Crédits :\n\nFlorentin DEHOOGHE\nLouis-Clément LANGUE\nRémi VANDEWALLE\nLouis VIVIER";
-    var text = game.add.bitmapText(game.world.centerX, game.world.centerY+40, 'Exo2',contenu, 40);
-    text.align = 'center';
-    text.tint = 0x000000;
-    text.anchor.x = 0.5;
-    text.anchor.y = 0.5;
-    text.scale.setTo(game.width/1500);
+    var textCredits = game.add.bitmapText(game.world.centerX, game.world.centerY+40, 'Exo2',contenu, 40);
+    textCredits.align = 'center';
+    textCredits.tint = 0x000000;
+    textCredits.anchor.x = 0.5;
+    textCredits.anchor.y = 0.5;
+    textCredits.scale.setTo(game.width/1500);
     var boutonRetour = game.add.button(game.world.centerX, game.height/1.15, 'retour', this.retourMenu, this, 1, 0);
     boutonRetour.anchor.set(0.5);
     boutonRetour.scale.setTo(game.height/750);
