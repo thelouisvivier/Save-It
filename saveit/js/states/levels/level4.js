@@ -14,7 +14,6 @@ var wallStorage = [];
 //Pour Timer
 var turnon;
 var coutobjprecedent;
-coutobjprecedent=0;
 var total;
 
 var Level4 = {
@@ -24,6 +23,16 @@ var Level4 = {
   },
 
   create : function() {
+    //Reinitialisation des variables
+    spriteStorage = [];
+    stateStorage = [];
+    flipFlop =[];
+    spriteOnMap = [];
+    wallStorage = [];
+    turnon = 0;
+    coutobjprecedent=0;
+
+    //Definition des difficultées
     total=90;
     tempsrestant=90;
 
