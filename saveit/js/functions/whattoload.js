@@ -84,8 +84,6 @@ var Whattoload = function() {
   game.load.spritesheet('b_continuer','./assets/buttons/continuer.png', 0, 357);
   game.load.spritesheet('b_credits','./assets/buttons/credits.png', 0, 357);
   game.load.spritesheet('retour','./assets/buttons/retour.png', 0, 74);
-  game.load.image('text','./assets/fonts/text.png',0,0);
-  game.load.image('credits','./assets/fonts/Credits.png',0,0);
   game.load.spritesheet('niveau1', './assets/buttons/niveau1.png', 0, 87);
   game.load.spritesheet('niveau2', './assets/buttons/niveau2.png', 0, 87);
   game.load.spritesheet('niveau3', './assets/buttons/niveau3.png', 0, 87);
