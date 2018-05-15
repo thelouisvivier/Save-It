@@ -8,10 +8,24 @@ var Menu = {
     game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
     game.scale.setShowAll();
 
-    var buttonIntroduction = game.add.button((game.width/2.45), game.height/2.50, 'b_intro', this.startIntroduction, this, 1, 0, 2).scale.setTo(game.height/3000);
-    var buttonDemarrer = game.add.button((game.width/2.45) , game.height/1.90, 'b_demarrer', this.startStart, this, 1, 0, 2).scale.setTo(game.height/3000);
-    var buttonContinuer = game.add.button((game.width/2.45) , game.height/1.53, 'b_continuer', this.startContinuer, this, 1, 0, 2).scale.setTo(game.height/3000);
-    var buttonCredits = game.add.button((game.width/2.45) , game.height/1.28, 'b_credits', this.startCredit, this, 1, 0, 2).scale.setTo(game.height/3000);
+    var buttonIntroduction = game.add.button((game.width/2)-50, game.height/2.5, 'b_intro', this.startIntroduction, this, 1, 0, 2);
+    var buttonDemarrer = game.add.button((game.width/2)- 50 , game.height/1.80, 'b_demarrer', this.startStart, this, 1, 0, 2);
+    var buttonContinuer = game.add.button((game.width/2)+ 50, game.height/1.8, 'b_continuer', this.startContinuer, this, 1, 0, 2);
+    var buttonCommandes = game.add.button((game.width/2) + 50, game.height/2.50, 'b_commandes', this.startCommandes, this, 1, 0, 2);
+    var buttonActus = game.add.button((game.width/2)-50 , game.height/1.4, 'b_actus', this.startActus, this, 1, 0, 2);
+    var buttonCredits = game.add.button((game.width/2)+50 , game.height/1.4, 'b_credits', this.startCredit, this, 1, 0, 2);
+    buttonIntroduction.anchor.x = 1;
+    buttonDemarrer.anchor.x = 1;
+    buttonContinuer.anchor.x = 0;
+    buttonCommandes.anchor.x = 0;
+    buttonActus.anchor.x = 1;
+    buttonCredits.anchor.x = 0;
+    buttonIntroduction.scale.setTo(game.height/3000);
+    buttonDemarrer.scale.setTo(game.height/3000);
+    buttonContinuer.scale.setTo(game.height/3000);
+    buttonCommandes.scale.setTo(game.height/3000);
+    buttonActus.scale.setTo(game.height/3000);
+    buttonCredits.scale.setTo(game.height/3000);
   },
 
   startIntroduction : function(){
@@ -24,6 +38,14 @@ var Menu = {
 
   startContinuer : function(){
     game.state.start('ContinuerState');
+  },
+
+  startCommandes : function(){
+    game.state.start('CommandesState');
+  },
+
+  startActus : function(){
+    game.state.start('ActusState');
   },
 
   startCredit : function(){

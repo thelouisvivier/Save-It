@@ -89,6 +89,8 @@ var Whattoload = function() {
   game.load.spritesheet('niveau3', './assets/buttons/niveau3.png', 0, 87);
   game.load.spritesheet('niveau4', './assets/buttons/niveau4.png', 0, 87);
   game.load.spritesheet('niveau5', './assets/buttons/niveau5.png', 0, 87);
+  game.load.spritesheet('b_actus', './assets/buttons/actussprite.png', 0, 357);
+  game.load.spritesheet('b_commandes', './assets/buttons/commandessprite.png', 0, 357);
 
   //fonts
   game.load.bitmapFont('Exo2', 'assets/fonts/Exo2/Exo2.png', 'assets/fonts/Exo2/Exo2.fnt');

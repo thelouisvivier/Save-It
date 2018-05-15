@@ -4,6 +4,8 @@ game.state.add('PreloadState', Preload);
 game.state.add('IntroductionState', Introduction);
 game.state.add('ContinuerState', Continuer);
 game.state.add('CreditState', Credit);
+game.state.add('ActusState', Actus);
+game.state.add('CommandesState', Commandes);
 game.state.add('MenuState', Menu);
 game.state.add('Level1State', Level1);
 game.state.add('Level2State', Level2);
