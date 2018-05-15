@@ -1,7 +1,4 @@
 var Credit = {
-  preload : function(){
-    Whattoload();
-  },
 
   create : function(){
     var fond = game.add.tileSprite(0, 0, 3456, 2304, 'menu');

@@ -18,10 +18,6 @@ var total;
 
 var Level1 = {
 
-  preload: function (){
-    Whattoload();
-  },
-
   create : function() {
     //Reinitialisation des variables
     spriteStorage = [];

@@ -17,11 +17,7 @@ var coutobjprecedent;
 var total;
 
 var Level2 = {
-
-  preload: function (){
-    Whattoload();
-  },
-
+  
   create : function() {
     //Reinitialisation des variables
     spriteStorage = [];

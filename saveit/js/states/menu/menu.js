@@ -1,7 +1,4 @@
 var Menu = {
-  preload : function(){
-    Whattoload();
-  },
 
   create : function(){
     this.stage.backgroundColor = '#000000';
