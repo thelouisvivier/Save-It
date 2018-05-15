@@ -17,7 +17,7 @@ var coutobjprecedent;
 var total;
 
 var Level2 = {
-  
+
   create : function() {
     //Reinitialisation des variables
     spriteStorage = [];
@@ -55,7 +55,7 @@ var Level2 = {
     };
 
     //Popup
-    setTimeout(function () {Popup.create('evierinfo',300,400);}, 3000);
+    setTimeout(function () {Popup.create('evierinfo',300,400);}, 1000);
 
     menuPause('Level2State');
 

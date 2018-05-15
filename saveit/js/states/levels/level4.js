@@ -56,7 +56,7 @@ var Level4 = {
     };
 
     //Popup
-    setTimeout(function () {Popup.create('fenetreinfo',220,0);}, 3000);
+    setTimeout(function () {Popup.create('fenetreinfo',220,0);}, 1000);
 
     menuPause('Level4State');
 

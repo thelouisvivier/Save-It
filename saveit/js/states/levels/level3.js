@@ -56,7 +56,7 @@ var Level3 = {
     };
 
     //Popup
-    setTimeout(function () {Popup.create('lampeinfo',1150,350);}, 3000);
+    setTimeout(function () {Popup.create('lampeinfo',1150,350);}, 1000);
 
     menuPause('Level3State');
 
