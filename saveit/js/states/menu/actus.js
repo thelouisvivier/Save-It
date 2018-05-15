@@ -8,7 +8,7 @@ var Actus = {
     game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
     game.scale.setShowAll();
 
-    var contenu = "Actus";
+    var contenu = "// En cours de construction //";
     var text = game.add.bitmapText(game.world.centerX, game.world.centerY+40, 'Exo2',contenu, 40);
     text.align = 'center';
     text.tint = 0x000000;
@@ -17,6 +17,7 @@ var Actus = {
 
     var boutonRetour = game.add.button(game.world.centerX, game.height/1.15, 'retour', this.retourMenu, this, 1, 0);
     boutonRetour.anchor.set(0.5);
+    boutonRetour.scale.setTo(game.height/750);
   },
 
   retourMenu : function(){
