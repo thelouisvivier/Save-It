@@ -14,8 +14,10 @@ var Introduction = {
     text.tint = 0x000000;
     text.anchor.x = 0.5;
     text.anchor.y = 0.5;
+    text.scale.setTo(game.width/1500);
     var boutonRetour = game.add.button(game.world.centerX, game.height/1.15, 'retour', this.retourMenu, this, 1, 0);
     boutonRetour.anchor.set(0.5);
+    boutonRetour.scale.setTo(game.height/750);
   },
 
   retourMenu : function(){

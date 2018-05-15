@@ -79,6 +79,8 @@ var Whattoload = function() {
 
   //menu
   game.load.image('menu','./assets/textures/menu.jpg');
+  game.load.image('arrowkeys','./assets/sprites/arrowkeys.png');
+  game.load.image('keys','./assets/sprites/keys.png');
   game.load.spritesheet('b_intro','./assets/buttons/intro.png', 0 , 357);
   game.load.spritesheet('b_demarrer','./assets/buttons/demarrer.png', 0, 357);
   game.load.spritesheet('b_continuer','./assets/buttons/continuer.png', 0, 357);
