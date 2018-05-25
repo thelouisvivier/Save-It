@@ -8,7 +8,7 @@ var Introduction = {
     game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
     game.scale.setShowAll();
 
-    contenu = "Samedi 5 mai 2018 : la France vit à crédit par rapport\naux ressources naturelles produites par la Terre.\n\nDans cette aire de surconsommationn botre planète a décidé qu'elle en avait assez.\nDans save-it votre but sera de minimiser votre dette\nécologique en économisant les ressources que vous\nconsommez chez vous.";
+    contenu = "Samedi 5 mai 2018 : la France vit à crédit par rapport\naux ressources naturelles produites par la Terre.\n\nDans cette aire de surconsommationn notre planète a décidé qu'elle en avait assez.\nDans save-it votre but sera de minimiser votre dette\nécologique en économisant les ressources que vous\nconsommez chez vous.";
     var textIntro = game.add.bitmapText(game.world.centerX, game.world.centerY+30, 'Exo2',contenu, 30);
     textIntro.align = 'center';
     textIntro.tint = 0x000000;
