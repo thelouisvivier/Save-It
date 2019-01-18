@@ -1,4 +1,4 @@
-var game  = new Phaser.Game(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.CANEVAS,'');
+var game  = new Phaser.Game(document.documentElement.clientWidth, document.documentElement.clientHeight, Phaser.CANEVAS,'');
 game.state.add('BootState', Boot);
 game.state.add('PreloadState', Preload);
 game.state.add('IntroductionState', Introduction);
